@@ -1,0 +1,40 @@
+
+.page{
+  @include outer-container;
+
+  margin-top:20px;
+}
+
+.page__header{
+
+}
+
+  .page__globalNav{
+
+  }
+
+  .page__topSlider{
+    background:brown;
+
+  }
+
+.page__content{
+  @include outer-container;
+}
+
+
+.page__main{
+  @include span-columns(3 of 4);
+
+  background:yellow;
+}
+
+.page__sidebar{
+  @include span-columns(1 of 4);
+  background:green;
+}
+
+.page__footer{
+
+}
+
