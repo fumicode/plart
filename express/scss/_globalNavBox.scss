@@ -1,0 +1,17 @@
+
+.globalNavBox{
+  @extend .black-box;
+
+  position:relative;
+
+
+}
+
+.globalNavBox__siteDesc{}
+
+.globalNavBox__siteTitle{
+  line-height:1; 
+
+  margin-bottom:100px;
+}
+

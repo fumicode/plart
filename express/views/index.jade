@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  div.page
+    div.page__header
+      div.page__globalNav
+        div.globalNavBox
+
+          img.globalNavBox__plartLogo(src="/images/plart_logo.png")
+          p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
+          h1.globalNavBox__siteTitle PLART STORY
+
+          .categoryBox
+            table.categoryBox__table
+              tr
+                td.categoryBox__art(rowspan="3") ART
+                td.categoryBox__cross(rowspan="3") X
+                td.categoryBox__catName
+                  a(href="") PEOPLE
+                td.categoryBox__catContent 人、アーティスト
+              tr                   
+                td.categoryBox__catName 
+                  a(href="") PLACE
+                td.categoryBox__catContent  場、空間、      
+              tr                   
+                td.categoryBox__catName 
+                  a(href="") THING
+                td.categoryBox__catContentモノ、コト、    
+
+
+
+          div.globalNav
+            ul
+              li.globalNav__item
+                a(href="") ABOUT
+              li.globalNav__item
+                a(href="") HEY!ART 
+              li.globalNav__item
+                a(href="") PARTNERS
+
+
+        
+
+      div.page__topSlider
+        div.topSliderBox
+          p slide
+
+    div.page__content
+      div.page__main
+        div.mainBox
+          h2 title
+
+      div.page__sidebar
+        div.sidebarBox
+          h2 title
+
+    div.page__footer
+      div.footerBox
+        h2 title
+
