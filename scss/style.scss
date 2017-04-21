@@ -1,5 +1,25 @@
-$red:#FF3399;
+//////////// basic framework////////////
+@import "normalize";
+//@import "bourbon";
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+@import "base/grid-settings";
+@import "neat";
 
-.red {
-  color: $red;
+@import "base/base"; //bitters これは変えちゃっていいもの。
+
+body{
+
 }
+
+
+
+@import "page";
+
+@import "boxes";
+
+
+@import "categoryBox";
+@import "globalNav";
+@import "globalNavBox";
+
+

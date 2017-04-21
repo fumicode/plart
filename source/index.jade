@@ -1,9 +1,6 @@
-html
-  head
-    title #{title}
-body
-  div.red
-    :php
-      echo "waa";
-    - echo "aa";
-  div.aho
+extends layouts/basic-layout
+
+block content
+  div.mainBox
+    h2 title
+

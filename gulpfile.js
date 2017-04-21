@@ -11,6 +11,7 @@ var riot = require("gulp-riot");
 
 //var browser = require("browser-sync");
 gulp.task("scss", function(){ 
+  console.log(neat.includePaths);
   return gulp.src("./scss/*.scss")
 
     .pipe(plumber({
@@ -21,6 +22,8 @@ gulp.task("scss", function(){
       includePaths: neat.includePaths
     }).on('error', sass.logError)) 
     .pipe(gulp.dest("./"));
+
+
 
 });
 
