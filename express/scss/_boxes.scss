@@ -16,7 +16,10 @@
   @extend .black-box;
 }
 .mainBox{
-  @extend .black-box;
+  .contentBox{
+    @extend .black-box;
+  }
+
 }
 .sidebarBox{
   @extend .black-box;

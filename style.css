@@ -611,6 +611,9 @@ table.n {
       margin: 0;
       padding: 0; }
 
+body {
+  background: red; }
+
 .page {
   max-width: 1200px;
   margin-left: auto;
@@ -638,7 +641,7 @@ table.n {
   display: block;
   margin-right: 0%;
   width: 75%;
-  background: yellow; }
+  background: blue; }
   .page__main:last-child {
     margin-right: 0; }
 

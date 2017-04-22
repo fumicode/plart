@@ -20,12 +20,12 @@
 
 .page__content{
   @include outer-container;
+  background: pink;
 }
 
 
 .page__main{
   @include span-columns(3 of 4);
-
   background:yellow;
 }
 
@@ -37,4 +37,3 @@
 .page__footer{
 
 }
-

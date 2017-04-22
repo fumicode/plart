@@ -26,7 +26,7 @@
 .page__main{
   @include span-columns(3 of 4);
 
-  background:yellow;
+  background:blue;
 }
 
 .page__sidebar{
@@ -37,4 +37,3 @@
 .page__footer{
 
 }
-
