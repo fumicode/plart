@@ -615,7 +615,8 @@ table.n {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px; }
+  margin-top: 20px;
+  width: 800px; }
   .page::after {
     clear: both;
     content: "";
@@ -668,7 +669,7 @@ table.n {
   background: white; }
 
 .categoryBox__table {
-  font-size: 26px;
+  font-size: 22px;
   margin: 0; }
   .categoryBox__table td {
     margin: 0;
@@ -677,14 +678,14 @@ table.n {
 
 .categoryBox__art {
   font-weight: bold;
-  width: 15%; }
+  width: 17%; }
 
 .categoryBox__cross {
-  width: 10%; }
+  width: 7%; }
 
 .categoryBox__catName {
   text-decoration: underline;
-  width: 25%; }
+  width: 26%; }
   .categoryBox__catName a {
     color: #000; }
 
@@ -704,6 +705,36 @@ table.n {
 
 .globalNavBox__plartLogo {
   float: right; }
+
+.topSliderBox__number {
+  display: block;
+  float: right;
+  background: yellow;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 25px;
+  margin-right: 25px; }
+
+.plartstory__title--plart {
+  font-size: 14px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  font-weight: bold; }
+
+.plartstory__title--story {
+  font-size: 14px;
+  margin-top: -12px;
+  letter-spacing: 2px; }
+
+.plartstory__number {
+  font-size: 12px;
+  width: 60px;
+  margin: auto;
+  margin-top: -6px;
+  padding-top: 6px;
+  border-top: solid 1px black; }
 
 .globalNavBox {
   position: relative; }
