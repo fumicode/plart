@@ -1,51 +1,15 @@
-.titleFontSize{
-    font-size: 18px;
-    margin: 0px;
-    padding: 0px;
-}
+$titleFontSize:1.4rem;
 
-.contentBox__wahtsNew{
-  padding-bottom: 2em;
-  h2 {
-    @extend .titleFontSize;
-  }
-
-  .articles__left{
+.contentBox__2columns{
+  .contentBox__sliderBox{
+    @include span-columns(2 of  3)
     background: pink;
-
-    .article__slider{
-      clear: both;
-    }
-    @include span-columns(2 of 3);
-    .articles__left__left{
-      @include span-columns(1 of 2);
-    }
-
-    .articles__left__right{
-      @include span-columns(1 of 2);
-    }
-  }
-  .articles__right{
-    @include span-columns(1 of 3);
-    background: red;
-    .articleBox{
-
-    }
-    #articleNo1{
-      border-top: 0px;
-    }
   }
 
-}
-
-.category{
-  margin: 3px;
-  float:left;
-}
-.number{
-  float:right;
-  background: yellow;
-  margin:3px;
+  .contentBox__articlesBox{
+    @include span-columns(1 of 3)
+    background: brown;
+  }
 }
 
 .viewMore{
@@ -56,39 +20,57 @@
   width:150px;
 
   text-align: center;
-  color:#FFFFFF;
+
+  a {
+    color:white;
+  }
 }
+
+.contentBox__title{
+  h2 {
+    font-size: $titleFontSize;
+  }
+  margin-top: -10px;
+
+}
+
+.contentBox__wahtsNew{
+  padding-bottom: 2em;
+  @extend .contentBox__2columns;
+}
+
+
+
+
 
 .articleBox{
   border-top: 1px solid gray;
   width:200px;
+
+  .category{
+    margin: 3px;
+    float:left;
+  }
+  .number{
+    float:right;
+    background: yellow;
+    margin:3px;
+  }
 }
 
 .contentBox__backNumber{
-  h2 {
-    @extend .titleFontSize;
-  }
 
 }
-
 
 .contentBox__banner{
-  h2 {
-    @extend .titleFontSize;
-  }
+
 }
 .contentBox__pickUp{
-  h2 {
-    @extend .titleFontSize;
-  }
+
 }
 .contentBox__instagram{
-  h2 {
-    @extend .titleFontSize;
-  }
+
 }
 .contentBox__partners{
-  h2 {
-    @extend .titleFontSize;
-  }
+
 }

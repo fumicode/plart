@@ -1,0 +1,129 @@
+$titleFontSize:1.4rem;
+$articleBoxHeight:140px;
+$bigArticleBoxHeight:300px;
+$moreViewButtonWidth:180px;
+$bannerHeight:100px;
+$pickupSliderHeight:100px;
+$instagramHeight:150px;
+$partnersHeight:300px;
+
+.mainBox__title{
+  padding:0px;
+  margin:0px;
+  font-size: $titleFontSize;
+}
+.mainBox__whatnew{
+  @extend .black-box;
+  height:$articleBoxHeight + $bigArticleBoxHeight + 120px;
+}
+.mainBox__backnumber{
+  @extend .black-box;
+  height:$bigArticleBoxHeight + 120px;
+}
+.mainBox__banner{
+  @extend .black-box;
+  height:$bannerHeight*2+80px;
+}
+.mainBox__pickup{
+  @extend .black-box;
+}
+.mainBox__instagram{
+  @extend .black-box;
+}
+.mainBox__partners{
+  @extend .black-box;
+}
+
+.contentsLayout--1big2small{
+
+}
+
+.contentsLayout--1big2small--big{
+  @include span-columns(2 of 3);
+}
+
+.contentsLayout--1big2small--small{
+  @include span-columns(1 of 3);
+}
+
+.contentsLayout--3cols{
+  clear:both;
+  @include outer-container;
+  li{
+    display: inline-block;
+  }
+}
+
+.contentsLayout__3items{
+}
+
+.contentsLayout__3items--left{
+  @include span-columns(1 of 3);
+}
+.contentsLayout__3items--center{
+  @include span-columns(1 of 3);
+}
+.contentsLayout__3items--right{
+  @include span-columns(1 of 3);
+}
+.articleBox{
+  height:$articleBoxHeight;
+  padding:5px;
+  background: pink;
+  border-top:solid 1px gray;
+}
+
+
+
+.articleBox--big{
+  height:$bigArticleBoxHeight;
+  padding:5px;
+  background: red;
+}
+
+header.articleBox__header{
+
+}
+.articleBox__category{
+  float: left;
+}
+
+.articleBox__number{
+  float: right;
+  background:yellow;
+}
+
+.moreViewButton{
+  display: block;
+  background: black;
+  color:white;
+  margin-top:15px;
+  @include outer-container;
+  width:$moreViewButtonWidth;
+  text-align: center;
+}
+
+.banner--1{
+  height: $bannerHeight;
+  background: brown;
+}
+
+.banner--2{
+  height: $bannerHeight;
+  background: purple;
+}
+
+.slider--pickup{
+  height:$pickupSliderHeight;
+  background: red;
+}
+
+.instagramBox{
+  height:$instagramHeight;
+  background: pink;
+}
+
+.partnersBox{
+  height:$partnersHeight;
+  background: red;
+}
