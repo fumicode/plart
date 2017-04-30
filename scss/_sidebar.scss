@@ -1,0 +1,37 @@
+$titleFontSize:1.4rem;
+.sidebarBox__plartStory--1{
+  @extend .black-box;
+  background: gray;
+}
+.sidebarBox__plartStory--2{
+  @extend .black-box;
+  background: gray;
+}
+.sidebarBox__searchBar{
+  @extend .black-box;
+}
+.sidebarBox__ranking{
+  @extend .black-box;
+}
+
+
+.sidebarBox__pressRelease{
+  @extend .black-box;
+}
+
+.sidebarBox__facebook{
+  @extend .black-box;
+}
+
+.sidebarBox__twitter{
+  @extend .black-box;
+}
+
+.sidebarBox__title{
+  font-size: $titleFontSize;
+  margin-top:-15px;
+  margin-left:-15px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding:0px;
+}

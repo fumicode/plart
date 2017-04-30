@@ -1,0 +1,26 @@
+.sidebarBox__ranking{
+  background:pink;
+}
+.sidebarBox__title{
+  margin-bottom: 10px;
+}
+.articleBox--ranking{
+  @extend .clearfix;
+  border-bottom: solid 1px gray;
+  padding-bottom:5px;
+  @include outer-container;
+}
+.articleBox--ranking--thumbnail{
+  @include span-columns(4 of 10);
+}
+.articleBox--ranking--right{
+  @include span-columns(6 of 10);
+}
+.articleBox--ranking--rank{
+  font-size: 30px;
+}
+.articleBox--ranking--title{
+  font-size: 8px;
+  clear:both;
+
+}
