@@ -743,19 +743,18 @@ table.n {
   line-height: 1;
   margin-bottom: 100px; }
 
+.clearfix:after, .contentsLayout--1big2small:after {
+  content: "";
+  clear: both;
+  display: block; }
+
 .mainBox__title {
   padding: 0px;
   margin: 0px;
   font-size: 1.4rem; }
 
-.mainBox__whatnew {
-  height: 560px; }
-
-.mainBox__backnumber {
-  height: 420px; }
-
-.mainBox__banner {
-  height: 280px; }
+.contentsLayout--1big2small {
+  margin-top: 5px; }
 
 .contentsLayout--1big2small--big {
   float: left;
@@ -809,29 +808,12 @@ table.n {
   .contentsLayout__3items--right:last-child {
     margin-right: 0; }
 
-.articleBox {
-  height: 140px;
-  padding: 5px;
-  background: pink;
-  border-top: solid 1px gray; }
-
-.articleBox--big {
-  height: 300px;
-  padding: 5px;
-  background: red; }
-
-.articleBox__category {
-  float: left; }
-
-.articleBox__number {
-  float: right;
-  background: yellow; }
-
 .moreViewButton {
   display: block;
   background: black;
   color: white;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: -20px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -861,3 +843,48 @@ table.n {
 .partnersBox {
   height: 300px;
   background: red; }
+
+.articleBox {
+  height: 200px;
+  padding: 5px;
+  background: pink;
+  border-top: solid 1px gray; }
+
+.articleBox--big {
+  height: 400px;
+  padding: 5px;
+  background: red; }
+
+header.articleBox__header {
+  margin-top: 5px;
+  padding: 0px; }
+
+.articleBox__category {
+  float: left; }
+
+.articleBox__category--ART {
+  font-weight: bold;
+  font-size: 13px;
+  float: left;
+  margin-right: 4px; }
+
+.articleBox__category--genre {
+  font-size: 11px;
+  float: left;
+  line-height: 1.8; }
+
+.articleBox__number {
+  float: right;
+  background: yellow;
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 1px; }
+
+.articleBox__thumbnail {
+  clear: both; }
+
+.articleBox__title {
+  clear: both;
+  font-size: 9px;
+  word-break: break-all;
+  line-height: 1.5; }

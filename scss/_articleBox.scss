@@ -1,0 +1,55 @@
+$articleBoxHeight:200px;
+$bigArticleBoxHeight:400px;
+
+.articleBox{
+  height:$articleBoxHeight;
+  padding:5px;
+  background: pink;
+  border-top:solid 1px gray;
+}
+
+
+
+.articleBox--big{
+  height:$bigArticleBoxHeight;
+  padding:5px;
+  background: red;
+}
+
+header.articleBox__header{
+  margin-top: 5px;
+  padding:0px;
+}
+.articleBox__category{
+  float: left;
+}
+.articleBox__category--ART{
+  font-weight: bold;
+  font-size: 13px;
+  float: left;
+  margin-right: 4px;
+}
+.articleBox__category--genre{
+  font-size: 11px;
+  float: left;
+  line-height: 1.8;
+}
+
+.articleBox__number{
+  float: right;
+  background:yellow;
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 1px;
+}
+
+.articleBox__thumbnail{
+  clear:both;
+}
+
+.articleBox__title{
+  clear:both;
+  font-size: 9px;
+  word-break: break-all;
+  line-height: 1.5;
+}
