@@ -16,6 +16,7 @@ $partnersHeight:300px;
 .mainBox__title{
   padding:0px;
   margin:0px;
+  margin-bottom: 10px;
   font-size: $titleFontSize;
 }
 .mainBox__whatnew{
@@ -38,7 +39,6 @@ $partnersHeight:300px;
 }
 
 .contentsLayout--1big2small{
-  margin-top:5px;
   @extend .clearfix;
 }
 
@@ -85,11 +85,13 @@ $partnersHeight:300px;
 .banner--1{
   height: $bannerHeight;
   background: brown;
+  width:100%;
 }
 
 .banner--2{
   height: $bannerHeight;
   background: purple;
+  height:180px;
 }
 
 .slider--pickup{
@@ -105,4 +107,14 @@ $partnersHeight:300px;
 .partnersBox{
   height:$partnersHeight;
   background: red;
+
+}
+
+.partners--1{
+  @include span-columns(1 of 6);
+  margin-right: 5px;
+}
+
+.partners--2{
+  @include span-columns(1 of 6)
 }

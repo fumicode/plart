@@ -751,10 +751,8 @@ table.n {
 .mainBox__title {
   padding: 0px;
   margin: 0px;
+  margin-bottom: 10px;
   font-size: 1.4rem; }
-
-.contentsLayout--1big2small {
-  margin-top: 5px; }
 
 .contentsLayout--1big2small--big {
   float: left;
@@ -826,11 +824,13 @@ table.n {
 
 .banner--1 {
   height: 100px;
-  background: brown; }
+  background: brown;
+  width: 100%; }
 
 .banner--2 {
   height: 100px;
-  background: purple; }
+  background: purple;
+  height: 180px; }
 
 .slider--pickup {
   height: 100px;
@@ -843,6 +843,23 @@ table.n {
 .partnersBox {
   height: 300px;
   background: red; }
+
+.partners--1 {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 16.66667%;
+  margin-right: 5px; }
+  .partners--1:last-child {
+    margin-right: 0; }
+
+.partners--2 {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 16.66667%; }
+  .partners--2:last-child {
+    margin-right: 0; }
 
 .articleBox {
   height: 200px;
@@ -881,7 +898,8 @@ header.articleBox__header {
   padding: 1px; }
 
 .articleBox__thumbnail {
-  clear: both; }
+  clear: both;
+  margin-top: 10px; }
 
 .articleBox__title {
   clear: both;
@@ -937,7 +955,8 @@ header.articleBox__header {
     margin-right: 0; }
 
 .articleBox--ranking--rank {
-  font-size: 30px; }
+  font-size: 30px;
+  clear: both; }
 
 .articleBox--ranking--title {
   font-size: 8px;
