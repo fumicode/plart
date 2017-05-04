@@ -616,7 +616,7 @@ table.n {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  width: 800px; }
+  width: 1200px; }
   .page::after {
     clear: both;
     content: "";
@@ -862,50 +862,59 @@ table.n {
     margin-right: 0; }
 
 .articleBox {
-  height: 200px;
-  padding: 5px;
+  padding: 10px;
   background: pink;
   border-top: solid 1px gray; }
 
 .articleBox--big {
-  height: 400px;
-  padding: 5px;
+  padding: 10px;
   background: red; }
 
-header.articleBox__header {
-  margin-top: 5px;
+.articleBox__thumbnail--big {
+  clear: both;
+  height: 510px;
+  width: 100%;
+  margin-bottom: 10px; }
+
+.articleBox__header {
+  margin-bottom: 40px;
   padding: 0px; }
 
 .articleBox__category {
-  float: left; }
+  float: left;
+  margin-top: 10px; }
 
 .articleBox__category--ART {
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1;
   float: left;
   margin-right: 4px; }
 
 .articleBox__category--genre {
-  font-size: 11px;
-  float: left;
-  line-height: 1.8; }
+  font-size: 13px;
+  line-height: 1;
+  float: left; }
 
 .articleBox__number {
   float: right;
   background: yellow;
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 2;
   padding: 1px; }
 
 .articleBox__thumbnail {
   clear: both;
-  margin-top: 10px; }
+  height: 170px;
+  width: 100%;
+  margin-bottom: 10px; }
 
 .articleBox__title {
   clear: both;
-  font-size: 9px;
+  font-size: 10px;
   word-break: break-all;
-  line-height: 1.5; }
+  line-height: 2;
+  height: 92px; }
 
 .sidebarBox__plartStory--1 {
   background: gray; }
@@ -942,7 +951,9 @@ header.articleBox__header {
   float: left;
   display: block;
   margin-right: 0%;
-  width: 40%; }
+  width: 40%;
+  margin-top: 20px;
+  padding-right: 10px; }
   .articleBox--ranking--thumbnail:last-child {
     margin-right: 0; }
 
@@ -950,7 +961,8 @@ header.articleBox__header {
   float: left;
   display: block;
   margin-right: 0%;
-  width: 60%; }
+  width: 60%;
+  margin-top: 10px; }
   .articleBox--ranking--right:last-child {
     margin-right: 0; }
 

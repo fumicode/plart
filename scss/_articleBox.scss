@@ -1,9 +1,8 @@
-$articleBoxHeight:200px;
-$bigArticleBoxHeight:400px;
+$titleFontSize:10px;
+$articleThumbnail:170px;
 
 .articleBox{
-  height:$articleBoxHeight;
-  padding:5px;
+  padding:10px;
   background: pink;
   border-top:solid 1px gray;
 }
@@ -11,46 +10,56 @@ $bigArticleBoxHeight:400px;
 
 
 .articleBox--big{
-  height:$bigArticleBoxHeight;
-  padding:5px;
+  padding:10px;
   background: red;
 }
+.articleBox__thumbnail--big{
+  clear:both;
+  height:$articleThumbnail*3;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-header.articleBox__header{
-  margin-top: 5px;
+.articleBox__header{
+  margin-bottom:40px;
   padding:0px;
 }
 .articleBox__category{
   float: left;
+  margin-top: 10px;
 }
 .articleBox__category--ART{
   font-weight: bold;
-  font-size: 13px;
+  font-size: 15px;
+  line-height: 1;
   float: left;
   margin-right: 4px;
 }
 .articleBox__category--genre{
-  font-size: 11px;
+  font-size: 13px;
+  line-height: 1;
   float: left;
-  line-height: 1.8;
 }
 
 .articleBox__number{
   float: right;
   background:yellow;
-  font-size: 11px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 2;
   padding: 1px;
 }
 
 .articleBox__thumbnail{
   clear:both;
-  margin-top:10px;
+  height:$articleThumbnail;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .articleBox__title{
   clear:both;
-  font-size: 9px;
+  font-size: $titleFontSize;
   word-break: break-all;
-  line-height: 1.5;
+  line-height: 2;
+  height:$titleFontSize*2*3+32px;
 }

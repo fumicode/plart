@@ -12,9 +12,12 @@
 }
 .articleBox--ranking--thumbnail{
   @include span-columns(4 of 10);
+  margin-top: 20px;
+  padding-right: 10px;
 }
 .articleBox--ranking--right{
   @include span-columns(6 of 10);
+  margin-top: 10px;
 }
 .articleBox--ranking--rank{
   font-size: 30px;
