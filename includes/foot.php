@@ -1,1 +1,1 @@
-<div class="footerBox"><h2>title</h2></div>
+<div class="footerBox"><h2 class="footer__siteTitle"><div class="siteTitle--PLART">PLART</div><div class="siteTitle--STORY">STORY</div></h2><div class="footerBox__menuBox"><div class="menuBox__pressRelease">aaaaa</div></div></div>

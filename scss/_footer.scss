@@ -1,0 +1,33 @@
+$footerTitleFontSize:30px;
+
+.clearfix:after{
+  content:"";
+  clear:both;
+  display: block;
+}
+
+.footer_siteTitle{
+  @extend .clearfix;
+}
+
+.siteTitle-base{
+  font-size: footerTitleFontSize;
+  line-height: 1;
+  margin-right: 5px;
+  letter-spacing: 2px;
+}
+
+.siteTitle--PLART{
+  font-weight: bold;
+  float: left;
+}
+.siteTitle--STORY{
+  @extend .siteTitle-base;
+  font-weight: 100;
+  float: left;
+
+}
+
+.footerBox__menuBox{
+  clear: both;
+}
