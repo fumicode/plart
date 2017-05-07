@@ -1,4 +1,7 @@
 $footerTitleFontSize:30px;
+$footeTitleMarginBottom:15px;
+$footerMenuFontSize:10px;
+
 
 .clearfix:after{
   content:"";
@@ -11,13 +14,16 @@ $footerTitleFontSize:30px;
 }
 
 .siteTitle-base{
-  font-size: footerTitleFontSize;
-  line-height: 1;
+  font-size: $footerTitleFontSize;
+  line-height: $footerTitleFontSize;
   margin-right: 5px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  margin-bottom: $footeTitleMarginBottom;
+
 }
 
 .siteTitle--PLART{
+  @extend .siteTitle-base;
   font-weight: bold;
   float: left;
 }
@@ -25,9 +31,32 @@ $footerTitleFontSize:30px;
   @extend .siteTitle-base;
   font-weight: 100;
   float: left;
+}
 
+.footerBox__icon{
+  float:right;
 }
 
 .footerBox__menuBox{
   clear: both;
+}
+.contentsLayout--3lines{
+  @extend .clearfix;
+}
+.contentsLayout--3lines--menuList{
+  margin: 0px;
+  padding:0px;
+}
+
+.contentsLayout--3lines--menu{
+  float:left;
+  font-size: $footerMenuFontSize;
+  line-height: $footerMenuFontSize;
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+
+.contentsLayout--3lines--br{
+  margin: 0px;
+  padding:0px;
 }
