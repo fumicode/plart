@@ -3,6 +3,11 @@
   border:$box-border-width solid black;
   border-bottom-width:0;
   padding:$box-padding;
+
+}
+
+.black-box--last{
+  border-bottom-width: $box-border-width;
 }
 
 .black-box--thin{
@@ -12,13 +17,3 @@
 }
 
 
-.mainBox{
-  //@extend .black-box;
-}
-
-.sidebarBox{
-  //@extend .black-box;
-}
-.footerBox{
-  @extend .black-box;
-}

@@ -3,6 +3,7 @@ $page-margin-top:$box-padding * 1.4;
 .page{
   @include outer-container;
   margin-top:$page-margin-top ;
+  margin-bottom:$page-margin-top ;
   width:1200px;
   //padding:0px 100px 0px 100px;
 }

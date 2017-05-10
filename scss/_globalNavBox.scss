@@ -1,6 +1,9 @@
 
 $globalNavBox-height:333px; //あとで設定！
 
+$titleBox-margin-left: 55px;
+$titleBox-margin-top: 41px;
+
 
 .globalNavBox{
 
@@ -12,12 +15,17 @@ $globalNavBox-height:333px; //あとで設定！
 
 }
 
-$titleBox-margin-left: 55px;
-$titleBox-margin-top: 41px;
 
 
 .globalNavBox__plartLogo{  // あとでやる
-  float:right;
+  position:absolute;
+    top: 36px;
+    right: 26px;
+
+  width: 109px;
+  height: 76px;
+
+
 }
 
 .globalNavBox__titleBox{

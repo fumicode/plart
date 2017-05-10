@@ -11,12 +11,13 @@ $plartStoryNumber-padding-size:10px;
 
 
   display: block;
-  background: yellow;
+  background: $color-plart-yellow;
   width: $plartStoryNumber-size;
   height: $plartStoryNumber-size;
   border-radius: $plartStoryNumber-size /2;
   text-align: center;
 
+  border:$box-border-width-thin solid #000;
   padding: $plartStoryNumber-padding-size;
 }
 
@@ -27,6 +28,7 @@ $plartStoryNumber-padding-size:10px;
   letter-spacing: 2px;
   font-weight: bold;
 }
+
 .plartStoryNumber__title--story{
   font-family:$base-font-family;
   font-weight:$base-font-weight;
@@ -36,6 +38,7 @@ $plartStoryNumber-padding-size:10px;
   letter-spacing: 2px;
 
 }
+
 .plartStoryNumber__number{
   font-size: 12px;
 

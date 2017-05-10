@@ -19,12 +19,12 @@ $thumbnailMarginBottom:5px;
 
 .articleBox{
   @extend .articleBox-base;
-  border-top:solid 1px gray;
+  border-top:solid 1px $color-plart-gray;
 }
 
 .articleBox--smalltop{
   @extend .articleBox-base;
-  border-top:solid 0px gray;
+  border-top-width:0;
   margin-bottom: 1px;
   padding-top: 0px;
 }
@@ -64,7 +64,7 @@ $thumbnailMarginBottom:5px;
 }
 .articleBox__number{
   float: right;
-  background:yellow;
+  background:$color-plart-yellow;
   font-size: $numberFontSize;
   line-height: $categoryLineHeight;
   padding-left: $categoryLineHeight - $numberFontSize;

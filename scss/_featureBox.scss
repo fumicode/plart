@@ -1,0 +1,32 @@
+$featureBox-number-font-size:14px;
+$featureBox-title-font-size:30px;
+
+.featureBox{
+
+}
+
+
+.featureBox__number{
+  @extend .black-box--thin;
+  display:inline-block;
+  padding: 15px;
+  background-color:$color-plart-yellow;
+
+
+  font-size:$featureBox-number-font-size;
+
+  line-height:1;
+}
+
+.featureBox__title {
+  @extend .black-box--thin;
+
+  margin-top: - $box-border-width-thin;
+
+  display:inline-block;
+  padding: 20px;
+
+  line-height:1;
+  font-size:$featureBox-title-font-size;
+  background-color:rgba(255,255,255,0.8);
+}
