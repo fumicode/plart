@@ -637,8 +637,8 @@ table.n {
 .page__main {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 75%;
+  margin-right: 1.49254%;
+  width: 74.62687%;
   background: blue; }
   .page__main:last-child {
     margin-right: 0; }
@@ -646,8 +646,8 @@ table.n {
 .page__sidebar {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 25%;
+  margin-right: 1.49254%;
+  width: 23.8806%;
   background: green; }
   .page__sidebar:last-child {
     margin-right: 0; }
@@ -757,16 +757,16 @@ table.n {
 .contentsLayout--1big2small--big {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 66.66667%; }
+  margin-right: 2%;
+  width: 66%; }
   .contentsLayout--1big2small--big:last-child {
     margin-right: 0; }
 
 .contentsLayout--1big2small--small {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 33.33333%; }
+  margin-right: 2%;
+  width: 32%; }
   .contentsLayout--1big2small--small:last-child {
     margin-right: 0; }
 
@@ -782,29 +782,17 @@ table.n {
   .contentsLayout--3cols li {
     display: inline-block; }
 
-.contentsLayout__3items--left {
+.contentsLayout__item {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 33.33333%; }
-  .contentsLayout__3items--left:last-child {
+  margin-right: 2%;
+  width: 32%; }
+  .contentsLayout__item:last-child {
     margin-right: 0; }
-
-.contentsLayout__3items--center {
-  float: left;
-  display: block;
-  margin-right: 0%;
-  width: 33.33333%; }
-  .contentsLayout__3items--center:last-child {
+  .contentsLayout__item:nth-child(3n) {
     margin-right: 0; }
-
-.contentsLayout__3items--right {
-  float: left;
-  display: block;
-  margin-right: 0%;
-  width: 33.33333%; }
-  .contentsLayout__3items--right:last-child {
-    margin-right: 0; }
+  .contentsLayout__item:nth-child(3n+1) {
+    clear: left; }
 
 .moreViewButton {
   display: block;
@@ -847,8 +835,8 @@ table.n {
 .partners--1 {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 16.66667%;
+  margin-right: 0.9901%;
+  width: 15.84158%;
   margin-right: 5px; }
   .partners--1:last-child {
     margin-right: 0; }
@@ -856,8 +844,8 @@ table.n {
 .partners--2 {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 16.66667%; }
+  margin-right: 0.9901%;
+  width: 15.84158%; }
   .partners--2:last-child {
     margin-right: 0; }
 
@@ -1217,21 +1205,24 @@ th {
   padding: 0; }
 
 .articleBox-base, .articleBox, .articleBox--smalltop, .articleBox--big {
-  padding: 15px 15px 15px 0px; }
+  padding: 15px 0px 15px 0px; }
 
 .articleBox {
   border-top: solid 1px gray; }
 
 .articleBox--smalltop {
   border-top: solid 0px gray;
-  margin-bottom: 1px; }
+  margin-bottom: 1px;
+  padding-top: 0px; }
 
 .articleBox--big {
-  margin-bottom: 1px; }
+  margin-bottom: 1px;
+  padding-top: 0px; }
 
 .articleBox__header {
-  margin-bottom: 30px;
-  padding: 0px; }
+  margin-bottom: 10px;
+  padding: 0px;
+  overflow: hidden; }
 
 .articleBox__category {
   float: left; }
@@ -1318,8 +1309,8 @@ th {
 .articleBox--ranking--thumbnail {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 40%;
+  margin-right: 0.59172%;
+  width: 39.64497%;
   margin-top: 20px;
   padding-right: 10px;
   display: block; }
@@ -1329,8 +1320,8 @@ th {
 .articleBox--ranking--right {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 60%;
+  margin-right: 0.59172%;
+  width: 59.76331%;
   margin-top: 10px; }
   .articleBox--ranking--right:last-child {
     margin-right: 0; }

@@ -2,7 +2,7 @@ $titleFontSize:10px;
 $articleThumbnailHeight:170px;
 $articleBox-padding:15px;
 $articleBoxTitleHeight:$titleFontSize*2*4;
-$articleBoxHeader-marginBottom:30px;
+$articleBoxHeader-marginBottom:10px;
 $categoryFontiSize-ART:13px; //ART と CROSS のpx差は2pxにする
 $categoryFontiSize-CROSS:11px;
 $categoryFontiSize-GENRE:13px;
@@ -12,7 +12,8 @@ $thumbnailMarginBottom:5px;
 @import "normalize";
 
 .articleBox-base{
-  padding:$articleBox-padding $articleBox-padding $articleBox-padding 0px;
+  padding:$articleBox-padding 0px $articleBox-padding 0px;
+  //margin-right: $articleBox-padding;
   //background: pink;
 }
 
@@ -25,17 +26,20 @@ $thumbnailMarginBottom:5px;
   @extend .articleBox-base;
   border-top:solid 0px gray;
   margin-bottom: 1px;
+  padding-top: 0px;
 }
 
 .articleBox--big{
   @extend .articleBox-base;
   margin-bottom: 1px;
+  padding-top: 0px;
   //background: red;
 }
 
 .articleBox__header{
   margin-bottom: $articleBoxHeader-marginBottom;
   padding:0px;
+  overflow: hidden;
 }
 .articleBox__category{
   float: left;
@@ -81,7 +85,7 @@ $thumbnailMarginBottom:5px;
 }
 .articleBox__thumbnail--big{
   @extend .thumbnail-base;
-  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $articleBoxHeader-marginBottom;
+  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $articleBoxHeader-marginBottom + $categoryLineHeight;
 }
 
 .articleBox__title{

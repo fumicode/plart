@@ -61,15 +61,11 @@ $partnersHeight:300px;
 .contentsLayout__3items{
 }
 
-.contentsLayout__3items--left{
+.contentsLayout__item{
   @include span-columns(1 of 3);
+  @include omega(3n);
 }
-.contentsLayout__3items--center{
-  @include span-columns(1 of 3);
-}
-.contentsLayout__3items--right{
-  @include span-columns(1 of 3);
-}
+
 
 .moreViewButton{
   display: block;
