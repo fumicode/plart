@@ -1,9 +1,9 @@
 
 .page{
   @include outer-container;
-
-  margin-top:20px;
+  margin-top: 20px;
   width:1200px;
+  //padding:0px 100px 0px 100px;
 }
 
 .page__header{

@@ -891,7 +891,6 @@ table.n {
 .articleBox__category--cross {
   font-size: 11px;
   line-height: 20px;
-  margin-top: 1px;
   float: left;
   margin-right: 4px; }
 
@@ -917,7 +916,7 @@ table.n {
   height: 170px; }
 
 .articleBox__thumbnail--big {
-  height: 486px; }
+  height: 506px; }
 
 .articleBox__title {
   clear: both;

@@ -3,7 +3,7 @@ $articleThumbnailHeight:170px;
 $articleBox-padding:15px;
 $articleBoxTitleHeight:$titleFontSize*2*4;
 $articleBoxHeader-marginBottom:30px;
-$categoryFontiSize-ART:13px; //ART と CROSS のpx差は1pxにする
+$categoryFontiSize-ART:13px; //ART と CROSS のpx差は2pxにする
 $categoryFontiSize-CROSS:11px;
 $categoryFontiSize-GENRE:13px;
 $categoryLineHeight:20px;
@@ -49,7 +49,6 @@ $thumbnailMarginBottom:5px;
 .articleBox__category--cross{
   font-size: $categoryFontiSize-CROSS;
   line-height: $categoryLineHeight;
-  margin-top: 1px; //本来は calc(($categoryFontiSize-ART - $categoryFontiSize-CROSS)/2)
   float:left;
   margin-right: 4px;
 }
@@ -78,7 +77,7 @@ $thumbnailMarginBottom:5px;
 }
 .articleBox__thumbnail--big{
   @extend .thumbnail-base;
-  height:$articleThumbnailHeight*2 + $articleBox-padding + $categoryLineHeight + $articleBoxHeader-marginBottom + $articleBoxTitleHeight + 1px;
+  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $categoryLineHeight + $articleBoxHeader-marginBottom ;
 }
 
 .articleBox__title{
