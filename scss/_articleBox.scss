@@ -9,6 +9,7 @@ $categoryFontiSize-GENRE:13px;
 $categoryLineHeight:20px;
 $numberFontSize:13px;
 $thumbnailMarginBottom:5px;
+@import "normalize";
 
 .articleBox-base{
   padding:$articleBox-padding $articleBox-padding $articleBox-padding 0px;
@@ -70,6 +71,9 @@ $thumbnailMarginBottom:5px;
   clear:both;
   width: 100%;
   margin-bottom: $thumbnailMarginBottom;
+  padding:0px;
+  display: block;
+  //vertical-align: bottom;
 }
 .articleBox__thumbnail{
   @extend .thumbnail-base;
@@ -77,7 +81,7 @@ $thumbnailMarginBottom:5px;
 }
 .articleBox__thumbnail--big{
   @extend .thumbnail-base;
-  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $categoryLineHeight + $articleBoxHeader-marginBottom ;
+  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $articleBoxHeader-marginBottom;
 }
 
 .articleBox__title{
@@ -86,4 +90,6 @@ $thumbnailMarginBottom:5px;
   word-break: break-all;
   line-height: 2;
   height:$articleBoxTitleHeight;
+  margin:0px;
+  padding: 0px;
 }
