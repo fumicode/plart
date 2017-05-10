@@ -611,6 +611,11 @@ table.n {
       margin: 0;
       padding: 0; }
 
+.clearfix:after, .page__content:after, .contentsLayout--1big2small:after, .articleBox--ranking:after, .footer_siteTitle:after, .contentsLayout--3lines:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
 .page {
   max-width: 1200px;
   margin-left: auto;
@@ -625,32 +630,15 @@ table.n {
 .page__topSlider {
   background: brown; }
 
-.page__content {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto; }
-  .page__content::after {
-    clear: both;
-    content: "";
-    display: table; }
-
 .page__main {
   float: left;
-  display: block;
-  margin-right: 1.49254%;
-  width: 74.62687%;
+  width: 75%;
   background: blue; }
-  .page__main:last-child {
-    margin-right: 0; }
 
 .page__sidebar {
-  float: left;
-  display: block;
-  margin-right: 1.49254%;
-  width: 23.8806%;
+  float: right;
+  width: 25%;
   background: green; }
-  .page__sidebar:last-child {
-    margin-right: 0; }
 
 .black-box, .black-box--thin, .categoryBox, .topSliderBox, .footerBox, .globalNavBox, .mainBox__whatnew, .mainBox__backnumber, .mainBox__banner, .mainBox__pickup, .mainBox__instagram, .mainBox__partners, .sidebarBox__plartStory--1, .sidebarBox__plartStory--2, .sidebarBox__searchBar, .sidebarBox__ranking, .sidebarBox__pressRelease, .sidebarBox__facebook, .sidebarBox__twitter {
   margin: -4px;
@@ -743,7 +731,7 @@ table.n {
   line-height: 1;
   margin-bottom: 100px; }
 
-.clearfix:after, .contentsLayout--1big2small:after, .articleBox--ranking:after, .footer_siteTitle:after, .contentsLayout--3lines:after {
+.clearfix:after, .page__content:after, .contentsLayout--1big2small:after, .articleBox--ranking:after, .footer_siteTitle:after, .contentsLayout--3lines:after {
   content: "";
   clear: both;
   display: block; }
@@ -1334,7 +1322,7 @@ th {
   font-size: 8px;
   clear: both; }
 
-.clearfix:after, .contentsLayout--1big2small:after, .articleBox--ranking:after, .footer_siteTitle:after, .contentsLayout--3lines:after {
+.clearfix:after, .page__content:after, .contentsLayout--1big2small:after, .articleBox--ranking:after, .footer_siteTitle:after, .contentsLayout--3lines:after {
   content: "";
   clear: both;
   display: block; }

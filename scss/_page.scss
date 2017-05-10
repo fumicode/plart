@@ -20,18 +20,21 @@
   }
 
 .page__content{
-  @include outer-container;
+  @extend .clearfix;
 }
 
 
 .page__main{
-  @include span-columns(3 of 4);
+  float:left;
+  width:75%;
 
   background:blue;
 }
 
 .page__sidebar{
-  @include span-columns(1 of 4);
+  float:right;
+  width:25%;
+
   background:green;
 }
 
