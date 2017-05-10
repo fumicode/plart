@@ -1,13 +1,101 @@
+$titleFontSize:1.4rem;
+$subTitleFontSize:1.0rem;
+$articleBoxHeight:200px;
+$bigArticleBoxHeight:400px;
+$moreViewButtonWidth:180px;
+$bannerHeight:100px;
+$pickupSliderHeight:100px;
+$instagramHeight:150px;
+$partnersHeight:300px;
+$plartFactoryLinkHeight:400px;
+
+.mainBox{
+  @extend .black-box;
+}
 
 .mainBox__title{
   padding:0px;
   margin:0px;
   margin-bottom: 10px;
   font-size: $titleFontSize;
-}
-.mainBox{
-  @extend .black-box;
+  margin-right: 10px;
 }
 
+.mainBox__mainTitle{
+  @extend .mainBox__title;
+  float:left;
+  margin-right: 10px;
+}
+
+.mainBox__subTitle{
+  float:left;
+  font-size: $subTitleFontSize;
+  line-height: $titleFontSize;
+  border-bottom: 0px;
+}
 
 
+
+
+.contentsLayout__item{
+  @include span-columns(1 of 3);
+  @include omega(3n);
+}
+
+
+.moreViewButton{
+  display: block;
+  background: black;
+  color:white;
+  margin-top:10px;
+  margin-bottom: -20px;
+  @include outer-container;
+  width:$moreViewButtonWidth;
+  text-align: center;
+}
+
+.topPageButton{
+  @extend .moreViewButton;
+}
+
+.banner--1{
+  height: $bannerHeight;
+  background: brown;
+  width:100%;
+}
+
+.banner--2{
+  height: $bannerHeight;
+  background: purple;
+  height:180px;
+}
+
+.slider--pickup{
+  height:$pickupSliderHeight;
+  background: red;
+}
+
+.instagramBox{
+  height:$instagramHeight;
+  background: pink;
+}
+
+.partnersBox{
+  height:$partnersHeight;
+  background: red;
+}
+
+.partners--1{
+  @include span-columns(1 of 6);
+  margin-right: 5px;
+}
+
+.partners--2{
+  @include span-columns(1 of 6)
+}
+
+.plartFactory__link{
+  height: $plartFactoryLinkHeight;
+  width:100%;
+  background: red;
+}

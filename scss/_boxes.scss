@@ -16,4 +16,18 @@
   border-bottom-width:$box-border-width-thin;
 }
 
+.articlePage{
+  @extend .black-box;
+}
 
+.relationArticles{
+  @extend .black-box;
+}
+
+.newArticles{
+  @extend .black-box;
+}
+
+.plartFactory{
+  @extend .black-box;
+}
