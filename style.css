@@ -1379,6 +1379,14 @@ th {
   margin: 0px;
   padding: 0px; }
 
+strong {
+  background: linear-gradient(transparent 68%, #d5ff00 68%); }
+
+blockquote {
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  padding: 0px 20px 0px 20px; }
+
 .articlePage {
   padding-top: 80px; }
 
@@ -1428,7 +1436,8 @@ th {
 
 .articlePage__main {
   clear: both;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  background: pink; }
 
 .articlePage__title {
   border-bottom: solid 1px gray;
@@ -1478,7 +1487,14 @@ th {
   font-weight: bold; }
 
 .articlePage__shareLinks {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
 
 .articlePage__keyword {
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
+
+.keyword {
+  background: gray;
+  display: inline-block;
+  color: white;
+  margin-bottom: 10px;
+  margin-right: 10px; }

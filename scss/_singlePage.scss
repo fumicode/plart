@@ -12,8 +12,21 @@ $article-marginBottom:10px;
 $name-marginBottom:5px;
 $nameFontSize:1.6rem;
 $profileFontSize:1.4rem;
-$shareLinks-marginBottom:20px;
+$shareLinks-marginBottom:10px;
+$keyword-marginBottom:10px;
+$blockquote-padding:20px;
 
+strong{
+  background: linear-gradient(transparent $gradient, #d5ff00 $gradient);
+
+}
+
+blockquote{
+  //background: green;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  padding:0px $blockquote-padding 0px $blockquote-padding;
+}
 
 .articlePage{
   padding-top:$articlePage-paddingTop;
@@ -74,6 +87,7 @@ $shareLinks-marginBottom:20px;
 .articlePage__main{
   clear: both;
   margin-bottom: $article-marginBottom;
+  background: pink;
 }
 .articlePage__title{
   border-bottom: solid 1px gray;
@@ -125,4 +139,16 @@ $shareLinks-marginBottom:20px;
 
 .articlePage__keyword{
   margin-bottom: $shareLinks-marginBottom;
+}
+
+.keywords{
+
+}
+
+.keyword{
+  background: gray;
+  display: inline-block;
+  color:white;
+  margin-bottom: $keyword-marginBottom;
+  margin-right: $keyword-marginBottom;
 }
