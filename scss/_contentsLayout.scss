@@ -1,0 +1,28 @@
+
+.contentsLayout--1big2small{
+  @extend .clearfix;
+}
+
+.contentsLayout--1big2small--big{
+  @include span-columns(2 of 3);
+}
+
+.contentsLayout--1big2small--small{
+  @include span-columns(1 of 3);
+}
+
+.contentsLayout--3cols{
+  clear:both;
+  @include outer-container;
+  li{
+    display: inline-block;
+  }
+}
+
+.contentsLayout__3items{
+}
+
+.contentsLayout__item{
+  @include span-columns(1 of 3);
+  @include omega(3n);
+}

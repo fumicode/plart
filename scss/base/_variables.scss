@@ -1,19 +1,33 @@
-///////////////////////////ATEJI original///////////////////////////////
-$ateji-oudo-color: #b28f44;
-$ateji-light-oudo-color: #D9B881;
-$ateji-shu-color : #d4371c;
-$ateji-shu-color : #d4371c;
-$ateji-lightgray-color : #efefef;
-
-$topbar-color: #b28f44;
 
 
+$titleFontSize:1.4rem;
+$articleBoxHeight:200px;
+$bigArticleBoxHeight:400px;
+$bannerHeight:100px;
+$pickupSliderHeight:100px;
+$instagramHeight:150px;
+$partnersHeight:300px;
 
-////////////// basic /////////////
+
+
+///////////////////////////original color///////////////////////////////
+
+
+$color-plart-yellow: #e6ff00;
+$color-plart-gray: #dcdcdc;
+$color-plart-lightgray:#e4e4e4;
+
+
+////////////// basic size /////////////
+
+$box-padding: 36px;
+$box-padding-small: 26px;
+
+$box-border-width:4px;
+$box-border-width-thin:2px;
 
 //////////////topbar/////////////
 
-$topbar-color: $ateji-oudo-color;
 
 $topbar-height:auto; 
 
@@ -23,9 +37,10 @@ $body-side-margin:1rem;
 
 // Typography
 $base-font-family: $verdana;
+$base-font-weight: normal;
+
 $heading-font-family: $base-font-family;
-$kanji-font-family: "ro-nikkatsu-sei-kai-std",serif;
-// web font available: "ro-shino-std"
+$heading-font-weight: bold;
 
 // Font Sizes
 $pc-font-size: 62.5%;    // = 10px => 1.6rem = 16px
@@ -52,7 +67,7 @@ $light-gray: #ddd;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$action-color: $ateji-shu-color;
+$action-color: $color-plart-yellow;
 
 // Border
 $base-border-color: $light-gray;

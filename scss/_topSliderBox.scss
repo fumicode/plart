@@ -1,0 +1,13 @@
+
+.topSliderBox{
+  @extend .black-box;
+}
+.topSliderBox{
+  position:relative;
+}
+.topSliderBox__number{
+  position:absolute;
+    top:$box-padding;
+    right:$box-padding;
+
+}

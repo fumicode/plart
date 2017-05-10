@@ -1,4 +1,9 @@
+
 $titleFontSize:1.4rem;
+.sidebarBox{
+  margin-left:-$box-border-width *2;
+}
+w
 .sidebarBox__plartStory--1{
   @extend .black-box;
   background: gray;

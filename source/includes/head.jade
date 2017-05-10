@@ -2,8 +2,13 @@ div.page__globalNav
   div.globalNavBox
 
     img.globalNavBox__plartLogo(src="/images/plart_logo.png")
-    p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
-    h1.globalNavBox__siteTitle PLART STORY
+
+    header.globalNavBox__titleBox
+      p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
+      h1.globalNavBox__siteTitle
+        span.siteTitle 
+          span.siteTitle__plart PLART 
+          span.siteTitle__story STORY
 
     .categoryBox
       table.categoryBox__table
@@ -25,6 +30,7 @@ div.page__globalNav
 
 
     .globalNav
+
       ul
         li.globalNav__item
           a(href="") ABOUT
@@ -37,12 +43,15 @@ div.page__globalNav
 
 
 .page__topSlider
-  a.topSliderBox__number(href="")
-    p.plartstory__title--plart PLART
-    p.plartstory__title--story  STORY
-    p.plartstory__number 3月15日号
   .topSliderBox
-    p slide
-    p slide
-    p slide
-    p slide
+    .topSliderBox__number
+      a.plartStoryNumber(href="")
+        p.plartStoryNumber__title--plart PLART
+        p.plartStoryNumber__title--story  STORY
+        p.plartStoryNumber__number 3月15日号
+
+    .topSlider
+      p slide
+      p slide
+      p slide
+      p slide

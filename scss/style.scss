@@ -11,18 +11,64 @@ body{
 
 }
 
+//fundamental
 @import "clearfix";
-
-@import "page";
 
 @import "boxes";
 
 
+//modules
+
+@import "page";
+
+@import "siteTitle";
 @import "categoryBox";
 @import "globalNav";
 @import "globalNavBox";
+@import "topSliderBox";
+@import "plartStoryNumber";
+@import "contentsLayout";
+@import "moreViewButton";
 @import "mainBox";
 @import "articleBox";
 @import "sidebar";
 @import "articleBox--ranking";
-@import "footer"
+@import "footer";
+
+
+.banner--1{
+  height: $bannerHeight;
+  background: brown;
+  width:100%;
+}
+
+.banner--2{
+  height: $bannerHeight;
+  background: purple;
+  height:180px;
+}
+
+.slider--pickup{
+  height:$pickupSliderHeight;
+  background: red;
+}
+
+.instagramBox{
+  height:$instagramHeight;
+  background: pink;
+}
+
+.partnersBox{
+  height:$partnersHeight;
+  background: red;
+
+}
+
+.partners--1{
+  @include span-columns(1 of 6);
+  margin-right: 5px;
+}
+
+.partners--2{
+  @include span-columns(1 of 6)
+}
