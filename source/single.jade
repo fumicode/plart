@@ -2,5 +2,137 @@ extends layouts/basic-layout
 
 block content
   .mainBox
-    h2 a
-    h2 abc
+    .articlePage
+      .breadCrumb top > aa
+      .articlePage__header--title
+        .articlePage__header__title 心に届く
+        .articlePage__header__line ｜
+        .articlePage__header__writer 株式会社
+      .articlePage__header--linkAndNumber
+        .articlePage__header__shareLinks
+          .shareLink SHARE
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+        .articlePage__header__number PLART編集部 2017.3.15
+      .articlePage__main
+        | 記事ああああああああああ
+        
+      .articlePage__title PROFILE
+      .articlePage__profile
+        img.writerImage(src="https://1.bp.blogspot.com/-0-VrA-zoZ0E/WK7fKPKPVkI/AAAAAAABCBQ/1OS-nwYjBMA_iwWKouoLZStze_Uwyc8TwCLcB/s400/pose_furikaeru_man.png")
+        .writerProfile
+          .writerProfile__name 名前
+          .writerProfile__intro 自己紹介。1111年1月1日 滋賀県大津市で生まれる。aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbb
+
+      .articlePage__title EXHIBITION
+      .articlePage__exhibition
+        .articlePage__exhibition__title アール・ブリュット？
+        ul.exhibitionInfo
+          li.date xx/yy - xx/zz
+          li.place TOKYO
+
+      .articlePage__shareLinks SHARE
+        .articlePage__shareIcons
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+          a.shareLink(href="#")
+            img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+
+      .articlePage__keyword KEYWORD
+
+
+
+    .relationArticles
+      h2.mainBox__mainTitle RELATED ARTICLES
+      h3.mainBox__subTitle 関連記事
+      .contentsLayout--3cols
+        ul.contentsLayout__3items
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+    .newArticles
+      h2.mainBox__title WHAT'S NEW
+      .contentsLayout--3cols
+        ul.contentsLayout__3items
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+    .plartFactory
+      img.plartFactory__link(src="#")
+      a.topPageButton(href="#") PAGE TOP

@@ -1,4 +1,5 @@
 $titleFontSize:1.4rem;
+$subTitleFontSize:1.0rem;
 $articleBoxHeight:200px;
 $bigArticleBoxHeight:400px;
 $moreViewButtonWidth:180px;
@@ -6,6 +7,7 @@ $bannerHeight:100px;
 $pickupSliderHeight:100px;
 $instagramHeight:150px;
 $partnersHeight:300px;
+$plartFactoryLinkHeight:400px;
 
 .clearfix:after{
   content:"";
@@ -18,7 +20,23 @@ $partnersHeight:300px;
   margin:0px;
   margin-bottom: 10px;
   font-size: $titleFontSize;
+  margin-right: 10px;
 }
+
+.mainBox__mainTitle{
+  @extend .mainBox__title;
+  float:left;
+  margin-right: 10px;
+}
+
+.mainBox__subTitle{
+  float:left;
+  font-size: $subTitleFontSize;
+  line-height: $titleFontSize;
+  border-bottom: 0px;
+}
+
+
 .mainBox__whatnew{
   @extend .black-box;
 }
@@ -78,6 +96,10 @@ $partnersHeight:300px;
   text-align: center;
 }
 
+.topPageButton{
+  @extend .moreViewButton;
+}
+
 .banner--1{
   height: $bannerHeight;
   background: brown;
@@ -103,7 +125,6 @@ $partnersHeight:300px;
 .partnersBox{
   height:$partnersHeight;
   background: red;
-
 }
 
 .partners--1{
@@ -113,4 +134,10 @@ $partnersHeight:300px;
 
 .partners--2{
   @include span-columns(1 of 6)
+}
+
+.plartFactory__link{
+  height: $plartFactoryLinkHeight;
+  width:100%;
+  background: red;
 }
