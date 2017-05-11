@@ -37,7 +37,7 @@ block content
 
           .singleArticle__shareLinks
             .shareLinks
-              .shareLinks_title SHARE
+              h5.shareLinks_title SHARE
               a.shareLinks_item(href="#")
                 img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
               a.shareLinks_item(href="#")
@@ -50,15 +50,17 @@ block content
                 img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
 
         .singleArticle__thumbnailBox
-          img.singleArticle__thumbnail(src="")
+          .articleThumbnailBox
+            img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
 
-          .numberBadge
-            .numberBadge__title TOPICS
-            .numberBadge__number
-              .plartStoryNumber(href="")
-                p.plartStoryNumber__title--plart PLART
-                p.plartStoryNumber__title--story  STORY
-                p.plartStoryNumber__number 3月15日号
+            .articleThumbnailBox__badge
+              .numberBadge
+                .numberBadge__title TOPICS
+                .numberBadge__number
+                  .plartStoryNumber(href="")
+                    p.plartStoryNumber__title--plart PLART
+                    p.plartStoryNumber__title--story  STORY
+                    p.plartStoryNumber__number 3月15日号
             
             
 
@@ -71,27 +73,59 @@ block content
             em 蛍光ペン
           p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ
 
+          h1 見出し1
+          h2 見出し2
+          h3 見出し3
+          h4 見出し4
+          h5 見出し5
+
+          p 記事あああ
+            a(href="#") あああああああ p
+            strong ストロング
+            em エンファシス
+            | 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ
+
+
           blockquote
-            h2 title
-            | nakami
+            h2 title ながまが作ってる
+            | nakami なななななながまが作ってる がまが作ってる がまが作ってる がまが作ってる がまが作ってる がまが作ってる 
 
-        h4 PROFILE
-        .singleArticle__profile
-          img.writerImage(src="https://1.bp.blogspot.com/-0-VrA-zoZ0E/WK7fKPKPVkI/AAAAAAABCBQ/1OS-nwYjBMA_iwWKouoLZStze_Uwyc8TwCLcB/s400/pose_furikaeru_man.png")
-          .writerProfile
-            .writerProfile__name 名前
-            .writerProfile__intro 自己紹介。1111年1月1日 滋賀県大津市で生まれる。aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbb
+          table
+            tr
+              td a1
+              td b1
+              td c1
+            tr
+              td a2
+              td b2
+              td c2
+            tr
+              td a3
+              td b3
+              td c3
 
-        h4 EXHIBITION
-        .singleArticle__exhibition
-          .singleArticle__exhibition__title アール・ブリュット？
-          ul.exhibitionInfo
-            li.date xx/yy - xx/zz
-            li.place TOKYO
+          .humanProfile
+            h4.humanProfile__title PROFILE
+            img.humanProfile__image(src="https://1.bp.blogspot.com/-0-VrA-zoZ0E/WK7fKPKPVkI/AAAAAAABCBQ/1OS-nwYjBMA_iwWKouoLZStze_Uwyc8TwCLcB/s400/pose_furikaeru_man.png")
+
+            .humanProfile__desc
+              h5.humanProfile__name 名前
+              .humanProfile__intro 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。自己紹介。1111年1月1日 滋賀県大津市で生まれる。
+
+          h4 EXHIBITION
+          .singleArticle__exhibition
+            .singleArticle__exhibition__title アール・ブリュット？
+            ul.exhibitionInfo
+              li.date xx/yy - xx/zz
+              li.place TOKYO
+          hr.
+
+        hr.noBorder.bigMargin
 
         footer.singleArticle__footer
           .shareLinks
-            .shareLinks_title SHARE
+            h5.shareLinks_title SHARE
+            br
             a.shareLinks_item(href="#")
               img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
             a.shareLinks_item(href="#")
@@ -104,21 +138,48 @@ block content
               img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
 
 
+          hr.noBorder.bigMargin
+        
 
-        .keywordTags KEYWORD
-          ul.keywordTags__list
-            li.keywordTags__item
-              a.keywordTags__link(href="") アール・ブリュット
-            li.keywordTags__item
-              a.keywordTags__link(href="") 杉本 志乃
-            li.keywordTags__item
-              a.keywordTags__link(href="") アール・ブリュット
-            li.keywordTags__item
-              a.keywordTags__link(href="") 杉本 志乃
-            li.keywordTags__item
-              a.keywordTags__link(href="") アール・ブリュット
-            li.keywordTags__item
-              a.keywordTags__link(href="") 杉本 志乃
+          .keywordTags 
+            h5.keywordTags__title KEYWORD
+            ul.keywordTags__list
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
+              li.keywordTags__item
+                a.keywordTags__link(href="") アール・ブリュット
+              li.keywordTags__item
+                a.keywordTags__link(href="") 杉本 志乃
 
 
     .mainBox

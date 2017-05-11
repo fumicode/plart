@@ -1,0 +1,45 @@
+
+$numberBadge-width:250px;
+$numberBadge-height:100px;
+
+$numberBadge-title-font-size:30px;
+$numberBadge-title-padding:10px;
+
+
+.numberBadge{
+  position:relative;
+  width: $numberBadge-width;
+  height: $numberBadge-height;
+}
+
+.numberBadge__title{
+  @extend .black-box--thin;
+
+  box-sizing:border-box;
+  position:absolute;
+    top:$numberBadge-height / 2;
+    left:0px;
+
+  margin-top:-( $numberBadge-title-font-size + $numberBadge-title-padding *2) /2;
+
+
+  font-size:$numberBadge-title-font-size;
+
+  padding: $numberBadge-title-padding;
+
+  width:80%;
+
+
+  background:rgba(255,255,255,0.9);
+
+  line-height:1;
+
+
+}
+
+.numberBadge__number{
+  position:absolute;
+    top:0px;
+    right:0px;
+
+}
