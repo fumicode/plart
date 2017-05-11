@@ -1,0 +1,12 @@
+
+$blackButtonWidth:180px;
+.blackButton{
+  display: block;
+  background: black;
+  color:white;
+  margin-top:10px;
+  margin-bottom: -20px;
+  @include outer-container;
+  width:$blackButtonWidth;
+  text-align: center;
+}

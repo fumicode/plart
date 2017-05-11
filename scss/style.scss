@@ -30,12 +30,16 @@ body{
 @import "featureBox";
 @import "seriesBox";
 @import "contentsLayout";
-@import "moreViewButton";
+@import "blackButton";
 @import "mainBox";
 @import "articleBox";
 @import "sidebarBox";
 @import "articleBox--ranking";
 @import "footerBox";
+@import "singleArticle";
+@import "breadCrumb";
+@import "shareLinks";
+@import "shareIcon";
 
 
 .banner--1{
@@ -73,4 +77,17 @@ body{
 
 .partners--2{
   @include span-columns(1 of 6)
+}
+
+
+
+
+
+
+
+
+.plartFactory__link{
+  height: $plartFactoryLinkHeight;
+  width:100%;
+  background: red;
 }

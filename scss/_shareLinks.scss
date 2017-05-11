@@ -1,0 +1,20 @@
+
+.shareLink{
+}
+
+.shareLinks_title {
+  display:inline-block;
+  margin-right: 5px;
+
+
+}
+
+.shareLinks_item{
+  @extend .n;
+  display:inline-block;
+  margin-right: 5px;
+
+  line-height:1;
+
+
+}

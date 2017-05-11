@@ -1,0 +1,22 @@
+.breadCrumb{
+
+}
+
+.breadCrumb__list{
+}
+
+.breadCrumb__item {
+  display:inline-block;
+  
+  margin-right:0.5em;
+}
+
+.breadCrumb__item--arrow {
+  @extend .breadCrumb__item;
+
+}
+
+.breadCrumb__link{
+  border-color:black;
+}
+
