@@ -21,21 +21,30 @@ $plartStoryNumber-padding-size:10px;
   padding: $plartStoryNumber-padding-size;
 }
 
+
+.plartStoryNumber__title{
+
+  line-height:1;
+  letter-spacing: 2px;
+  margin-bottom:10px;
+}
+
 .plartStoryNumber__title--plart{
+  @extend.plartStoryNumber__title;
+
   font-family:$heading-font-family;
   font-weight:$heading-font-weight;
   font-size: $plartStoryNumber-font-size;
-  letter-spacing: 2px;
-  font-weight: bold;
 }
 
 .plartStoryNumber__title--story{
+  @extend.plartStoryNumber__title;
+
   font-family:$base-font-family;
   font-weight:$base-font-weight;
 
   font-size: $plartStoryNumber-font-size;
-  margin-top: -12px;
-  letter-spacing: 2px;
+
 
 }
 

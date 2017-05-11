@@ -2,17 +2,12 @@ doctype html
 html
   head
     title= title
-    :php
-      wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
-      wp_head();
+
+    - wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
+    - wp_head();
+
   body
     div.page
-      p hogehoge
-      p hogehoge
-      p hogehoge
-      p hogehoge
-      p hogehoge
-      p hogehoge
       div.page__header
         block head
       div.page__content
@@ -24,4 +19,5 @@ html
       div.page__footer
         block foot
 
+      -wp_footer();
 
