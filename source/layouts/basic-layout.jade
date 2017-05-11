@@ -7,13 +7,21 @@ html
       wp_head();
   body
     div.page
+      p hogehoge
+      p hogehoge
+      p hogehoge
+      p hogehoge
+      p hogehoge
+      p hogehoge
       div.page__header
-        include ../includes/head
+        block head
       div.page__content
         div.page__main
           block content
         div.page__sidebar
-          include ../includes/sidebar
+          block sidebar
 
       div.page__footer
-        include ../includes/foot
+        block foot
+
+

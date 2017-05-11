@@ -1,0 +1,21 @@
+
+$seriesBox-font-size:26px;
+
+.seriesBox{
+  @extend .black-box--thin;
+  padding:17px 26px;
+  background:$color-plart-yellow;
+  
+  font-size: $seriesBox-font-size;
+
+  line-height:1;
+
+  .seriesBox__siteTitles{
+
+    font-size: $base-font-size;
+
+    .siteTitle{
+      font-size: $base-font-size;
+    }
+  }
+}

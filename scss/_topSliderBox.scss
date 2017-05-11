@@ -1,0 +1,25 @@
+
+$topSliderBox-height:500px;
+.topSliderBox{
+  @extend .black-box;
+  position:relative;
+  height: $topSliderBox-height;
+}
+.topSliderBox__number{
+  position:absolute;
+    top:$box-padding;
+    right:$box-padding;
+
+}
+
+.topSliderBox__featureBox{
+  position:absolute;
+    bottom:$box-padding;
+    left:$box-padding;
+}
+
+.topSliderBox__seriesBox{
+  position:absolute;
+    bottom:-30px; //高さ
+    right:$box-padding-small;
+}

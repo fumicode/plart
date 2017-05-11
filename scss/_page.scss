@@ -1,12 +1,15 @@
+$page-margin-top:$box-padding * 1.4;
 
 .page{
   @include outer-container;
-  margin-top: 20px;
+  margin-top:$page-margin-top ;
+  margin-bottom:$page-margin-top ;
   width:1200px;
   //padding:0px 100px 0px 100px;
 }
 
 .page__header{
+
 
 }
 
@@ -15,24 +18,29 @@
   }
 
   .page__topSlider{
-    background:brown;
 
   }
 
 .page__content{
-  @include outer-container;
+  @extend .clearfix;
+
+  border-right:solid $box-border-width black;
+
 }
 
 
 .page__main{
-  @include span-columns(3 of 4);
+  box-sizing:border-box;
+  float:left;
+  width:75%;
 
-  background:blue;
 }
 
 .page__sidebar{
-  @include span-columns(1 of 4);
-  background:green;
+  box-sizing:border-box;
+  float:right;
+  width:25%;
+
 }
 
 .page__footer{

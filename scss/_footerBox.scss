@@ -1,0 +1,17 @@
+
+.footerBox{
+  @extend .black-box;
+  @extend .black-box--last;
+
+}
+
+.footerBox__icon{
+  float:right;
+
+  width:109px;
+  height: 76px;
+}
+
+.footerBox__menuBox{
+  clear: both;
+}

@@ -1,27 +1,18 @@
 
 .black-box{
-  margin:-4px;
-  border:8px solid #000;
-  padding:2em;
+  border:$box-border-width solid black;
+  border-bottom-width:0;
+  padding:$box-padding;
+
+}
+
+.black-box--last{
+  border-bottom-width: $box-border-width;
 }
 
 .black-box--thin{
   @extend .black-box;
-  border-width:4px;
-  margin:-2px;
+  border-width:$box-border-width-thin;
+  border-bottom-width:$box-border-width-thin;
 }
 
-
-.topSliderBox{
-  @extend .black-box;
-}
-.mainBox{
-  //@extend .black-box;
-}
-
-.sidebarBox{
-  //@extend .black-box;
-}
-.footerBox{
-  @extend .black-box;
-}

@@ -1,16 +1,6 @@
-$titleFontSize:1.4rem;
-$articleBoxHeight:200px;
-$bigArticleBoxHeight:400px;
-$moreViewButtonWidth:180px;
-$bannerHeight:100px;
-$pickupSliderHeight:100px;
-$instagramHeight:150px;
-$partnersHeight:300px;
 
-.clearfix:after{
-  content:"";
-  clear:both;
-  display: block;
+.mainBox{
+  @extend .black-box;
 }
 
 .mainBox__title{
@@ -18,99 +8,19 @@ $partnersHeight:300px;
   margin:0px;
   margin-bottom: 10px;
   font-size: $titleFontSize;
-}
-.mainBox__whatnew{
-  @extend .black-box;
-}
-.mainBox__backnumber{
-  @extend .black-box;
-}
-.mainBox__banner{
-  @extend .black-box;
-}
-.mainBox__pickup{
-  @extend .black-box;
-}
-.mainBox__instagram{
-  @extend .black-box;
-}
-.mainBox__partners{
-  @extend .black-box;
+  margin-right: 10px;
 }
 
-.contentsLayout--1big2small{
-  @extend .clearfix;
+.mainBox__subTitle{
+  display:inline;
+
+  font-size: $subTitleFontSize;
+  font-family: $base-font-family;
+  font-weight: $base-font-weight;
 }
 
-.contentsLayout--1big2small--big{
-  @include span-columns(2 of 3);
+.mainBox--article{
+  @extend .mainBox;
+  padding-top:80px;
 }
 
-.contentsLayout--1big2small--small{
-  @include span-columns(1 of 3);
-}
-
-.contentsLayout--3cols{
-  clear:both;
-  @include outer-container;
-  li{
-    display: inline-block;
-  }
-}
-
-.contentsLayout__3items{
-}
-
-.contentsLayout__item{
-  @include span-columns(1 of 3);
-  @include omega(3n);
-}
-
-
-.moreViewButton{
-  display: block;
-  background: black;
-  color:white;
-  margin-top:10px;
-  margin-bottom: -20px;
-  @include outer-container;
-  width:$moreViewButtonWidth;
-  text-align: center;
-}
-
-.banner--1{
-  height: $bannerHeight;
-  background: brown;
-  width:100%;
-}
-
-.banner--2{
-  height: $bannerHeight;
-  background: purple;
-  height:180px;
-}
-
-.slider--pickup{
-  height:$pickupSliderHeight;
-  background: red;
-}
-
-.instagramBox{
-  height:$instagramHeight;
-  background: pink;
-}
-
-.partnersBox{
-  height:$partnersHeight;
-  background: red;
-
-}
-
-.partners--1{
-  @include span-columns(1 of 6);
-  margin-right: 5px;
-}
-
-.partners--2{
-  @include span-columns(1 of 6)
-}

@@ -1,0 +1,55 @@
+
+.contentsLayout--1big2small{
+  @extend .clearfix;
+}
+
+.contentsLayout--1big2small--big{
+  @include span-columns(2 of 3);
+}
+
+.contentsLayout--1big2small--small{
+  @include span-columns(1 of 3);
+}
+
+.contentsLayout--3cols{
+  clear:both;
+  @include outer-container;
+  li{
+    display: inline-block;
+  }
+}
+
+.contentsLayout__3items{
+}
+
+.contentsLayout__item{
+  @include span-columns(1 of 3);
+  @include omega(3n);
+}
+
+
+
+$footerTitleFontSize:30px;
+$footeTitleMarginBottom:15px;
+$footerMenuFontSize:10px;
+
+.contentsLayout--3lines{
+  @extend .clearfix;
+}
+.contentsLayout--3lines--menuList{
+  margin: 0px;
+  padding:0px;
+}
+
+.contentsLayout--3lines--menu{
+  float:left;
+  font-size: $footerMenuFontSize;
+  line-height: $footerMenuFontSize;
+  margin-bottom: 0px;
+  margin-right: 5px;
+}
+
+.contentsLayout--3lines--br{
+  margin: 0px;
+  padding:0px;
+}

@@ -1,0 +1,44 @@
+
+
+.breadCrumb{
+  background: green;
+  float: left;
+  margin-bottom:$breadCrumb-marginBottom;
+}
+
+
+
+.writerImage{
+  @include span-columns(1 of 5)
+  display: block;
+  width:$profileImageWidth;
+  height:$profileImageHeight;
+}
+.writerProfile{
+  @include span-columns(4 of 5)
+  display: block;
+}
+.writerProfile__name{
+  font-weight: bold;
+  font-size: $nameFontSize;
+  line-height: $nameFontSize;
+  margin-bottom: $name-marginBottom;
+}
+.writerProfile__intro{
+  font-size: $profileFontSize;
+  line-height: $profileFontSize;
+  word-break: break-all;
+}
+
+
+.keywords{
+
+}
+
+.keyword{
+  background: gray;
+  display: inline-block;
+  color:white;
+  margin-bottom: $keyword-marginBottom;
+  margin-right: $keyword-marginBottom;
+}

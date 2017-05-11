@@ -1,0 +1,49 @@
+
+//サイズはかる
+
+$plartStoryNumber-size:100px;
+$plartStoryNumber-font-size:14px;
+
+$plartStoryNumber-padding-size:10px;
+
+
+.plartStoryNumber{
+
+
+  display: block;
+  background: $color-plart-yellow;
+  width: $plartStoryNumber-size;
+  height: $plartStoryNumber-size;
+  border-radius: $plartStoryNumber-size /2;
+  text-align: center;
+
+  border:$box-border-width-thin solid #000;
+  padding: $plartStoryNumber-padding-size;
+}
+
+.plartStoryNumber__title--plart{
+  font-family:$heading-font-family;
+  font-weight:$heading-font-weight;
+  font-size: $plartStoryNumber-font-size;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.plartStoryNumber__title--story{
+  font-family:$base-font-family;
+  font-weight:$base-font-weight;
+
+  font-size: $plartStoryNumber-font-size;
+  margin-top: -12px;
+  letter-spacing: 2px;
+
+}
+
+.plartStoryNumber__number{
+  font-size: 12px;
+
+  margin:auto;
+  margin-top: -6px;
+  padding-top: 6px;
+  border-top: solid 1px black;
+}

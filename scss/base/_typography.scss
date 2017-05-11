@@ -28,6 +28,7 @@ h4,
 h5,
 h6 {
   font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
   //font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
@@ -69,6 +70,14 @@ h3.n,
 h4.n{
   font-size:1em;
 }
+
+
+h4,
+.h4{
+  border-bottom: solid 1px $color-plart-gray;
+  padding-bottom: 1em;
+}
+
 
 
 
@@ -126,4 +135,27 @@ table.n{
       padding:0;
     }
   }
+}
+
+
+$gradient:68%;
+em{
+  background: linear-gradient(transparent $gradient, #d5ff00 $gradient);
+}
+
+$blockquote-padding:20px;
+blockquote{
+  //background: green;
+  border-top: solid 1px gray;
+  border-bottom: solid 1px gray;
+  padding:0px $blockquote-padding 0px $blockquote-padding;
+}
+
+a{
+  border-bottom:solid 1px $color-plart-gray;
+}
+
+
+a.n{
+  border-bottom:none;
 }

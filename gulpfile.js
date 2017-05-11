@@ -12,7 +12,7 @@ var riot = require("gulp-riot");
 //var browser = require("browser-sync");
 gulp.task("scss", function(){ 
   console.log(neat.includePaths);
-  return gulp.src("./scss/*.scss")
+  return gulp.src("./scss/**/*.scss")
 
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>") //<-
@@ -46,7 +46,7 @@ gulp.task('watch',function () {
 });
 
 gulp.task('templates', function() {
-  gulp.src('./source/**/*.jade')
+  gulp.src('./source/*.jade')
     .pipe(jade({
         locals: {
           title: 'OMG THIS IS THE TITLE'

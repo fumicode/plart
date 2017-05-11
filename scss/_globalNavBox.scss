@@ -1,17 +1,50 @@
 
+$globalNavBox-height:333px; //あとで設定！
+
+$titleBox-margin-left: 55px;
+$titleBox-margin-top: 41px;
+
+
 .globalNavBox{
+
   @extend .black-box;
 
   position:relative;
 
+  height: $globalNavBox-height - 2 * $box-padding;
 
 }
 
-.globalNavBox__siteDesc{}
+
+
+.globalNavBox__plartLogo{  // あとでやる
+  position:absolute;
+    top: 36px;
+    right: 26px;
+
+  width: 109px;
+  height: 76px;
+
+
+}
+
+.globalNavBox__titleBox{
+  margin-left:$titleBox-margin-left - $box-padding;
+  margin-top:$titleBox-margin-top - $box-padding;
+  
+}
+
+.globalNavBox__siteDesc{
+  line-height:1; 
+  margin-bottom:18px;
+
+}
 
 .globalNavBox__siteTitle{
   line-height:1; 
 
-  margin-bottom:100px;
+  margin:0px;
+  
+
 }
 
