@@ -12,175 +12,130 @@ block foot
 block content
   .mainBoxContainer
     .mainBox--article
-      article.singleArticle
-        .breadCrumb
-          ul.breadCrumb__list
-            li.breadCrumb__item 
-              a.breadCrumb__link(href="#") top 
+      - while( have_posts() ) : the_post()
+        article.singleArticle
+          .breadCrumb
+            ul.breadCrumb__list
+              li.breadCrumb__item
+                a.breadCrumb__link(href="/") top
 
-            li.breadCrumb__item--arrow > 
-            li.breadCrumb__item 
-              a.breadCrumb__link(href="#") aa 
-
-            li.breadCrumb__item--arrow > 
-            li.breadCrumb__item 
-              a.breadCrumb__link(href="#") aa 
-
-        .singleArticle__header
-          .singleArticle__titleBox
-            h1.singleArticle__title 心に届く |  株式会社
-
-          .singleArticle__right 
-            span.singleArticle__writer PLART編集部 
-            span.singleArticle__number 2017.3.15
+              li.breadCrumb__item--arrow > 
+              li.breadCrumb__item 
+                - $cat = get_the_category()[0];
+                a.breadCrumb__link(href="/category/<?= $cat->slug?>") ART ✕ <?= $cat->name ?>
 
 
-          .singleArticle__shareLinks
-            .shareLinks
-              h5.shareLinks_title SHARE
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              li.breadCrumb__item--arrow >
+              li.breadCrumb__item
+                a.breadCrumb__link(href="<? the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
+                
 
-        .singleArticle__thumbnailBox
-          .articleThumbnailBox
-            img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+          .singleArticle__header
+            .singleArticle__titleBox
+              h1.singleArticle__title 
+                -the_title()
 
-            .articleThumbnailBox__badge
-              .numberBadge
-                .numberBadge__title TOPICS
-                .numberBadge__number
-                  .plartStoryNumber(href="")
-                    p.plartStoryNumber__title--plart PLART
-                    p.plartStoryNumber__title--story  STORY
-                    p.plartStoryNumber__number 3月15日号
-            
-            
-
-        .singleArticle__content
-          p 記事ああああああああああ
-          p 記事ああああああああああ
-          p 記事ああああああああああ
-          p 記事ああああああああああ
-          p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ
-            em 蛍光ペン
-          p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ
-
-          h1 見出し1
-          h2 見出し2
-          h3 見出し3
-          h4 見出し4
-          h5 見出し5
-
-          p 記事あああ
-            a(href="#") あああああああ p
-            strong ストロング
-            em エンファシス
-            | 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ p 記事ああああああああああ
+            .singleArticle__right
+              span.singleArticle__writer PLART編集部 
+              span.singleArticle__number <?= get_the_date('Y')?>.<?= get_the_date('n')?>.15
 
 
-          blockquote
-            h2 title ながまが作ってる
-            | nakami なななななながまが作ってる がまが作ってる がまが作ってる がまが作ってる がまが作ってる がまが作ってる 
+            .singleArticle__shareLinks
+              .shareLinks
+                h5.shareLinks_title SHARE
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
 
-          table
-            tr
-              td a1
-              td b1
-              td c1
-            tr
-              td a2
-              td b2
-              td c2
-            tr
-              td a3
-              td b3
-              td c3
+          .singleArticle__thumbnailBox
+            .articleThumbnailBox
+              img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
 
-          .humanProfile
-            h4.humanProfile__title PROFILE
-            img.humanProfile__image(src="https://1.bp.blogspot.com/-0-VrA-zoZ0E/WK7fKPKPVkI/AAAAAAABCBQ/1OS-nwYjBMA_iwWKouoLZStze_Uwyc8TwCLcB/s400/pose_furikaeru_man.png")
+              .articleThumbnailBox__badge
+                .numberBadge
+                  .numberBadge__title TOPICS
+                  .numberBadge__number
+                    .plartStoryNumber(href="")
+                      p.plartStoryNumber__title--plart PLART
+                      p.plartStoryNumber__title--story  STORY
+                      p.plartStoryNumber__number <?= get_the_date('n')?>月15日号
 
-            .humanProfile__desc
-              h5.humanProfile__name 名前
-              .humanProfile__intro 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。 自己紹介。1111年1月1日 滋賀県大津市で生まれる。自己紹介。1111年1月1日 滋賀県大津市で生まれる。
 
-          h4 EXHIBITION
-          .singleArticle__exhibition
-            .singleArticle__exhibition__title アール・ブリュット？
-            ul.exhibitionInfo
-              li.date xx/yy - xx/zz
-              li.place TOKYO
-          hr.
 
-        hr.noBorder.bigMargin
-
-        footer.singleArticle__footer
-          .shareLinks
-            h5.shareLinks_title SHARE
-            br
-            a.shareLinks_item(href="#")
-              img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-            a.shareLinks_item(href="#")
-              img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-            a.shareLinks_item(href="#")
-              img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-            a.shareLinks_item(href="#")
-              img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-            a.shareLinks_item(href="#")
-              img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-
+          .singleArticle__content
+            - the_content();
 
           hr.noBorder.bigMargin
-        
 
-          .keywordTags 
-            h5.keywordTags__title KEYWORD
-            ul.keywordTags__list
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
-              li.keywordTags__item
-                a.keywordTags__link(href="") アール・ブリュット
-              li.keywordTags__item
-                a.keywordTags__link(href="") 杉本 志乃
+          footer.singleArticle__footer
+            .shareLinks
+              h5.shareLinks_title SHARE
+              br
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
 
+
+            hr.noBorder.bigMargin
+
+
+            .keywordTags
+              h5.keywordTags__title KEYWORD
+              ul.keywordTags__list
+                // タグを表示
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+                li.keywordTags__item
+                  a.keywordTags__link(href="") アール・ブリュット
+                li.keywordTags__item
+                  a.keywordTags__link(href="") 杉本 志乃
+
+      - endwhile;
+      //rewind 的なのいるっけ？
 
     .mainBox
       h2.mainBox__title RELATED ARTICLES

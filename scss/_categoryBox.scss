@@ -61,6 +61,17 @@ $categoryBox-height:160px;
   width:24%;
 }
 
+
+.categoryBox.--place .categoryBox__catName.--place,
+.categoryBox.--people .categoryBox__catName.--people,
+.categoryBox.--thing .categoryBox__catName.--thing{
+
+  a{
+    color:$color-plart-gray;
+  }
+
+}
+
 .categoryBox__catContent {
   width:50%;
 

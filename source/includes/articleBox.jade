@@ -1,13 +1,14 @@
 mixin articleBox(modifier)
-  div(class="articleBox#{ modifier ? '--' + modifier :''}")
-    header.articleBox__header
-      .articleBox__category
-        .articleBox__category--ART ART  
-        .articleBox__category--cross ✕
-        .articleBox__category--genre
-          - $category = get_the_category()[0];
-          | <?=$category->cat_name?> 
-      .articleBox__number <?= get_the_date('n')?>月15日号
-    img(class="articleBox__thumbnail" src="http://kingofwallpapers.com/demo/demo-002.jpg")
-    .articleBox__title <?= the_title() ?>
+  a.n(href="<? the_permalink()?>")
+    div(class="articleBox#{ modifier ? '--' + modifier :''}")
+      header.articleBox__header
+        .articleBox__category
+          .articleBox__category--ART ART
+          .articleBox__category--cross ✕
+          .articleBox__category--genre
+            - $category = get_the_category()[0];
+            | <?=$category->cat_name?> 
+        .articleBox__number <?= get_the_date('n')?>月15日号
+      img(class="articleBox__thumbnail" src="http://kingofwallpapers.com/demo/demo-002.jpg")
+      .articleBox__title <?= the_title() ?>
 

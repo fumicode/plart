@@ -1,10 +1,10 @@
 
-$topSliderBox-height:500px;
 .topSliderBox{
   @extend .black-box;
   position:relative;
-  height: $topSliderBox-height;
+  height: $topSliderBox-height -2px;
 }
+
 .topSliderBox__number{
   position:absolute;
     top:$box-padding;

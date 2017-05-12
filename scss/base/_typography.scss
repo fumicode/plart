@@ -35,7 +35,7 @@ h6 {
 }
 
 
-//1 1 2 3 5 8 13 21 34 55 
+//1 1 2 3 5 8 13 21 34 55
 h1,.h1{
   font-size:1.4em;
 }
@@ -148,12 +148,21 @@ em{
   background: linear-gradient(transparent $gradient, #d5ff00 $gradient);
 }
 
-$blockquote-padding:20px;
+$blockquote-padding:30px;
+$quoteImage-width: $blockquote-padding - 15px;
+$quoteImage-height: 35px;
+$quoteImage-margin:20px;
 blockquote{
   //background: green;
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
-  padding:0px $blockquote-padding 0px $blockquote-padding;
+  //padding:0px $blockquote-padding 0px $blockquote-padding;
+  padding:$blockquote-padding;
+  background-image: url(./public/image/quote_left.png),
+                    url(./public/image/quote_right.png);
+  background-repeat: no-repeat,no-repeat;
+  background-position: left top $quoteImage-margin,right bottom $quoteImage-margin;
+  background-size: $quoteImage-width $quoteImage-height, $quoteImage-width $quoteImage-height;
 }
 
 a{

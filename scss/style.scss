@@ -34,6 +34,7 @@ body{
 @import "globalNav";
 @import "globalNavBox";
 @import "topSliderBox";
+@import "topSlider";
 @import "plartStoryNumber";
 @import "featureBox";
 @import "seriesBox";
@@ -94,12 +95,17 @@ body{
 
 
 
-
-
-
-
 .plartFactory__link{
   height: $plartFactoryLinkHeight;
   width:100%;
   background: red;
 }
+
+
+
+
+/////////////////  plugin /////////////////
+@import "slick-theme";
+
+
+
