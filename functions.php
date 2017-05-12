@@ -1,5 +1,10 @@
 <?php
 
+add_filter( 'wp_pagenavi_class_page', 'custom_wp_pagenavi_class_page' );
+function custom_wp_pagenavi_class_page($class_name) {
+	return 'pager';
+}
+
 function set_article_type(){
 
   register_taxonomy(

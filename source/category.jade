@@ -28,6 +28,8 @@ block content
       .contentsLayout--3cols
         ul.contentsLayout__3items
           - $post_index = 0
+          - $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
           - while ( have_posts() ) : the_post()
             - $post_index ++
             li.contentsLayout__item
@@ -47,7 +49,8 @@ block content
                   - the_title();
 
           - endwhile;
-
+          
+      - if(function_exists('wp_pagenavi')) { wp_pagenavi(); };
 
 
 
