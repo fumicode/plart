@@ -1,58 +1,92 @@
 
+
+
+
 .page__topSlider
   .topSliderBox
-    #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
-      div.topSlider__slide
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+    //まずは、どのタームなのかを調べる
+    //固定ページをとってきて、それのカスタムフィールドをみる。
+    :php
+      $topic_setting_page = wc_get_page_by_slug("topic_setting");
+      $page_id = $topic_setting_page->ID;
 
-      div.topSlider__slide
+      //これが、カテゴリの名前
+      $term_name = get_post_meta($page_id, "topic_setting",true);
+    
+      $args = array(
+        'post_type' => 'post',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'article_type',
+            'field' => 'slug',
+            'terms' => $term_name,
+          ),
+        ),
+      );
 
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+      $the_query = new WP_Query( $args );
 
-      div.topSlider__slide
+    
+      //そのカテゴリに属してるやつを全部表示する
 
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+    - if($the_query->have_posts()): 
 
-      div.topSlider__slide
-
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-
-      div.topSlider__slide
-
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-
-      div.topSlider__slide
-
-        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-
-      // 下記が、body↓に必要だからね  
-        script.
-          $("#topSlider").slick();
+      #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
+        - while($the_query->have_posts()): $the_query->the_post();
         
+          div.topSlider__slide
+            a.topSlider__link(href="<? the_permalink()?>")
+              - the_title();
+
+              img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
 
 
-    .topSliderBox__number
+        - endwhile;
 
-      a.plartStoryNumber(href="")
-        p.plartStoryNumber__title--plart PLART
-        p.plartStoryNumber__title--story  STORY
-        p.plartStoryNumber__number 3月15日号
-
-    .topSliderBox__featureBox
-      .featureBox
-        .featureBox__number 3月15日号 特集
-        br
-        .featureBox__title 女性の感性
+        //これは下に書いてあるので大丈夫
+        //- wp_reset_postdata();
 
 
-    .topSliderBox__seriesBox
-      .seriesBox SERIES 
-
-        span.seriesBox__siteTitles
-          span.siteTitle 
-            span.siteTitle__plart PLART
-            span.siteTitle__story STORY
-          | 連載
 
 
+      .topSliderBox__number
+
+        a.plartStoryNumber(href="")
+          p.plartStoryNumber__title--plart PLART
+          p.plartStoryNumber__title--story  STORY
+          p.plartStoryNumber__number <?= get_the_date('n') ?>月15日号
+
+      .topSliderBox__featureBox
+        .featureBox
+          .featureBox__number <?= get_the_date('n') ?>月15日号 特集
+          br
+          .featureBox__title 
+            :php
+              $term = get_term_by('slug', $term_name, 'article_type');
+              echo $term->name;
+              //echo $child_term->name
+
+
+      .topSliderBox__seriesBox
+        .seriesBox SERIES 
+
+          span.seriesBox__siteTitles
+            span.siteTitle 
+              span.siteTitle__plart PLART
+              span.siteTitle__story STORY
+            | 連載
+
+      //スライダーのをここでちょっと遅れてリセットする。
+      //何月ごうとか、カテゴリー名を表示するためにまだポストを使うから。
+      - wp_reset_postdata();
+
+    - else:
+      hr.bigMargin
+      p <?=$term_name?> の特集は存在しません。以下のことを確認してください
+      ul
+        li 特集カテゴリ名が、特集の子カテゴリとして存在していること 
+        li 設定の特集スラッグと実際の特集スラッグが一致していること
+        li その特集の記事が存在していること
+
+    - endif;
 

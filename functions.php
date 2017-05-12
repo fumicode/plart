@@ -28,5 +28,22 @@ add_action('init', 'set_article_type');
 
 
 
+/**
+ *  * Get a page object by slug.
+ *   * https://codex.wordpress.org/Template_Tags/get_posts
+ *    */
+function wc_get_page_by_slug( $slug = '' ) {
+  $pages = get_posts(
+    array(
+      'post_type' => 'page',
+      'name' => $slug,
+      'posts_per_page' => 1
+    )
+  );
+
+  return isset( $pages[0] ) ? $pages[0] : false;
+}
+
+
 
 
