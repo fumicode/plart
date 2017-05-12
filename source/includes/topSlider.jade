@@ -1,13 +1,34 @@
 
 .page__topSlider
   .topSliderBox
+    #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
+      div.topSlider__slide
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
 
-      
-    .topSlider
-      p slide
-      p slide
-      p slide
-      p slide
+      div.topSlider__slide
+
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      div.topSlider__slide
+
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      div.topSlider__slide
+
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      div.topSlider__slide
+
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      div.topSlider__slide
+
+        img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      // 下記が、body↓に必要だからね  
+        script.
+          $("#topSlider").slick();
+        
 
 
     .topSliderBox__number

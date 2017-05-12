@@ -11,20 +11,28 @@ div.page__globalNav
           span.siteTitle__story STORY
 
 
-    .categoryBox
+    -  if(is_category()){
+    -    $cat_id=get_query_var('cat');
+    -    $cat=get_category($cat_id);
+    -    $cat_slug = $cat->category_nicename;  
+    -    $cat_name = $cat->name;
+    -  }
+
+
+    .categoryBox(class="<?= $cat ? '--'.$cat_slug : '' ?>")
       table.categoryBox__table
         tr
           td.categoryBox__art(rowspan="3") ART
           td.categoryBox__cross(rowspan="3") ✕
-          td.categoryBox__catName
+          td.categoryBox__catName.--people
             a(href="/category/people") PEOPLE
           td.categoryBox__catContent 人、アーティスト
         tr
-          td.categoryBox__catName
+          td.categoryBox__catName.--place
             a(href="/category/place") PLACE
           td.categoryBox__catContent  場、空間、
         tr
-          td.categoryBox__catName
+          td.categoryBox__catName.--thing
             a(href="/category/thing") THING
           td.categoryBox__catContent モノ、コト
 

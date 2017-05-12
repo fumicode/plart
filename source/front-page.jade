@@ -1,5 +1,11 @@
 extends layouts/basic-layout
 
+block head_end
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+
+
+  
+
 block head
   include ./includes/head
   include ./includes/topSlider
@@ -10,9 +16,16 @@ block sidebar
 block foot
   include ./includes/foot
 
+block body_end
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  script.
+    $("#topSlider").slick();
+
+
 block content
   include ./includes/articleBox
-
   .mainBoxContainer
     .mainBox
 

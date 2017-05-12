@@ -6,6 +6,7 @@ html
     - wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
     - wp_head();
 
+    block head_end
   body
     div.page
       div.page__header
@@ -20,4 +21,4 @@ html
         block foot
 
       -wp_footer();
-
+    block body_end
