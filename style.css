@@ -374,7 +374,7 @@ a.button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -408,7 +408,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-size: 1.6rem; }
   input.inline,
   label.inline,
@@ -430,7 +430,7 @@ select[multiple=multiple] {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-size: 1.6rem;
   margin-bottom: 1em;
   padding: 0.66667em;
@@ -533,9 +533,9 @@ html {
 
 body {
   color: #333;
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-feature-settings: "kern", "liga", "pnum";
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 2; }
 
 h1,
@@ -544,22 +544,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   line-height: 1.2;
   margin: 0 0 1em; }
 
 h1, .h1 {
-  font-size: 1.4em; }
+  font-size: 2.6rem; }
 
 h2, .h2 {
-  font-size: 1.4em; }
+  font-size: 2.6rem; }
 
 h3, .h3 {
-  font-size: 1.4em; }
+  font-size: 2.6rem; }
 
 h4, .h4 {
-  font-size: 1em; }
+  font-size: 1.8rem; }
 
 h4,
 .h4 {
@@ -567,10 +567,10 @@ h4,
   padding-bottom: 1em; }
 
 h5, .h5 {
-  font-size: 1em; }
+  font-size: 1.3rem; }
 
-h6, .ho6 {
-  font-size: 1em; }
+h6, .h6 {
+  font-size: 1.3rem; }
 
 h1.n, h1.shareLinks_item,
 h2.n,
@@ -583,7 +583,7 @@ h5.n,
 h5.shareLinks_item,
 h6.n,
 h6.shareLinks_item {
-  font-size: 1em; }
+  font-size: 1.3rem; }
 
 p {
   margin: 0 0 1em; }
@@ -620,7 +620,7 @@ picture {
   max-width: 100%; }
 
 .big {
-  font-size: 1.4em; }
+  font-size: 1.8rem; }
 
 table.n, table.shareLinks_item {
   border: none;
@@ -636,6 +636,7 @@ table.n, table.shareLinks_item {
       padding: 0; }
 
 em {
+  font-style: normal;
   background: linear-gradient(transparent 68%, #d5ff00 68%); }
 
 blockquote {
@@ -696,15 +697,15 @@ a.n, a.shareLinks_item {
   width: 326px; }
 
 .siteTitle {
-  font-size: 36px;
-  letter-spacing: 0.2em; }
+  font-size: 3rem;
+  letter-spacing: 0.3em; }
 
 .siteTitle__plart {
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold; }
 
 .siteTitle__story {
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
 .categoryBox {
@@ -719,7 +720,7 @@ a.n, a.shareLinks_item {
   background: white; }
 
 .categoryBox__table {
-  font-size: 22px;
+  font-size: 1.8rem;
   margin: 0; }
   .categoryBox__table td {
     margin: 0;
@@ -727,15 +728,15 @@ a.n, a.shareLinks_item {
     border: none; }
 
 .categoryBox__art {
-  font-family: "Verdana", "Geneva", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: bold;
   width: 17%;
-  font-size: 32px;
-  letter-spacing: 2px; }
+  font-size: 2.6rem;
+  letter-spacing: 0.3em; }
 
 .categoryBox__cross {
   text-align: center;
-  font-size: 32px;
+  font-size: 2.6rem;
   width: 9%; }
 
 .categoryBox__catName {
@@ -751,7 +752,7 @@ a.n, a.shareLinks_item {
 
 .categoryBox__catContent {
   width: 50%;
-  font-size: 16px; }
+  font-size: 1rem; }
   .categoryBox__catContent a {
     color: #000;
     text-decoration: none; }
@@ -822,36 +823,42 @@ a.n, a.shareLinks_item {
   height: 540px; }
 
 .plartStoryNumber {
+  box-sizing: border-box;
   display: block;
   background: #e6ff00;
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+  width: 145px;
+  height: 145px;
+  border-radius: 72.5px;
   text-align: center;
   border: 2px solid #000;
-  padding: 10px; }
+  padding: 36px 31px;
+  font-size: 1.8rem;
+  text-align: justify;
+  -moz-text-align-last: justify;
+  text-align-last: justify; }
 
 .plartStoryNumber__title, .plartStoryNumber__title--plart, .plartStoryNumber__title--story {
   line-height: 1;
-  letter-spacing: 2px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  -moz-text-align-last: justify;
+  text-align-last: justify;
+  width: 100%; }
 
 .plartStoryNumber__title--plart {
-  font-family: "Verdana", "Geneva", sans-serif;
-  font-weight: bold;
-  font-size: 14px; }
+  font-family: "Raleway", sans-serif;
+  font-weight: bold; }
 
 .plartStoryNumber__title--story {
-  font-family: "Verdana", "Geneva", sans-serif;
-  font-weight: normal;
-  font-size: 14px; }
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-weight: normal; }
 
 .plartStoryNumber__number {
-  font-size: 12px;
+  width: 100%;
   margin: auto;
   margin-top: -6px;
   padding-top: 6px;
-  border-top: solid 1px black; }
+  border-top: solid 1px black;
+  font-size: 1.3rem; }
 
 .featureBox__number {
   display: inline-block;
@@ -953,13 +960,14 @@ a.n, a.shareLinks_item {
   padding: 0px;
   margin: 0px;
   margin-bottom: 10px;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin-right: 10px; }
 
 .mainBox__subTitle {
   display: inline;
-  font-size: 1rem;
-  font-family: "Verdana", "Geneva", sans-serif;
+  margin-left: 1em;
+  font-size: 1.3rem;
+  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
 .mainBox--article {
@@ -985,30 +993,27 @@ a.n, a.shareLinks_item {
   overflow: hidden; }
 
 .articleBox__category {
-  float: left; }
+  float: left;
+  font-size: 1.3rem; }
 
 .articleBox__category--ART {
   font-weight: bold;
-  font-size: 13px;
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
 .articleBox__category--cross {
-  font-size: 11px;
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
 .articleBox__category--genre {
-  font-size: 13px;
   line-height: 20px;
   float: left; }
 
 .articleBox__number {
   float: right;
   background: #e6ff00;
-  font-size: 13px;
   line-height: 20px;
   padding-left: 7px;
   padding-right: 7px; }
@@ -1023,7 +1028,6 @@ a.n, a.shareLinks_item {
 
 .articleBox__title {
   clear: both;
-  font-size: 10px;
   word-break: break-all;
   line-height: 2;
   height: 80px;
@@ -1091,9 +1095,7 @@ a.n, a.shareLinks_item {
 
 .singleArticle__title {
   margin-top: 2em;
-  margin-bottom: 1em;
-  background: linear-gradient(transparent 68%, #d5ff00 68%);
-  display: inline-block; }
+  margin-bottom: 1em; }
 
 .singleArticle__right {
   float: right; }
@@ -1120,13 +1122,13 @@ a.n, a.shareLinks_item {
 
 .numberBadge {
   position: relative;
-  width: 250px;
-  height: 100px; }
+  width: 290px;
+  height: 145px; }
 
 .numberBadge__title {
   box-sizing: border-box;
   position: absolute;
-  top: 50px;
+  top: 72.5px;
   left: 0px;
   margin-top: -25px;
   font-size: 30px;
@@ -1142,6 +1144,9 @@ a.n, a.shareLinks_item {
 
 .articleThumbnailBox {
   position: relative; }
+
+.articleThumbnailBox__image {
+  width: 100%; }
 
 .articleThumbnailBox__badge {
   position: absolute;

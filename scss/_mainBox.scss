@@ -3,21 +3,25 @@
   @extend .black-box;
 }
 
+
 .mainBox__title{
   padding:0px;
   margin:0px;
   margin-bottom: 10px;
-  font-size: $titleFontSize;
+  font-size: $font-size-semibig;
   margin-right: 10px;
 }
 
 .mainBox__subTitle{
   display:inline;
 
-  font-size: $subTitleFontSize;
+  margin-left:1em;
+
+  font-size: $font-size-normal;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
 }
+
 
 .mainBox--article{
   @extend .mainBox;

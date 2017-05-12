@@ -3,9 +3,6 @@ $articleThumbnailHeight:170px;
 $articleBox-padding:15px;
 $articleBoxTitleHeight:$titleFontSize*2*4;
 $articleBoxHeader-marginBottom:10px;
-$categoryFontiSize-ART:13px; //ART と CROSS のpx差は2pxにする
-$categoryFontiSize-CROSS:11px;
-$categoryFontiSize-GENRE:13px;
 $categoryLineHeight:20px;
 $numberFontSize:13px;
 $thumbnailMarginBottom:5px;
@@ -43,25 +40,23 @@ $thumbnailMarginBottom:5px;
 
 .articleBox__category{
   float: left;
+  font-size: $font-size-normal;
 }
 
 .articleBox__category--ART{
   font-weight: bold;
-  font-size: $categoryFontiSize-ART;
   line-height: $categoryLineHeight;
   float: left;
   margin-right: 4px;
 }
 
 .articleBox__category--cross{
-  font-size: $categoryFontiSize-CROSS;
   line-height: $categoryLineHeight;
   float:left;
   margin-right: 4px;
 }
 
 .articleBox__category--genre{
-  font-size: $categoryFontiSize-GENRE;
   line-height: $categoryLineHeight;
   float:left;
 }
@@ -69,7 +64,6 @@ $thumbnailMarginBottom:5px;
 .articleBox__number{
   float: right;
   background:$color-plart-yellow;
-  font-size: $numberFontSize;
   line-height: $categoryLineHeight;
   padding-left: $categoryLineHeight - $numberFontSize;
   padding-right: $categoryLineHeight - $numberFontSize;
@@ -101,7 +95,6 @@ $thumbnailMarginBottom:5px;
 
 .articleBox__title{
   clear:both;
-  font-size: $titleFontSize;
   word-break: break-all;
   line-height: 2;
   height:$articleBoxTitleHeight;
