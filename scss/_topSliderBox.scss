@@ -2,7 +2,11 @@
 .topSliderBox{
   @extend .black-box;
   position:relative;
-  height: $topSliderBox-height -2px;
+  height: $topSliderBox-height ;
+
+  box-sizing:content-box;
+  padding:0;
+  
 }
 
 .topSliderBox__number{

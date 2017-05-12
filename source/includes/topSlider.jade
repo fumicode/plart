@@ -1,7 +1,4 @@
 
-
-
-
 .page__topSlider
   .topSliderBox
     //まずは、どのタームなのかを調べる
@@ -15,6 +12,7 @@
     
       $args = array(
         'post_type' => 'post',
+        'order' => 'ASC',
         'tax_query' => array(
           array(
             'taxonomy' => 'article_type',
@@ -22,6 +20,7 @@
             'terms' => $term_name,
           ),
         ),
+
       );
 
       $the_query = new WP_Query( $args );
@@ -35,10 +34,13 @@
         - while($the_query->have_posts()): $the_query->the_post();
         
           div.topSlider__slide
-            a.topSlider__link(href="<? the_permalink()?>")
-              - the_title();
+            a.n.topSlider__link(href="<? the_permalink()?>")
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("slider", array('class'=>'topSlider__image'));
+              - else:
+                img.topSlider__image(src="<?= get_stylesheet_directory_uri();?>/public/image/thumb4x3.png" width="1200" height="540")
 
-              img.topSlider__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              - endif;
 
 
         - endwhile;

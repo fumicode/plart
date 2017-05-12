@@ -9,7 +9,6 @@ $categoryFontiSize-GENRE:13px;
 $categoryLineHeight:20px;
 $numberFontSize:13px;
 $thumbnailMarginBottom:5px;
-@import "normalize";
 
 .articleBox-base{
   padding:$articleBox-padding 0px $articleBox-padding 0px;
@@ -20,21 +19,21 @@ $thumbnailMarginBottom:5px;
 .articleBox{
   @extend .articleBox-base;
   border-top:solid 1px $color-plart-gray;
+
+  &.--big{
+    border-top-width:0;
+    margin-bottom: 1px;
+    padding-top: 0px;
+  }
+
+  &.--smalltop{
+    border-top-width:0;
+    margin-bottom: 1px;
+    padding-top: 0px;
+  }
+
 }
 
-.articleBox--smalltop{
-  @extend .articleBox-base;
-  border-top-width:0;
-  margin-bottom: 1px;
-  padding-top: 0px;
-}
-
-.articleBox--big{
-  @extend .articleBox-base;
-  margin-bottom: 1px;
-  padding-top: 0px;
-  //background: red;
-}
 
 .articleBox__header{
   margin-bottom: $articleBoxHeader-marginBottom;
@@ -76,22 +75,28 @@ $thumbnailMarginBottom:5px;
   padding-right: $categoryLineHeight - $numberFontSize;
 }
 
+
+.articleBox__thumbnailBox{
+  
+}
+
 .thumbnail-base{
+  
   clear:both;
+  display: block;
+
   width: 100%;
   margin-bottom: $thumbnailMarginBottom;
   padding:0px;
-  display: block;
-  //vertical-align: bottom;
+
+  vertical-align: bottom;
 }
 .articleBox__thumbnail{
   @extend .thumbnail-base;
-  height:$articleThumbnailHeight;
 }
 
 .articleBox--big .articleBox__thumbnail{
   @extend .thumbnail-base;
-  height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $articleBoxHeader-marginBottom + $categoryLineHeight;
 }
 
 .articleBox__title{
