@@ -1351,7 +1351,7 @@ th {
   padding-left: 7px;
   padding-right: 7px; }
 
-.thumbnail-base, .articleBox__thumbnail, .articleBox__thumbnail--big {
+.thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   width: 100%;
   margin-bottom: 5px;
@@ -1361,7 +1361,7 @@ th {
 .articleBox__thumbnail {
   height: 170px; }
 
-.articleBox__thumbnail--big {
+.articleBox--big .articleBox__thumbnail {
   height: 486px; }
 
 .articleBox__title {
