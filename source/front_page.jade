@@ -13,22 +13,33 @@ block foot
 block content
   .mainBoxContainer
     .mainBox
-      h2.mainBox__title WHAT'S NEW
+      - $args = array( 'post_type' => 'post' )
+      - $the_query = new WP_Query( $args )
+      - while (  ) :       -   the_title();
+      -   endwhile;
+      -   wp_reset_postdata();
+
+      h2.mainBox__title WHAT'S NEW oraora
       .contentsLayout--1big2small
-        .contentsLayout--1big2small--big
-          .sliderBox
-            .sliderBox__slide
-              .articleBox--big
-                header.articleBox__header
-                  .articleBox__category
-                    .articleBox__category--ART
-                      | ART
-                    .articleBox__category--genre
-                      | ✕ PEOPLE
-                  .articleBox__number 3月15日号
-                img.articleBox__thumbnail--big(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-                .articleBox__title
-                  | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。長いタイトルだとどうなるのかチェックしています。
+        - if($the_query->have_posts()) : $the_query->the_post()
+
+          .contentsLayout--1big2small--big
+            .sliderBox
+              .sliderBox__slide
+                .articleBox--big
+                  header.articleBox__header
+                    .articleBox__category
+                      .articleBox__category--ART
+                        | ART
+                      .articleBox__category--genre
+                        | ✕ 
+                        - $category = get_the_category()[0];
+                        | <?=$category->cat_name?> 
+                    .articleBox__number <?= get_the_date('n')?>月15日号
+                  img.articleBox__thumbnail--big(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+                  .articleBox__title <?= $the_query->the_title() ?>
+
+        - endif;
         .contentsLayout--1big2small--small
           .articleBox--smalltop
             header.articleBox__header
@@ -53,6 +64,7 @@ block content
 
       .contentsLayout--3cols
         ul.contentsLayout__3items
+          - 
           li.contentsLayout__item
             .articleBox
               header.articleBox__header
@@ -86,6 +98,9 @@ block content
               img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
               .articleBox__title
                 | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+      -   wp_reset_postdata();
+
       a.blackButton(href="#") VIEW MORE 
     .mainBox
       h2.mainBox__title BACK NUMBRE

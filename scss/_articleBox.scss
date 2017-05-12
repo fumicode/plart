@@ -41,9 +41,11 @@ $thumbnailMarginBottom:5px;
   padding:0px;
   overflow: hidden;
 }
+
 .articleBox__category{
   float: left;
 }
+
 .articleBox__category--ART{
   font-weight: bold;
   font-size: $categoryFontiSize-ART;
@@ -51,17 +53,20 @@ $thumbnailMarginBottom:5px;
   float: left;
   margin-right: 4px;
 }
+
 .articleBox__category--cross{
   font-size: $categoryFontiSize-CROSS;
   line-height: $categoryLineHeight;
   float:left;
   margin-right: 4px;
 }
+
 .articleBox__category--genre{
   font-size: $categoryFontiSize-GENRE;
   line-height: $categoryLineHeight;
   float:left;
 }
+
 .articleBox__number{
   float: right;
   background:$color-plart-yellow;
@@ -83,7 +88,8 @@ $thumbnailMarginBottom:5px;
   @extend .thumbnail-base;
   height:$articleThumbnailHeight;
 }
-.articleBox__thumbnail--big{
+
+.articleBox--big .articleBox__thumbnail{
   @extend .thumbnail-base;
   height:$articleThumbnailHeight*2 + $thumbnailMarginBottom + $articleBoxTitleHeight + $articleBox-padding*2 + 1px + $articleBoxHeader-marginBottom + $categoryLineHeight;
 }
