@@ -641,7 +641,11 @@ em {
 blockquote {
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
-  padding: 0px 20px 0px 20px; }
+  padding: 30px;
+  background-image: url(./public/image/quote_left.png), url(./public/image/quote_right.png);
+  background-repeat: no-repeat,no-repeat;
+  background-position: left top 20px, right bottom 20px;
+  background-size: 15px 35px, 15px 35px; }
 
 a {
   border-bottom: solid 1px #dcdcdc; }

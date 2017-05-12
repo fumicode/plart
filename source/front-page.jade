@@ -11,6 +11,8 @@ block foot
   include ./includes/foot
 
 block content
+  include ./includes/articleBox
+
   .mainBoxContainer
     .mainBox
 
@@ -24,10 +26,8 @@ block content
               'after'=>'2017/4/1', // 三月号
               'before'=>'2017/5/1',
             )));
-
         $the_query = new WP_Query( $args )
 
-      include ./includes/articleBox
 
       h2.mainBox__title WHAT'S NEW 
       .contentsLayout--1big2small
