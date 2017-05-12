@@ -1,4 +1,6 @@
-
+.mainBoxContainer{
+  margin-left:-$box-border-width;
+}
 .mainBox{
   @extend .black-box;
 }
