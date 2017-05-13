@@ -85,24 +85,20 @@ block content
 
       - wp_reset_postdata();
 
-      a.blackButton(href="#") VIEW MORE 
+      a.blackButton(href="/articles") VIEW MORE 
     .mainBox
 
+
+      h2.mainBox__title BACK NUMBER
 
       :php
         $args = array( 
           'post_type' => 'post',
-          'date_query' => array( 
-            array( 
-              'compare'=>'BETWEEN', 
-              'inclusive'=>true, 
-              'after'=>'2017/2/1',
-              'before'=>'2017/3/1',
-            )));
-
-        $the_query = new WP_Query( $args )
-
-      h2.mainBox__title BACK NUMBER
+          'category_name' => 'cover',
+          'posts_per_page' => 3, 
+          'offset' => 1
+        );
+        $the_query = new WP_Query( $args );
 
       .contentsLayout--1big2small
         - if($the_query->have_posts()) : $the_query->the_post()
@@ -122,11 +118,13 @@ block content
           - endif;
 
 
-      a.blackButton(href="#") VIEW MORE 
+      a.blackButton(href="/category/cover") VIEW MORE 
 
     .mainBox
       img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
       img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+
+
 
     .mainBox
       h2.mainBox__title PICK UP
