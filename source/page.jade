@@ -1,0 +1,172 @@
+extends layouts/basic-layout
+
+block head
+  include ./includes/head
+
+block sidebar
+  include ./includes/sidebar
+
+block foot
+  include ./includes/foot
+
+block content
+  .mainBoxContainer
+    .mainBox--article
+      - while( have_posts() ) : the_post()
+        article.singleArticle
+          .breadCrumb
+            ul.breadCrumb__list
+              li.breadCrumb__item
+                a.breadCrumb__link(href="/") top
+                
+              li.breadCrumb__item--arrow >
+              li.breadCrumb__item
+                a.breadCrumb__link(href="<? the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
+                
+
+          .singleArticle__header
+            .singleArticle__titleBox
+              h1.singleArticle__title 
+                -the_title()
+
+            .singleArticle__right
+              span.singleArticle__writer PLART編集部 
+              span.singleArticle__number <?= get_the_date('Y')?>.<?= get_the_date('n')?>.15
+
+
+            .singleArticle__shareLinks
+              .shareLinks
+                h5.shareLinks_title SHARE
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                a.shareLinks_item(href="#")
+                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+
+          .singleArticle__thumbnailBox
+            .articleThumbnailBox
+              img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+              .articleThumbnailBox__badge
+                .numberBadge
+                  .numberBadge__title TOPICS
+                  .numberBadge__number
+                    .plartStoryNumber(href="")
+                      p.plartStoryNumber__title--plart PLART
+                      p.plartStoryNumber__title--story  STORY
+                      p.plartStoryNumber__number <?= get_the_date('n')?>月15日号
+
+
+
+          .singleArticle__content
+            - the_content();
+
+          hr.noBorder.bigMargin
+
+          footer.singleArticle__footer
+            .shareLinks
+              h5.shareLinks_title SHARE
+              br
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+              a.shareLinks_item(href="#")
+                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+
+
+            hr.noBorder.bigMargin
+            
+      - endwhile;
+      //rewind 的なのいるっけ？
+
+    .mainBox
+      h2.mainBox__title RELATED ARTICLES
+        span.mainBox__subTitle 関連記事
+
+      .contentsLayout--3cols
+        ul.contentsLayout__3items
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+    .mainBox
+      h2.mainBox__title WHAT'S NEW
+      .contentsLayout--3cols
+        ul.contentsLayout__3items
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+          li.contentsLayout__item
+            .articleBox--smalltop
+              header.articleBox__header
+                .articleBox__category
+                  .articleBox__category--ART ART
+                  .articleBox__category--cross ✕
+                  .articleBox__category--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+              .articleBox__title
+                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+    .mainBox
+      img.plartFactory__link(src="#")
+      a.blackButton(href="#") PAGE TOP
