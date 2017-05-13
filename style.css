@@ -1008,6 +1008,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .articleBox__category {
   float: left;
   font-size: 1.3rem; }
+  .articleBox__category.--unvisible {
+    visibility: hidden; }
 
 .articleBox__category--ART {
   font-weight: bold;
