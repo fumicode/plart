@@ -1,6 +1,15 @@
 <?php
 
+
+////////////////////////////////// wp_pagenaviのクラス名変更//////////////////////////////////////
+
+add_filter( 'wp_pagenavi_class_page', 'custom_wp_pagenavi_class_page' );
+function custom_wp_pagenavi_class_page($class_name) {
+	return 'pager';
+}
+
 ////////////////////////////////// カスタムタクソノミー　//////////////////////////////////////
+
 function set_article_type(){
 
   register_taxonomy(
@@ -24,6 +33,8 @@ function set_article_type(){
 
 add_action('init', 'set_article_type');
 
+
+
 ////////////////////////////////// スラッグからページをゲットする関数 //////////////////////////////////////
 
 /**
@@ -43,7 +54,33 @@ function wc_get_page_by_slug( $slug = '' ) {
 }
 
 
+/////////////////////////////クエリ書き換え//////////////////////////
+
+function query_at_archive( $query ) {
+  // ダッシュボードまたは管理パネルが表示されている、もしくはメインクエリではない場合は処理を中断
+  if ( is_admin() || ! $query->is_main_query() ) return;
+  if ( $query->is_archive() && isset($_GET['post_type'])) {
+      $num = $_GET['post_type'];
+      $tax_query = array(
+          array(
+              'taxonomy' => 'article_type',
+              'field' => 'slug',
+              'terms' => array( $num ),
+          )
+      );
+
+      $query->set( 'tax_query', $tax_query );
+      //$query->set( 'category_name', 'place' );
+      return;
+  }
+}
+add_action( 'pre_get_posts', 'query_at_archive' );
+
+
 ////////////////////////////////// サムネイルの設定//////////////////////////////////////
+
+
+
 
 
 add_theme_support( 'post-thumbnails' );
