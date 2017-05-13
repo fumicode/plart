@@ -3,8 +3,10 @@ html
   head
     title= title
 
+    - wp_enqueue_style('raleway', "https://fonts.googleapis.com/css?family=Raleway:700", array(), time() );
     - wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
     - wp_head();
+
 
     block head_end
   body

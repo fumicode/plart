@@ -1,0 +1,21 @@
+.snsLinks
+{
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+    &--text{
+      margin: 0 10px 0 0;
+    }
+    a{
+      border-bottom: none;
+    }
+  &--icon{
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+    margin: 0 0 0 12px;
+    padding-top: 8px;
+  }
+}

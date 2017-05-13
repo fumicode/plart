@@ -4,7 +4,6 @@ block head_end
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
 
-  
 
 block head
   include ./includes/head
@@ -21,7 +20,18 @@ block body_end
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   script.
-    $("#topSlider").slick();
+    //特集スライダー
+    $("#topSlider").slick({
+      autoplay:true,
+      autoplaySpeed:4000 //4秒
+
+    });
+
+    //what's new のスライダー 
+    $("#sliderBox").slick({
+      autoplay:true,
+      autoplaySpeed:4000 //4秒
+    });
 
 
 block content
@@ -29,28 +39,26 @@ block content
   .mainBoxContainer
     .mainBox
 
-      :php
-        $args = array( 
-          'post_type' => 'post',
-          'date_query' => array( 
-            array( 
-              'compare'=>'BETWEEN', 
-              'inclusive'=>true, 
-              'after'=>'2017/4/1', // 三月号
-              'before'=>'2017/5/1',
-            )));
-        $the_query = new WP_Query( $args )
-
-
       h2.mainBox__title WHAT'S NEW 
       .contentsLayout--1big2small
-        - if($the_query->have_posts()) : $the_query->the_post()
-          .contentsLayout--1big2small--big
-            .sliderBox
+        .contentsLayout--1big2small--big
+
+          #sliderBox.sliderBox
+            :php
+              $args = array( 
+                'post_type' => 'post',
+                'posts_per_page' => 5, //5件表示
+              );
+
+              $the_query = new WP_Query( $args )
+
+            - while($the_query->have_posts()) : $the_query->the_post()
               .sliderBox__slide
                 +articleBox("big")
 
-        - endif;
+            - endwhile;
+            - $the_query->rewind_posts()
+
         .contentsLayout--1big2small--small
 
           - if($the_query->have_posts()) : $the_query->the_post()

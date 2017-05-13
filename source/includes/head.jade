@@ -1,14 +1,17 @@
 div.page__globalNav
   div.globalNavBox
 
-    img.globalNavBox__plartLogo(src="/images/plart_logo.png")
+    img.globalNavBox__plartLogo(src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png")
 
-    header.globalNavBox__titleBox
-      p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
-      h1.globalNavBox__siteTitle
-        span.siteTitle 
-          span.siteTitle__plart PLART
-          span.siteTitle__story STORY
+
+    
+    a.n(href="/")
+      .globalNavBox__titleBox
+        p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
+        h1.globalNavBox__siteTitle
+          span.siteTitle 
+            span.siteTitle__plart PLART
+            span.siteTitle__story STORY
 
 
     -  if(is_category()){

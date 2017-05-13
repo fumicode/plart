@@ -16,7 +16,7 @@ body {
   font-family: $base-font-family;
   font-feature-settings: "kern", "liga", "pnum";
 
-  font-size: $base-font-size;
+  font-size: $font-size-normal;
 
   line-height: $base-line-height;
 }
@@ -29,7 +29,6 @@ h5,
 h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
-  //font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
 }
@@ -37,19 +36,19 @@ h6 {
 
 //1 1 2 3 5 8 13 21 34 55
 h1,.h1{
-  font-size:1.4em;
+  font-size: $font-size-big;
 }
 
 h2,.h2{
-  font-size:1.4em;
+  font-size: $font-size-big;
 }
 
 h3,.h3{
-  font-size:1.4em;
+  font-size: $font-size-big;
 }
 
 h4,.h4{
-  font-size:1em;
+  font-size: $font-size-semibig;
 }
 
 h4,
@@ -59,11 +58,11 @@ h4,
 }
 
 h5,.h5{
-  font-size:1em;
+  font-size: $font-size-normal;
 }
 
-h6,.ho6{
-  font-size:1em;
+h6,.h6{
+  font-size: $font-size-normal;
 }
 
 h1.n,
@@ -72,7 +71,7 @@ h3.n,
 h4.n,
 h5.n,
 h6.n{
-  font-size:1em;
+  font-size:$font-size-normal;
 }
 
 
@@ -122,7 +121,7 @@ picture {
 
 
 .big{
-  font-size: 1.4em;
+  font-size: $font-size-semibig;
 }
 
 
@@ -145,6 +144,7 @@ table.n{
 
 $gradient:68%;
 em{
+  font-style:normal;
   background: linear-gradient(transparent $gradient, #d5ff00 $gradient);
 }
 
@@ -152,14 +152,17 @@ $blockquote-padding:30px;
 $quoteImage-width: $blockquote-padding - 15px;
 $quoteImage-height: 35px;
 $quoteImage-margin:20px;
+
 blockquote{
+  margin-left:0;
+  margin-right:0;
   //background: green;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
+  border-top: solid 1px $color-plart-gray;
+  border-bottom: solid 1px $color-plart-gray;
   //padding:0px $blockquote-padding 0px $blockquote-padding;
+
   padding:$blockquote-padding;
-  background-image: url(./public/image/quote_left.png),
-                    url(./public/image/quote_right.png);
+  background-image: url(./public/image/quote_left.png), url(./public/image/quote_right.png);
   background-repeat: no-repeat,no-repeat;
   background-position: left top $quoteImage-margin,right bottom $quoteImage-margin;
   background-size: $quoteImage-width $quoteImage-height, $quoteImage-width $quoteImage-height;
@@ -169,7 +172,7 @@ a{
   border-bottom:solid 1px $color-plart-gray;
 }
 
-
 a.n{
   border-bottom:none;
 }
+

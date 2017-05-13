@@ -1,69 +1,43 @@
 .sidebarBoxContainer
-  .sidebarBox
-  .sidebarBox
-  .sidebarBox searchbar
+  .sidebarBox.--nopadding
+    a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+      img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+  .sidebarBox.--nopadding
+    a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+      img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+
+  .sidebarBox 
+    //searchbar
+    include ./snsLinks
   .sidebarBox
     h2.sidebarBox__title RANKING
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 1
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 2
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 3
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 4
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 5
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 6
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 7
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 8
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 9
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-    .articleBox--ranking
-      img.articleBox--ranking--thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      .articleBox--ranking--right
-        .articleBox--ranking--rank 10
-        .articleBox--ranking--title
-          | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+
+    :php
+      $args = array( 
+        'post_type' => 'post',
+        'posts_per_page' => 10, //5件表示
+      );
+
+      $the_query = new WP_Query( $args );
+
+    - $sidebar_index = 1;
+    - while($the_query->have_posts()) : $the_query->the_post()
+
+      .articleBox--ranking
+        - if(has_post_thumbnail()):
+        -   the_post_thumbnail("square", array('class'=>'articleBox--ranking--thumbnail'));
+        - else:
+          img.articleBox--ranking--thumbnail(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+        - endif;
+        .articleBox--ranking--right
+          .articleBox--ranking--rank 
+            - echo $sidebar_index ++;
+          .articleBox--ranking--title
+            - the_title();
+
+    - endwhile;
+    - $the_query->rewind_posts()
+      
 
   .sidebarBox
     h2.sidebarBox__title PRESS RELEASE

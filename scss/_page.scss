@@ -26,21 +26,20 @@ $page-margin-top:$box-padding * 1.4;
   @extend .clearfix;
 
   border-right:solid $box-border-width black;
+  border-left:solid $box-border-width black;
 
 }
-
 
 .page__main{
   box-sizing:border-box;
   float:left;
-  width:870px;
-
+  width:870px - $box-border-width;
 }
 
 .page__sidebar{
   box-sizing:border-box;
   float:right;
-  width:326px;
+  width:330px - $box-border-width;
 
 }
 
