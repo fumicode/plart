@@ -85,20 +85,24 @@ block content
 
       - wp_reset_postdata();
 
-      a.blackButton(href="/articles") VIEW MORE 
+      a.blackButton(href="#") VIEW MORE 
     .mainBox
 
-
-      h2.mainBox__title BACK NUMBER
 
       :php
         $args = array( 
           'post_type' => 'post',
-          'category_name' => 'cover',
-          'posts_per_page' => 3, 
-          'offset' => 1
-        );
-        $the_query = new WP_Query( $args );
+          'date_query' => array( 
+            array( 
+              'compare'=>'BETWEEN', 
+              'inclusive'=>true, 
+              'after'=>'2017/2/1',
+              'before'=>'2017/3/1',
+            )));
+
+        $the_query = new WP_Query( $args )
+
+      h2.mainBox__title BACK NUMBER
 
       .contentsLayout--1big2small
         - if($the_query->have_posts()) : $the_query->the_post()
@@ -118,7 +122,7 @@ block content
           - endif;
 
 
-      a.blackButton(href="/category/cover") VIEW MORE 
+      a.blackButton(href="#") VIEW MORE 
 
     .mainBox
       img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
@@ -133,7 +137,7 @@ block content
     .mainBox
       h2.mainBox__title INSTAGRAM
       .instagramBox 
-        - echo do_shortcode('[alpine-phototile-for-instagram id=506 user="plartjp" src="user_recent" imgl="instagram" style="wall" size="M" num="12" shadow="1" border="1" highlight="1" curve="1" align="center" max="100"]');
+        - echo do_shortcode('[alpine-phototile-for-instagram id=725 user="plartjp" src="user_recent" imgl="instagram" style="wall" size="M" num="10" highlight="1" align="center" max="100" nocredit="1"]');
 
 
     .mainBox
