@@ -32,13 +32,13 @@ add_action('init', 'set_article_type');
 function query_at_archive( $query ) {
 // ダッシュボードまたは管理パネルが表示されている、もしくはメインクエリではない場合は処理を中断
 if ( is_admin() || ! $query->is_main_query() ) return;
-if ( $query->is_archive() && isset($_GET['post_type'])) {
-    $num = $_GET['post_type'];
+if ( $query->is_archive() && isset($_GET['article_type'])) {
+    $article_type = $_GET['article_type'];
     $tax_query = array(
         array(
             'taxonomy' => 'article_type',
             'field' => 'slug',
-            'terms' => array( $num ),
+            'terms' => array( $article_type ),
         )
     );
 
