@@ -1180,6 +1180,23 @@ a.n, a.shareLinks_item {
 .keywordTags__link {
   color: white; }
 
+.snsLinks {
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center; }
+  .snsLinks--text {
+    margin: 0 10px 0 0; }
+  .snsLinks a {
+    border-bottom: none; }
+  .snsLinks--icon {
+    display: inline-block;
+    margin-left: 10px;
+    width: 20px;
+    margin: 0 0 0 12px;
+    padding-top: 8px; }
+
 .banner--1 {
   height: 100px;
   background: brown;
