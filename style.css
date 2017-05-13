@@ -1281,6 +1281,9 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   width: 100%;
   background: red; }
 
+/*
+ * Search Box用のcss
+ */
 .search-form, .search-box {
   position: relative; }
 
@@ -1299,6 +1302,12 @@ input[type="search"].search-field {
   right: 0;
   top: 0;
   width: 42px; }
+
+/*
+ * search.phpのnot found
+ */
+.notFound {
+  font-size: 30px; }
 
 /* Slider */
 .slick-loading .slick-list {

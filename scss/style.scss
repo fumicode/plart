@@ -106,12 +106,14 @@ body{
 
 
 
+/*
+ * Search Box用のcss
+ */
 
 
 .search-form, .search-box {
     position: relative;
 }
-
 
 input[type="search"].search-field {
 	border-radius: 2px 0 0 2px;
@@ -119,9 +121,6 @@ input[type="search"].search-field {
 	width: calc(100% - 42px);
         background:#dbdcdc;
 }
-
-
-
 
 .search-submit {
 	border-radius: 0 2px 2px 0;
@@ -132,6 +131,13 @@ input[type="search"].search-field {
 	right: 0;
 	top: 0;
 	width: 42px;
+}
+
+/*
+ * search.phpのnot found
+ */
+.notFound {
+    font-size:30px;
 }
 
 /////////////////  plugin /////////////////
