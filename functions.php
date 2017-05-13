@@ -1,6 +1,5 @@
 <?php
 
-
 ////////////////////////////////// wp_pagenaviのクラス名変更//////////////////////////////////////
 
 add_filter( 'wp_pagenavi_class_page', 'custom_wp_pagenavi_class_page' );
@@ -102,5 +101,33 @@ function custom_attribute( $html ){
   $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
   return $html;
 }
+
+
+///////////////////////////////投稿中の画像のwidth/height///////////////////////////
+
+/**
+ * 画像挿入時にwidthとheightを削除する
+  */
+
+function remove_width_attribute( $html ) {
+  $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+  return $html;
+}
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+
+
+// 画像編集の際に勝手にwidth/heightが入るので削除
+function my_tinymce_remove_width_attribute( $options ) {
+  if ( $options['tinymce'] ) {
+    wp_enqueue_script( 'tinymce_remove_width_attribute', get_template_directory_uri() . '/public/js/wp-admin-remove_width_attribute.js', array( 'jquery' ), '1.0.0', true);
+  }
+}
+
+add_action( 'wp_enqueue_editor', 'my_tinymce_remove_width_attribute', 10, 1 );
+
+
+
 
 
