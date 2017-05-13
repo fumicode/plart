@@ -41,6 +41,9 @@ $thumbnailMarginBottom:5px;
 .articleBox__category{
   float: left;
   font-size: $font-size-normal;
+  &.--unvisible{
+    visibility:hidden;
+  }
 }
 
 .articleBox__category--ART{
