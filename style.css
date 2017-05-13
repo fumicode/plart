@@ -935,6 +935,32 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   .contentsLayout__item:nth-child(3n+1) {
     clear: left; }
 
+.contentsLayout__3items--grid {
+  display: block;
+  width: calc(100% / 3);
+  float: left; }
+
+.contentsLayout--grid {
+  clear: both;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .contentsLayout--grid::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .contentsLayout--grid li {
+    display: inline-block; }
+
+.contentsLayout__item--grid {
+  display: inline;
+  vertical-align: top;
+  width: 100%;
+  padding: 15px;
+  margin-top: -1px;
+  margin-left: -1px;
+  border: solid 1px gray; }
+
 .contentsLayout--3lines--menuList {
   margin: 0px;
   padding: 0px; }
@@ -1236,6 +1262,12 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 
 .sidebarBanner__image {
   display: block; }
+
+.gridBox {
+  padding: 15px;
+  margin-top: -1px;
+  margin-left: -1px;
+  border: solid 1px gray; }
 
 .banner--1 {
   height: 100px;
