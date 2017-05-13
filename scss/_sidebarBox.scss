@@ -8,6 +8,10 @@
 .sidebarBox{
   @extend .black-box;
   padding:$box-padding-small;
+
+  &.--nopadding{
+    padding:0;
+  }
 }
 
 

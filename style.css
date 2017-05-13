@@ -477,13 +477,14 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  ul.n, ul.shareLinks_item {
+  ul.n, ul.shareLinks_item, ul.sidebarBanner {
     list-style-type: disc;
     margin-bottom: 1em;
     padding-left: 2em; }
   
   ol.n,
-  ol.shareLinks_item {
+  ol.shareLinks_item,
+  ol.sidebarBanner {
     list-style-type: decimal;
     margin-bottom: 1em;
     padding-left: 2em; }
@@ -496,10 +497,10 @@ dl {
   dl dd {
     margin: 0; }
 
-table.n, table.shareLinks_item {
+table.n, table.shareLinks_item, table.sidebarBanner {
   margin: 0;
   padding: 0; }
-  table.n tr, table.shareLinks_item tr, table.n th, table.shareLinks_item th, table.n td, table.shareLinks_item td {
+  table.n tr, table.shareLinks_item tr, table.sidebarBanner tr, table.n th, table.shareLinks_item th, table.sidebarBanner th, table.n td, table.shareLinks_item td, table.sidebarBanner td {
     margin: 0;
     padding: 0; }
 
@@ -572,17 +573,22 @@ h5, .h5 {
 h6, .h6 {
   font-size: 1.3rem; }
 
-h1.n, h1.shareLinks_item,
+h1.n, h1.shareLinks_item, h1.sidebarBanner,
 h2.n,
 h2.shareLinks_item,
+h2.sidebarBanner,
 h3.n,
 h3.shareLinks_item,
+h3.sidebarBanner,
 h4.n,
 h4.shareLinks_item,
+h4.sidebarBanner,
 h5.n,
 h5.shareLinks_item,
+h5.sidebarBanner,
 h6.n,
-h6.shareLinks_item {
+h6.shareLinks_item,
+h6.sidebarBanner {
   font-size: 1.3rem; }
 
 p {
@@ -622,15 +628,15 @@ picture {
 .big {
   font-size: 1.8rem; }
 
-table.n, table.shareLinks_item {
+table.n, table.shareLinks_item, table.sidebarBanner {
   border: none;
   padding: 0;
   width: auto; }
-  table.n tr, table.shareLinks_item tr {
+  table.n tr, table.shareLinks_item tr, table.sidebarBanner tr {
     border: none;
     margin: 0;
     padding: 0; }
-    table.n tr td, table.shareLinks_item tr td {
+    table.n tr td, table.shareLinks_item tr td, table.sidebarBanner tr td {
       border: none;
       margin: 0;
       padding: 0; }
@@ -653,7 +659,7 @@ blockquote {
 a {
   border-bottom: solid 1px #dcdcdc; }
 
-a.n, a.shareLinks_item {
+a.n, a.shareLinks_item, a.sidebarBanner {
   border-bottom: none; }
 
 .clearfix:after, .page__content:after, .contentsLayout--1big2small:after, .contentsLayout--3lines:after, .articleBox--ranking:after, .humanProfile:after {
@@ -1047,6 +1053,8 @@ a.n, a.shareLinks_item {
 
 .sidebarBox {
   padding: 26px; }
+  .sidebarBox.--nopadding {
+    padding: 0; }
 
 .sidebarBox__title {
   font-size: 1.8rem;
@@ -1196,6 +1204,9 @@ a.n, a.shareLinks_item {
     width: 20px;
     margin: 0 0 0 12px;
     padding-top: 8px; }
+
+.sidebarBanner__image {
+  display: block; }
 
 .banner--1 {
   height: 100px;
