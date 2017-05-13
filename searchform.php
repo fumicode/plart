@@ -1,0 +1,1 @@
+<div class="search-box"><form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" class="searchform"><label><input type="search" name="s" value="<?php the_search_query(); ?>" class="search-field"/></label><button type="submit" class="search-submit"><img src="/wp-content/themes/plart/public/image/search_button.png"/></button></form></div>

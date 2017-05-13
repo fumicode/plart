@@ -1,53 +1,53 @@
-.sidebarBoxContainer
-  .sidebarBox.--nopadding
-    a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
-      img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/banner-1.jpg")
-  .sidebarBox.--nopadding
-    a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
-      img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/banner-2.png")
+.sidebarBox.--nopadding
+  a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+    img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/banner-1.jpg")
+.sidebarBox.--nopadding
+  a.sidebarBanner(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+    img.sidebarBanner__image(src="<?= get_stylesheet_directory_uri()?>/public/image/banner-2.png")
 
-  .sidebarBox 
-    //searchbar
-    include ./snsLinks
-  .sidebarBox
-    h2.sidebarBox__title RANKING
+.sidebarBox 
+  //searchbar
+  - get_search_form();
+  include ./snsLinks
+.sidebarBox
+  h2.sidebarBox__title RANKING
 
-    :php
-      $args = array( 
-        'post_type' => 'post',
-        'posts_per_page' => 10, //5件表示
-      );
+  :php
+    $args = array( 
+      'post_type' => 'post',
+      'posts_per_page' => 10, //5件表示
+    );
 
-      $the_query = new WP_Query( $args );
+    $the_query = new WP_Query( $args );
 
-    - $sidebar_index = 1;
-    - while($the_query->have_posts()) : $the_query->the_post()
+  - $sidebar_index = 1;
+  - while($the_query->have_posts()) : $the_query->the_post()
 
-      .articleBox--ranking
-        - if(has_post_thumbnail()):
-        -   the_post_thumbnail("square", array('class'=>'articleBox--ranking--thumbnail'));
-        - else:
-          img.articleBox--ranking--thumbnail(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
-        - endif;
-        .articleBox--ranking--right
-          .articleBox--ranking--rank 
-            - echo $sidebar_index ++;
-          .articleBox--ranking--title
-            - the_title();
+    .articleBox--ranking
+      - if(has_post_thumbnail()):
+      -   the_post_thumbnail("square", array('class'=>'articleBox--ranking--thumbnail'));
+      - else:
+        img.articleBox--ranking--thumbnail(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+      - endif;
+      .articleBox--ranking--right
+        .articleBox--ranking--rank 
+          - echo $sidebar_index ++;
+        .articleBox--ranking--title
+          - the_title();
 
-    - endwhile;
-    - $the_query->rewind_posts()
-      
+  - endwhile;
+  - $the_query->rewind_posts()
 
-  .sidebarBox
-    h2.sidebarBox__title PRESS RELEASE
-    .pressRelease__slider
-      .slider
-        p slider
-        p slider
-  .sidebarBox
-    h2.sidebarBox__title FACEBOOK
-    <div class="fb-page" data-href="https://www.facebook.com/plartjp" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/plartjp" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/plartjp">PLART（プラート）</a></blockquote></div>
-  .sidebarBox
-    h2.sidebarBox__title TWITTER
-     <a class="twitter-timeline" data-height="600" data-dnt="true" href="https://twitter.com/plartjp">Tweets by plartjp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+.sidebarBox
+  h2.sidebarBox__title PRESS RELEASE
+  .pressRelease__slider
+    .slider
+      p slider
+      p slider
+.sidebarBox
+  h2.sidebarBox__title FACEBOOK
+  <div class="fb-page" data-href="https://www.facebook.com/plartjp" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/plartjp" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/plartjp">PLART（プラート）</a></blockquote></div>
+.sidebarBox
+  h2.sidebarBox__title TWITTER
+   <a class="twitter-timeline" data-height="600" data-dnt="true" href="https://twitter.com/plartjp">Tweets by plartjp</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
