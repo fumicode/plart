@@ -34,7 +34,7 @@
         - while($the_query->have_posts()): $the_query->the_post();
         
           div.topSlider__slide
-            a.n.topSlider__link(href="<? the_permalink()?>")
+            a.n.topSlider__link(href="<?php the_permalink()?>")
               - if(has_post_thumbnail()):
               -   the_post_thumbnail("slider", array('class'=>'topSlider__image'));
               - else:
@@ -88,4 +88,3 @@
         li その特集の記事が存在していること
 
     - endif;
-
