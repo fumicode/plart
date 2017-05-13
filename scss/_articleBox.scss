@@ -88,12 +88,31 @@ $thumbnailMarginBottom:5px;
 
   vertical-align: bottom;
 }
+.articleBox__thumbnailBox{
+  position:relative;
+}
 .articleBox__thumbnail{
   @extend .thumbnail-base;
 }
 
 .articleBox--big .articleBox__thumbnail{
   @extend .thumbnail-base;
+}
+
+.articleBox__coverBadge{
+
+  position:absolute;
+    right:5%;
+    top:5%;
+
+
+  visibility:hidden;
+
+  &.--visible{
+    visibility:visible;
+
+
+  }
 }
 
 .articleBox__title{
@@ -104,3 +123,4 @@ $thumbnailMarginBottom:5px;
   margin:0px;
   padding: 0px;
 }
+
