@@ -1562,7 +1562,8 @@ th {
 input[type="search"].search-field {
   border-radius: 2px 0 0 2px;
   width: -webkit-calc(100% - 42px);
-  width: calc(100% - 42px); }
+  width: calc(100% - 42px);
+  background: #dbdcdc; }
 
 .search-submit:before {
   content: "\f400";
