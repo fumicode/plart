@@ -1,8 +1,8 @@
-mixin articleBox(modifier)
-  a.n(href="<? the_permalink()?>")
+mixin articleBox(modifier, no_category)
+  a.n(href="<?php the_permalink()?>")
     .articleBox(class="#{ modifier ? '--' + modifier :''}")
       header.articleBox__header
-        .articleBox__category
+        .articleBox__category(class="#{no_category?'--unvisible':''}")
           .articleBox__category--ART ART
           .articleBox__category--cross ✕
           .articleBox__category--genre
@@ -25,4 +25,3 @@ mixin articleBox(modifier)
         -   endif;
         - endif;
       .articleBox__title <?= the_title() ?>
-
