@@ -1,30 +1,41 @@
 div.page__globalNav
   div.globalNavBox
 
-    img.globalNavBox__plartLogo(src="/images/plart_logo.png")
-
-    header.globalNavBox__titleBox
-      p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
-      h1.globalNavBox__siteTitle
-        span.siteTitle 
-          span.siteTitle__plart PLART
-          span.siteTitle__story STORY
+    img.globalNavBox__plartLogo(src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png")
 
 
-    .categoryBox
+    
+    a.n(href="/")
+      .globalNavBox__titleBox
+        p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
+        h1.globalNavBox__siteTitle
+          span.siteTitle 
+            span.siteTitle__plart PLART
+            span.siteTitle__story STORY
+
+
+    -  if(is_category()){
+    -    $cat_id=get_query_var('cat');
+    -    $cat=get_category($cat_id);
+    -    $cat_slug = $cat->category_nicename;  
+    -    $cat_name = $cat->name;
+    -  }
+
+
+    .categoryBox(class="<?= $cat ? '--'.$cat_slug : '' ?>")
       table.categoryBox__table
         tr
           td.categoryBox__art(rowspan="3") ART
           td.categoryBox__cross(rowspan="3") ✕
-          td.categoryBox__catName
+          td.categoryBox__catName.--people
             a(href="/category/people") PEOPLE
-          td.categoryBox__catContent 人、アーティスト
+          td.categoryBox__catContent ヒト、アーティスト
         tr
-          td.categoryBox__catName
+          td.categoryBox__catName.--place
             a(href="/category/place") PLACE
           td.categoryBox__catContent  場、空間、
         tr
-          td.categoryBox__catName
+          td.categoryBox__catName.--thing
             a(href="/category/thing") THING
           td.categoryBox__catContent モノ、コト
 
@@ -36,7 +47,3 @@ div.page__globalNav
           a(href="") HEY!ART
         li.globalNav__item
           a(href="") PARTNERS
-
-
-
-

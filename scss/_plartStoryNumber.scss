@@ -1,14 +1,9 @@
 
-//サイズはかる
-
-$plartStoryNumber-size:100px;
-$plartStoryNumber-font-size:14px;
-
-$plartStoryNumber-padding-size:10px;
 
 
 .plartStoryNumber{
 
+  box-sizing:border-box;
 
   display: block;
   background: $color-plart-yellow;
@@ -19,14 +14,22 @@ $plartStoryNumber-padding-size:10px;
 
   border:$box-border-width-thin solid #000;
   padding: $plartStoryNumber-padding-size;
+
+  font-size: $font-size-semibig;
+  text-align:justify;
+  -moz-text-align-last:justify;
+  text-align-last:justify;
+  //text-justify:inter-ideograph;
 }
 
 
 .plartStoryNumber__title{
 
   line-height:1;
-  letter-spacing: 2px;
   margin-bottom:10px;
+  -moz-text-align-last:justify;
+  text-align-last:justify;
+  width:100%;
 }
 
 .plartStoryNumber__title--plart{
@@ -34,7 +37,6 @@ $plartStoryNumber-padding-size:10px;
 
   font-family:$heading-font-family;
   font-weight:$heading-font-weight;
-  font-size: $plartStoryNumber-font-size;
 }
 
 .plartStoryNumber__title--story{
@@ -43,16 +45,18 @@ $plartStoryNumber-padding-size:10px;
   font-family:$base-font-family;
   font-weight:$base-font-weight;
 
-  font-size: $plartStoryNumber-font-size;
 
 
 }
 
 .plartStoryNumber__number{
-  font-size: 12px;
 
+  width:100%;
   margin:auto;
   margin-top: -6px;
   padding-top: 6px;
   border-top: solid 1px black;
+
+  font-size: $font-size-normal;
 }
+

@@ -34,6 +34,7 @@ body{
 @import "globalNav";
 @import "globalNavBox";
 @import "topSliderBox";
+@import "topSlider";
 @import "plartStoryNumber";
 @import "featureBox";
 @import "seriesBox";
@@ -49,9 +50,12 @@ body{
 @import "shareLinks";
 @import "shareIcon";
 @import "numberBadge";
+@import "coverBadge";
 @import "articleThumnbnailBox";
 @import "humanProfile";
 @import "keywordTags";
+@import "snsLinks";
+@import "sidebarBanner";
 
 
 .banner--1{
@@ -94,15 +98,12 @@ body{
 
 
 
-
-
-
-
 .plartFactory__link{
   height: $plartFactoryLinkHeight;
   width:100%;
   background: red;
 }
+
 
 
 
@@ -132,3 +133,7 @@ input[type="search"].search-field {
 	top: 0;
 	width: 42px;
 }
+
+/////////////////  plugin /////////////////
+@import "slick-theme";
+

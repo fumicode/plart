@@ -25,7 +25,7 @@ $categoryBox-height:160px;
 
 .categoryBox__table{
 
-  font-size:22px;
+  font-size:$font-size-semibig;
   margin:0;
   td{
     margin:0;
@@ -40,13 +40,13 @@ $categoryBox-height:160px;
   font-weight:$heading-font-weight;
   width:17%;
 
-  font-size:32px;
-  letter-spacing: 2px;
+  font-size:$font-size-big;
+  letter-spacing: 0.3em;
 
 }
 .categoryBox__cross{
   text-align:center;
-  font-size:32px;
+  font-size:$font-size-big;
 
   width:9%;
 }
@@ -61,10 +61,21 @@ $categoryBox-height:160px;
   width:24%;
 }
 
+
+.categoryBox.--place .categoryBox__catName.--place,
+.categoryBox.--people .categoryBox__catName.--people,
+.categoryBox.--thing .categoryBox__catName.--thing{
+
+  a{
+    color:$color-plart-gray;
+  }
+
+}
+
 .categoryBox__catContent {
   width:50%;
 
-  font-size:16px;
+  font-size:$font-size-small;
   a{
     color:#000;
 

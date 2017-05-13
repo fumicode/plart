@@ -1,0 +1,47 @@
+extends layouts/basic-layout
+
+block head
+  include ./includes/head
+
+block sidebar
+  include ./includes/sidebar
+
+block foot
+  include ./includes/foot
+
+block content
+  include ./includes/articleBox
+
+  .mainBoxContainer
+    .mainBox--article
+      .breadCrumb
+        ul.breadCrumb__list
+          li.breadCrumb__item 
+            a.breadCrumb__link(href="/") TOP
+
+          li.breadCrumb__item--arrow > 
+          li.breadCrumb__item 
+            a.breadCrumb__link(href="./") 記事一覧
+
+      hr.noBorder
+
+      .contentsLayout--3cols
+        ul.contentsLayout__3items
+          - $post_index = 0
+          - $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+          - while ( have_posts() ) : the_post()
+            - $post_index ++
+
+            li.contentsLayout__item
+              +articleBox("<?= $post_index <= 3 ? 'smalltop' : '' ?>")
+
+
+          - endwhile;
+          
+      - if(function_exists('wp_pagenavi')) { wp_pagenavi(); };
+
+
+
+
+      

@@ -1,12 +1,24 @@
 doctype html
 html
   head
-    title= title
+    title title
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PLART STORY | LIFE IS ART！ アートがライフスタイルになるウェブマガジン</title>
+    <meta name="keywords" content="PLART,LIFE IS ART,プラート,ART,アート,LIFE" />
+    <link rel='dns-prefetch' href='//oss.maxcdn.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; フィード" href="http://www.plart-story.jp/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; コメントフィード" href="http://www.plart-story.jp/comments/feed/" />
+    <meta name="description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
 
+    - wp_enqueue_style('raleway', "https://fonts.googleapis.com/css?family=Raleway:700", array(), time() );
     - wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
     - wp_head();
 
+
+    block head_end
   body
+    <div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=1810486322562458";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
     div.page
       div.page__header
         block head
@@ -20,4 +32,4 @@ html
         block foot
 
       -wp_footer();
-
+    block body_end

@@ -1,4 +1,10 @@
 
+$coverBadge-size:100px;
+
+$plartStoryNumber-size:145px;
+$plartStoryNumber-padding-size:36px 31px;
+
+$topSliderBox-height:540px;
 $iconWidth:20px;
 $breadCrumb-marginBottom:20px;
 $title-marginBottom:10px;
@@ -62,10 +68,10 @@ $body-side-margin:1rem;
 ///////////////////////////BITTERS///////////////////////////////
 
 // Typography
-$base-font-family: $verdana;
+$base-font-family: "Helvetica Neue", Arial, sans-serif,"游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
 $base-font-weight: normal;
 
-$heading-font-family: $base-font-family;
+$heading-font-family:'Raleway', sans-serif;
 $heading-font-weight: bold;
 
 // Font Sizes
@@ -74,6 +80,12 @@ $tablet-font-size:$pc-font-size;// おなじでよくね
 $mobile-font-size:$pc-font-size;// おなじでよくね
 
 $base-font-size: 1.6rem; // パソコンは16px
+
+$font-size-small:1rem;
+$font-size-normal:1.3rem;
+$font-size-semibig:1.8rem;
+$font-size-big:2.6rem;
+$font-size-extrabig:3rem;
 
 // Line height
 $base-line-height: 2;

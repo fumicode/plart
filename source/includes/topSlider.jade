@@ -1,37 +1,90 @@
 
 .page__topSlider
   .topSliderBox
+    //まずは、どのタームなのかを調べる
+    //固定ページをとってきて、それのカスタムフィールドをみる。
+    :php
+      $topic_setting_page = wc_get_page_by_slug("topic_setting");
+      $page_id = $topic_setting_page->ID;
 
-      
-    .topSlider
-      p slide
-      p slide
-      p slide
-      p slide
+      //これが、カテゴリの名前
+      $term_name = get_post_meta($page_id, "topic_setting",true);
+    
+      $args = array(
+        'post_type' => 'post',
+        'order' => 'ASC',
+        'tax_query' => array(
+          array(
+            'taxonomy' => 'article_type',
+            'field' => 'slug',
+            'terms' => $term_name,
+          ),
+        ),
+
+      );
+
+      $the_query = new WP_Query( $args );
+
+    
+      //そのカテゴリに属してるやつを全部表示する
+
+    - if($the_query->have_posts()): 
+
+      #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
+        - while($the_query->have_posts()): $the_query->the_post();
+        
+          div.topSlider__slide
+            a.n.topSlider__link(href="<?php the_permalink()?>")
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("slider", array('class'=>'topSlider__image'));
+              - else:
+                img.topSlider__image(src="<?= get_stylesheet_directory_uri();?>/public/image/thumb4x3.png" width="1200" height="540")
+
+              - endif;
 
 
-    .topSliderBox__number
+        - endwhile;
 
-      a.plartStoryNumber(href="")
-        p.plartStoryNumber__title--plart PLART
-        p.plartStoryNumber__title--story  STORY
-        p.plartStoryNumber__number 3月15日号
-
-    .topSliderBox__featureBox
-      .featureBox
-        .featureBox__number 3月15日号 特集
-        br
-        .featureBox__title 女性の感性
-
-
-    .topSliderBox__seriesBox
-      .seriesBox SERIES 
-
-        span.seriesBox__siteTitles
-          span.siteTitle 
-            span.siteTitle__plart PLART
-            span.siteTitle__story STORY
-          | 連載
+        //これは下に書いてあるので大丈夫
+        //- wp_reset_postdata();
 
 
 
+
+      .topSliderBox__number
+        include ./plartStoryNumber
+        +plartStoryNumber("<?= get_the_date('n') ?>")
+
+      .topSliderBox__featureBox
+        .featureBox
+          .featureBox__number <?= get_the_date('n') ?>月15日号 特集
+          br
+          .featureBox__title 
+            :php
+              $term = get_term_by('slug', $term_name, 'article_type');
+              echo $term->name;
+              //echo $child_term->name
+
+
+      .topSliderBox__seriesBox
+        .seriesBox SERIES 
+
+          span.seriesBox__siteTitles
+            span.siteTitle 
+              span.siteTitle__plart PLART
+              span.siteTitle__story STORY
+            | 連載
+
+      //スライダーのをここでちょっと遅れてリセットする。
+      //何月ごうとか、カテゴリー名を表示するためにまだポストを使うから。
+      - wp_reset_postdata();
+
+    - else:
+      hr.bigMargin
+      p <?=$term_name?> の特集は存在しません。以下のことを確認してください
+      ul
+        li 特集カテゴリ名が、特集の子カテゴリとして存在していること 
+        li 設定の特集スラッグと実際の特集スラッグが一致していること
+        li その特集の記事が存在していること
+
+    - endif;

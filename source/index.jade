@@ -1,8 +1,8 @@
 extends layouts/basic-layout
 
+
 block head
   include ./includes/head
-  include ./includes/topSlider
 
 block sidebar
   include ./includes/sidebar
@@ -11,143 +11,38 @@ block foot
   include ./includes/foot
 
 block content
+  include ./includes/articleBox
+
   .mainBoxContainer
-    .mainBox
-      h2.mainBox__title WHAT'S NEW
-      .contentsLayout--1big2small
-        .contentsLayout--1big2small--big
-          .sliderBox
-            .sliderBox__slide
-              .articleBox--big
-                header.articleBox__header
-                  .articleBox__category
-                    .articleBox__category--ART
-                      | ART
-                    .articleBox__category--genre
-                      | ✕ PEOPLE
-                  .articleBox__number 3月15日号
-                img.articleBox__thumbnail--big(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-                .articleBox__title
-                  | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。長いタイトルだとどうなるのかチェックしています。
-        .contentsLayout--1big2small--small
-          .articleBox--smalltop
-            header.articleBox__header
-              .articleBox__category
-                .articleBox__category--ART ART
-                .articleBox__category--cross ✕
-                .articleBox__category--genre PEOPLE
-              .articleBox__number 3月15日号
-            img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-            .articleBox__title
-              | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。長いタイトルだとどうなるのかチェックしています。
-          .articleBox
-            header.articleBox__header
-              .articleBox__category
-                .articleBox__category--ART ART
-                .articleBox__category--cross ✕
-                .articleBox__category--genre PEOPLE
-              .articleBox__number 3月15日号
-            img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-            .articleBox__title
-             | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
+    .mainBox--article
+      .breadCrumb
+        ul.breadCrumb__list
+          li.breadCrumb__item 
+            a.breadCrumb__link(href="/") TOP
+
+          li.breadCrumb__item--arrow > 
+          li.breadCrumb__item 
+            a.breadCrumb__link(href="./") 記事一覧
+
+      hr.noBorder
 
       .contentsLayout--3cols
         ul.contentsLayout__3items
-          li.contentsLayout__item
-            .articleBox
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-      a.blackButton(href="#") VIEW MORE 
-    .mainBox
-      h2.mainBox__title BACK NUMBRE
-      .contentsLayout--1big2small
-        .contentsLayout--1big2small--big
-          .sliderBox
-            .sliderBox__slide
-              .articleBox--big
-                header.articleBox__header
-                  .articleBox__category
-                    .articleBox__category--ART ART
-                    .articleBox__category--cross ✕
-                    .articleBox__category--genre PEOPLE
-                  .articleBox__number 3月15日号
-                img.articleBox__thumbnail--big(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-                .articleBox__title
-                  | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-        .contentsLayout--1big2small--small
-          .articleBox--smalltop
-            header.articleBox__header
-              .articleBox__category
-                .articleBox__category--ART ART
-                .articleBox__category--cross ✕
-                .articleBox__category--genre PEOPLE
-              .articleBox__number 3月15日号
-            img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-            .articleBox__title
-              | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          .articleBox
-            header.articleBox__header
-              .articleBox__category
-                .articleBox__category--ART ART
-                .articleBox__category--cross ✕
-                .articleBox__category--genre PEOPLE
-              .articleBox__number 3月15日号
-            img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-            .articleBox__title
-              | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-      a.moreViewButton(href="#") MORE VIEW
+          - $post_index = 0
+          - $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
-    .mainBox
-      img.banner--1(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      img.banner--1(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+          - while ( have_posts() ) : the_post()
+            - $post_index ++
 
-    .mainBox
-      h2.mainBox__title PICK UP
-      .sliderBox
-        .slide
-          .slider--pickup
+            li.contentsLayout__item
+              +articleBox("<?= $post_index <= 3 ? 'smalltop' : '' ?>")
 
-    .mainBox
-      h2.mainBox__title INSTAGRAM
-      .instagramBox
 
-    .mainBox
-      h2.mainBox__title PARTNERS
-      .partnersBox
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+          - endwhile;
+          
+      - if(function_exists('wp_pagenavi')) { wp_pagenavi(); };
+
+
+
+
+      

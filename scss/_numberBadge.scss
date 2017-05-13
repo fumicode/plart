@@ -1,6 +1,6 @@
 
-$numberBadge-width:250px;
-$numberBadge-height:100px;
+$numberBadge-height:$plartStoryNumber-size;
+$numberBadge-width: $numberBadge-height * 2;
 
 $numberBadge-title-font-size:30px;
 $numberBadge-title-padding:10px;

@@ -1,13 +1,35 @@
 mixin articleBox(modifier)
-  div(class="articleBox#{ modifier ? '--' + modifier :''}")
-    header.articleBox__header
-      .articleBox__category
-        .articleBox__category--ART ART  
-        .articleBox__category--cross ✕
-        .articleBox__category--genre
-          - $category = get_the_category()[0];
-          | <?=$category->cat_name?> 
-      .articleBox__number <?= get_the_date('n')?>月15日号
-    img(class="articleBox__thumbnail" src="http://kingofwallpapers.com/demo/demo-002.jpg")
-    .articleBox__title <?= the_title() ?>
+  - $category = get_the_category()[0];
+  - $is_cover = strcmp($category->slug,"cover") == 0;
+  a.n(href="<?php the_permalink()?>")
+    .articleBox(class="#{ modifier ? '--' + modifier :''}")
+      header.articleBox__header(class="<?= $is_cover ?'--unvisible':''?>")
+        .articleBox__category
+          .articleBox__category--ART ART
+          .articleBox__category--cross ✕
+          .articleBox__category--genre
+            | <?=$category->cat_name?> 
+        .articleBox__number <?= get_the_date('n')?>月15日号
 
+      .articleBox__thumbnailBox 
+        - if(has_post_thumbnail()):
+        -   if(#{modifier == "big"}): 
+        -     the_post_thumbnail("square", array('class'=>'articleBox__thumbnail'));
+        -   else:
+        -     the_post_thumbnail("thumbnail4x3", array('class'=>'articleBox__thumbnail'));
+        -   endif;
+        - else:
+        -   if(#{modifier == "big"}): 
+              img.articleBox__thumbnail(class="articleBox__thumbnail" src="<?= get_stylesheet_directory_uri(); ?>/public/image/thumb3x3.png")
+        -   else:
+              img.articleBox__thumbnail(class="articleBox__thumbnail" src="<?= get_stylesheet_directory_uri(); ?>/public/image/thumb4x3.png")
+        -   endif;
+        - endif;
+        
+
+        .articleBox__coverBadge(class="<?= $is_cover ? '--visible':'' ?> ") 
+          .coverBadge
+            .coverBadge__text <?= get_the_date('n')?>月15日号
+
+
+      .articleBox__title <?= the_title() ?>

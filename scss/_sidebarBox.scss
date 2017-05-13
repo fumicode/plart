@@ -1,4 +1,3 @@
-$titleFontSize:1.4rem;
 
 .sidebarBoxContainer{
   margin-left:-$box-border-width;
@@ -9,12 +8,15 @@ $titleFontSize:1.4rem;
 .sidebarBox{
   @extend .black-box;
   padding:$box-padding-small;
+
+  &.--nopadding{
+    padding:0;
+  }
 }
 
 
 .sidebarBox__title{
-  font-size: $titleFontSize;
+  font-size: $font-size-semibig;
 
   margin-bottom: 10px;
 }
-
