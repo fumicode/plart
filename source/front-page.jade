@@ -125,8 +125,8 @@ block content
       a.blackButton(href="#") VIEW MORE 
 
     .mainBox
-      img.banner--1(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-      img.banner--1(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
 
     .mainBox
       h2.mainBox__title PICK UP
@@ -136,7 +136,9 @@ block content
 
     .mainBox
       h2.mainBox__title INSTAGRAM
-      .instagramBox
+      .instagramBox 
+        - echo do_shortcode('[alpine-phototile-for-instagram id=725 user="plartjp" src="user_recent" imgl="instagram" style="wall" size="M" num="10" highlight="1" align="center" max="100" nocredit="1"]');
+
 
     .mainBox
       h2.mainBox__title PARTNERS
@@ -149,4 +151,3 @@ block content
           img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
         .partners--1
           img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-

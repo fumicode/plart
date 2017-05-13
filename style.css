@@ -880,6 +880,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
+  max-width: 45%;
   line-height: 1;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9); }
@@ -897,16 +898,16 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .contentsLayout--1big2small--big {
   float: left;
   display: block;
-  margin-right: 2%;
-  width: 66%; }
+  margin-right: 4.6332%;
+  width: 65.12227%; }
   .contentsLayout--1big2small--big:last-child {
     margin-right: 0; }
 
 .contentsLayout--1big2small--small {
   float: left;
   display: block;
-  margin-right: 2%;
-  width: 32%; }
+  margin-right: 4.6332%;
+  width: 30.24453%; }
   .contentsLayout--1big2small--small:last-child {
     margin-right: 0; }
 
@@ -925,8 +926,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .contentsLayout__item {
   float: left;
   display: block;
-  margin-right: 2%;
-  width: 32%; }
+  margin-right: 4.6332%;
+  width: 30.24453%; }
   .contentsLayout__item:last-child {
     margin-right: 0; }
   .contentsLayout__item:nth-child(3n) {
@@ -1007,6 +1008,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .articleBox__category {
   float: left;
   font-size: 1.3rem; }
+  .articleBox__category.--unvisible {
+    visibility: hidden; }
 
 .articleBox__category--ART {
   font-weight: bold;
@@ -1037,6 +1040,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-bottom: 5px;
   padding: 0px;
   vertical-align: bottom; }
+
+.articleBox__thumbnailBox {
+  position: relative; }
+
+.articleBox__coverBadge {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  visibility: hidden; }
+  .articleBox__coverBadge.--visible {
+    visibility: visible; }
 
 .articleBox__title {
   clear: both;
@@ -1074,8 +1088,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .articleBox--ranking--thumbnail {
   float: left;
   display: block;
-  margin-right: 0.59172%;
-  width: 39.64497%;
+  margin-right: 1.3463%;
+  width: 39.19222%;
   margin-top: 20px;
   padding-right: 10px;
   display: block; }
@@ -1085,8 +1099,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .articleBox--ranking--right {
   float: left;
   display: block;
-  margin-right: 0.59172%;
-  width: 59.76331%;
+  margin-right: 1.3463%;
+  width: 59.46148%;
   margin-top: 10px; }
   .articleBox--ranking--right:last-child {
     margin-right: 0; }
@@ -1155,6 +1169,21 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   position: absolute;
   top: 0px;
   right: 0px; }
+
+.coverBadge {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background: #e6ff00; }
+
+.coverBadge__text {
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 16.66667px; }
 
 .articleThumbnailBox {
   position: relative; }
@@ -1233,8 +1262,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .partners--1 {
   float: left;
   display: block;
-  margin-right: 0.9901%;
-  width: 15.84158%;
+  margin-right: 2.26415%;
+  width: 14.77987%;
   margin-right: 5px; }
   .partners--1:last-child {
     margin-right: 0; }
@@ -1242,8 +1271,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .partners--2 {
   float: left;
   display: block;
-  margin-right: 0.9901%;
-  width: 15.84158%; }
+  margin-right: 2.26415%;
+  width: 14.77987%; }
   .partners--2:last-child {
     margin-right: 0; }
 

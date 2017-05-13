@@ -1,0 +1,26 @@
+
+.coverBadge{
+  position:relative;
+
+  border:$box-border-width-thin solid #000;
+  border-radius: $coverBadge-size/2;
+
+  width:$coverBadge-size;
+  height:$coverBadge-size;
+  
+  background:$color-plart-yellow;
+
+}
+
+.coverBadge__text{
+  width:100%;
+  height:100%;
+
+  line-height: $coverBadge-size;
+  text-align:center;
+
+  font-size:$coverBadge-size/6;
+
+
+
+}
