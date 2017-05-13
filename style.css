@@ -1041,6 +1041,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 0px;
   vertical-align: bottom; }
 
+.articleBox__thumbnailBox {
+  position: relative; }
+
+.articleBox__coverBadge {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  visibility: hidden; }
+  .articleBox__coverBadge.--visible {
+    visibility: visible; }
+
 .articleBox__title {
   clear: both;
   word-break: break-all;
@@ -1158,6 +1169,21 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   position: absolute;
   top: 0px;
   right: 0px; }
+
+.coverBadge {
+  position: relative;
+  border: 2px solid #000;
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  background: #e6ff00; }
+
+.coverBadge__text {
+  width: 100%;
+  height: 100%;
+  line-height: 100px;
+  text-align: center;
+  font-size: 16.66667px; }
 
 .articleThumbnailBox {
   position: relative; }
