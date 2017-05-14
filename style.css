@@ -907,6 +907,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   display: inline;
   margin-left: 1.2em;
   letter-spacing: 0.13em;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   line-height: 1;
   border-bottom: 1px solid #dcdcdc; }
 
