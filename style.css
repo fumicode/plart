@@ -1062,8 +1062,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 
 .sidebarBoxContainer {
   margin-left: -4px;
-  margin-right: -4px;
-  width: auto; }
+  margin-right: -4px; }
 
 .sidebarBox {
   padding: 26px; }

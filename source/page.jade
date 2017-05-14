@@ -29,28 +29,20 @@ block content
               h1.singleArticle__title 
                 -the_title()
 
-            .singleArticle__right
-              span.singleArticle__writer PLART編集部 
-              span.singleArticle__number <?= get_the_date('Y')?>.<?= get_the_date('n')?>.15
-
-
             .singleArticle__shareLinks
               .shareLinks
                 h5.shareLinks_title SHARE
                 - echo do_shortcode('[ssba]');
                
+
           .singleArticle__thumbnailBox
             .articleThumbnailBox
-              img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
 
-              .articleThumbnailBox__badge
-                .numberBadge
-                  .numberBadge__title TOPICS
-                  .numberBadge__number
-                    .plartStoryNumber(href="")
-                      p.plartStoryNumber__title--plart PLART
-                      p.plartStoryNumber__title--story  STORY
-                      p.plartStoryNumber__number <?= get_the_date('n')?>月15日号
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("large", array('class'=>'articleThumbnailBox__image'));
+              - else:
+                  img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
+              - endif;
 
 
 
@@ -66,86 +58,5 @@ block content
             hr.noBorder.bigMargin
             
       - endwhile;
-      //rewind 的なのいるっけ？
+      - wp_reset_postdata();
 
-    .mainBox
-      h2.mainBox__title RELATED ARTICLES
-        span.mainBox__subTitle 関連記事
-
-      .contentsLayout--3cols
-        ul.contentsLayout__3items
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-
-    .mainBox
-      h2.mainBox__title WHAT'S NEW
-      .contentsLayout--3cols
-        ul.contentsLayout__3items
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-          li.contentsLayout__item
-            .articleBox--smalltop
-              header.articleBox__header
-                .articleBox__category
-                  .articleBox__category--ART ART
-                  .articleBox__category--cross ✕
-                  .articleBox__category--genre PEOPLE
-                .articleBox__number 3月15日号
-              img.articleBox__thumbnail(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-              .articleBox__title
-                | 長いタイトルだとどうなるのかチェックしています。最大で3行になるように色々調整する必要がある。
-
-    .mainBox
-      img.plartFactory__link(src="#")
-      a.blackButton(href="#") PAGE TOP
