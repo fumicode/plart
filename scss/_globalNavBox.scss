@@ -19,7 +19,7 @@ $titleBox-margin-top: 41px;
 
 .globalNavBox__plartLogo{  // あとでやる
   position:absolute;
-    top: 36px;
+    top: 26px;
     right: 26px;
 
   width: 109px;
@@ -31,20 +31,19 @@ $titleBox-margin-top: 41px;
 .globalNavBox__titleBox{
   margin-left:$titleBox-margin-left - $box-padding;
   margin-top:$titleBox-margin-top - $box-padding;
-  
+
 }
 
 .globalNavBox__siteDesc{
-  line-height:1; 
+  line-height:1;
   margin-bottom:18px;
 
 }
 
 .globalNavBox__siteTitle{
-  line-height:1; 
+  line-height:1;
 
   margin:0px;
-  
+
 
 }
-
