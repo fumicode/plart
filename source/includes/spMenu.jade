@@ -1,0 +1,35 @@
+#spMenuBg.spMenuBg
+#spMenu.spMenu
+  .spMenu__art ART
+  .spMenu__cross ✕
+  .spMenu__categoryList
+    .spMenu__categoryItem
+      h2.n.spMenu__categoryTitle 
+        a.spMenu__categoryLink(href="/category/people") PEOPLE
+      .spMenu__categoryDesc ヒト、アーティスト
+
+    .spMenu__categoryItem
+      h2.n.spMenu__categoryTitle 
+        a.spMenu__categoryLink(href="/category/place") PLACE
+      .spMenu__categoryDesc 場、空間、
+  
+    .spMenu__categoryItem
+      h2.n.spMenu__categoryTitle 
+        a.spMenu__categoryLink(href="/category/thing") THING
+      .spMenu__categoryDesc モノ、コト
+
+  .spMenu__nav
+    .globalNav--sp
+      nav
+        :php
+          wp_nav_menu( array(
+            'theme_location'=>'mainmenu', 
+            'container'     =>'', 
+            'menu_class'    =>'',
+            'items_wrap'    =>'<ul id="main-nav">%3$s</ul>'));
+
+  footer.spMenu__footer
+    - get_search_form();
+    include ../includes/snsLinks
+    img.globalNavBox__plartLogo(src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png")
+

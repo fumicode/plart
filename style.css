@@ -1763,9 +1763,10 @@ a.n, a.sidebarBanner {
   z-index: 200;
   width: 70%;
   background: white;
-  line-height: 1; }
+  line-height: 1;
+  letter-spacing: 0.1em; }
 
-/* line 21, scss/_spMenu.scss */
+/* line 22, scss/_spMenu.scss */
 .spMenuBg {
   display: none;
   position: fixed;
@@ -1776,24 +1777,24 @@ a.n, a.sidebarBanner {
   z-index: 190;
   background: rgba(0, 0, 0, 0.6); }
 
-/* line 34, scss/_spMenu.scss */
+/* line 35, scss/_spMenu.scss */
 .spMenu__art {
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   margin-bottom: 0.5rem; }
 
-/* line 41, scss/_spMenu.scss */
+/* line 42, scss/_spMenu.scss */
 .spMenu__cross {
   font-size: 3rem;
   margin-bottom: 0.5rem; }
 
-/* line 47, scss/_spMenu.scss */
+/* line 48, scss/_spMenu.scss */
 .spMenu__categoryItem {
   font-size: 3rem;
   margin-bottom: 1rem; }
 
-/* line 51, scss/_spMenu.scss */
+/* line 52, scss/_spMenu.scss */
 .n.spMenu__categoryTitle, .spMenu__categoryTitle.sidebarBanner {
   display: block;
   font-size: 2.6rem;
@@ -1801,16 +1802,16 @@ a.n, a.sidebarBanner {
   font-weight: normal;
   margin-bottom: 0.5rem; }
 
-/* line 60, scss/_spMenu.scss */
+/* line 61, scss/_spMenu.scss */
 .spMenu__categoryLink {
   border-bottom: 1px solid black; }
 
-/* line 64, scss/_spMenu.scss */
+/* line 65, scss/_spMenu.scss */
 .spMenu__categoryDesc {
   font-size: 1.3rem;
   margin-bottom: 0.5rem; }
 
-/* line 73, scss/_spMenu.scss */
+/* line 74, scss/_spMenu.scss */
 .spMenuButton {
   margin: 0;
   padding: 0;
