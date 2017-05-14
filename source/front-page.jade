@@ -33,6 +33,13 @@ block body_end
       autoplaySpeed:4000 //4秒
     });
 
+    //what's new のスライダー 
+    $("#bookSlider").slick({
+      autoplay:true,
+      autoplaySpeed:4000, //4秒
+      slidesToShow:4,
+      slidesToScroll:1,
+    });
 
 block content
   include ./includes/articleBox
@@ -121,16 +128,38 @@ block content
       a.blackButton(href="/category/cover") VIEW MORE 
 
     .mainBox
-      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
-      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+      a.n(href="/article_type/artinlife")
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+      a.n(href="/article_type/bussinessandart")
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
 
 
 
     .mainBox
-      h2.mainBox__title PICK UP
-      .sliderBox
-        .slide
-          .slider--pickup
+      h2.mainBox__title PICK UP ART BOOK
+
+      #bookSlider.bookSlider
+
+
+        :php
+          $args = array( 
+            'post_type' => 'book'
+
+          );
+
+          $the_query = new WP_Query( $args );
+        
+        - while($the_query->have_posts()): $the_query->the_post();
+
+          a.n.bookSlider__link
+            .bookSlider__item
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("square", array('class'=>'bookSlider__image'));
+              - else:
+                img.bookSlider__image(src="<?= get_stylesheet_directory_uri(); ?>/public/image/thumb4x3.png")
+              - endif;
+        - endwhile;
+        - wp_reset_postdata();
 
     .mainBox
       h2.mainBox__title INSTAGRAM
@@ -140,12 +169,10 @@ block content
 
     .mainBox
       h2.mainBox__title PARTNERS
-      .partnersBox
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+      //
+        .partnersBox
+          ul.partnersBox__list
+            li.partnersBox__item
+              img.bookSlider__image(class="articleBox__thumbnail" src="<?= get_stylesheet_directory_uri(); ?>/public/image/thumb4x3.png")
+
