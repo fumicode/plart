@@ -11,6 +11,10 @@
   &.--nopadding{
     padding:0;
   }
+
+  @include media($medium-screen-down) {
+    padding:$box-padding-sp;
+  }
 }
 
 

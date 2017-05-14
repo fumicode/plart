@@ -13,6 +13,11 @@ $titleBox-margin-top: 28px;
 
   height: $globalNavBox-height - 2 * $box-padding;
 
+  @include media($medium-screen-down){
+    //あとでpaddingとか
+    height:auto;
+  }
+
 }
 
 
@@ -25,6 +30,9 @@ $titleBox-margin-top: 28px;
   width: 109px;
   height: 76px;
 
+  @include media($medium-screen-down){
+    display:none;
+  }
 
 }
 

@@ -1,15 +1,53 @@
 
 .contentsLayout--1big2small{
+
   @extend .clearfix;
+  position:relative;
 }
 
-.contentsLayout--1big2small--big{
+.contentsLayout--1big2small__big1{
   @include span-columns(2 of 3);
+
+
+  @include media($medium-screen-down){
+    @include span-columns(2 of 2);
+  }
+
 }
 
-.contentsLayout--1big2small--small{
+.contentsLayout--1big2small__small2{
   @include span-columns(1 of 3);
+
+  @include media($medium-screen-down){
+    @include span-columns(2 of 2);
+  }
 }
+
+.contentsLayout--1big2small__small{
+
+  @include media($medium-screen-down){
+    @include span-columns(1 of 2);
+  }
+
+
+  &.--first{
+
+  }
+
+  &.--last{
+
+    @include media($medium-screen-up){
+      @include span-columns(1 of 3);
+      position:absolute;
+      bottom:0;
+      right:0;
+
+
+    }
+
+  }
+}
+
 
 .contentsLayout--3cols{
   clear:both;
@@ -26,7 +64,19 @@
 
 .contentsLayout__item{
   @include span-columns(1 of 3);
-  @include omega(3n);
+
+  @include media($medium-screen-up){
+    @include omega(3n);
+  }
+
+
+  @include media($medium-screen-down){
+    
+    @include span-columns(1 of 2);
+
+    @include omega(2n);
+
+  }
 }
 
 .contentsLayout__3items--grid{
@@ -42,6 +92,7 @@
     display: inline-block;
   }
 }
+
 $grid-layout-padding:15px;
 .contentsLayout__item--grid{
   display: inline;
@@ -79,3 +130,4 @@ $footerMenuFontSize:10px;
   margin: 0px;
   padding:0px;
 }
+

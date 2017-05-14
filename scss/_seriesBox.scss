@@ -10,12 +10,20 @@ $seriesBox-font-size:26px;
 
   line-height:1;
 
-  .seriesBox__siteTitles{
 
+
+  @include media($medium-screen-down) {
+    display:none;
+  }
+
+}
+
+
+.seriesBox__siteTitles{
+
+  font-size: $base-font-size;
+
+  .siteTitle{
     font-size: $base-font-size;
-
-    .siteTitle{
-      font-size: $base-font-size;
-    }
   }
 }

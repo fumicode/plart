@@ -20,6 +20,10 @@ $categoryBox-height:132px;
   height: $categoryBox-height;
 
   background:white;
+
+  @include media($medium-screen-down){
+    display:none;
+  }
 }
 
 
