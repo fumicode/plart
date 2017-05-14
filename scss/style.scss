@@ -59,52 +59,6 @@ body{
 @import "bookSlider";
 
 
-.banner--1{
-  height: $bannerHeight;
-  background: brown;
-  width:100%;
-}
-
-.banner--2{
-  height: $bannerHeight;
-  background: purple;
-  height:180px;
-}
-
-.slider--pickup{
-  height:$pickupSliderHeight;
-  background: red;
-}
-
-.instagramBox{
-  height:$instagramHeight;
-  background: pink;
-}
-
-.partnersBox{
-  height:$partnersHeight;
-  background: red;
-
-}
-
-.partners--1{
-  @include span-columns(1 of 6);
-  margin-right: 5px;
-}
-
-.partners--2{
-  @include span-columns(1 of 6)
-}
-
-
-
-
-.plartFactory__link{
-  height: $plartFactoryLinkHeight;
-  width:100%;
-  background: red;
-}
-
 
 
 /*

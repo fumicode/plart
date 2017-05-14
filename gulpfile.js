@@ -21,7 +21,8 @@ gulp.task("scss", function(){
 
     .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: neat.includePaths
+      includePaths: neat.includePaths,
+      sourceComments:true
     }).on('error', sass.logError)) 
     .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./"));
