@@ -880,8 +880,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
-  max-width: 45%;
-  line-height: 1;
+  max-width: 500px;
+  line-height: 1.1;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9); }
 
@@ -1233,8 +1233,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     margin: 0 0 0 12px;
     padding-top: 8px; }
 
+.mainBox .AlpinePhotoTiles-highlight-div, .mainBox--article .AlpinePhotoTiles-highlight-div {
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
 .sidebarBanner__image {
   display: block; }
+
+.bookSlider__item {
+  padding-left: 2em;
+  padding-right: 2em; }
 
 .banner--1 {
   height: 100px;

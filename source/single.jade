@@ -57,14 +57,16 @@ block content
 
           :php
             $terms = get_the_terms($post->ID, "article_type");
-            $top_terms = array_values(array_filter($terms, function($elem){
-              return $elem->parent == 0;
-            }));
+            if($terms){
+              $top_terms = array_values(array_filter($terms, function($elem){
+                return $elem->parent == 0;
+              }));
 
-            $top_term = $top_terms[0];
+              $top_term = $top_terms[0];
 
-            $article_type_slug = ($top_term->slug);
-            $article_type_name = strtoupper($article_type_slug);
+              $article_type_slug = ($top_term->slug);
+              $article_type_name = strtoupper($article_type_slug);
+            }
 
           .singleArticle__thumbnailBox
             .articleThumbnailBox
@@ -72,16 +74,18 @@ block content
               - if(has_post_thumbnail()):
               -   the_post_thumbnail("large", array('class'=>'articleThumbnailBox__image'));
               - else:
-                  img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
+                img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
               - endif;
 
-              .articleThumbnailBox__badge
-                .numberBadge
+              - if($article_type_name):
+                .articleThumbnailBox__badge
+                  .numberBadge
+                    .numberBadge__title <?= $article_type_name ?>
+                    .numberBadge__number
+                      include ./includes/plartStoryNumber
+                      +plartStoryNumber("<?= get_the_date('n') ?>")
+              - endif;
 
-                  .numberBadge__title <?= $article_type_name ?>
-                  .numberBadge__number
-                    include ./includes/plartStoryNumber
-                    +plartStoryNumber("<?= get_the_date('n') ?>")
 
 
           .singleArticle__content

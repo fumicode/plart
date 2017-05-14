@@ -1,0 +1,66 @@
+extends layouts/basic-layout
+
+block head
+  include ./includes/head
+
+block sidebar
+  include ./includes/sidebar
+
+block foot
+  include ./includes/foot
+
+block content
+  .mainBoxContainer
+    .mainBox--article
+      - while( have_posts() ) : the_post()
+        article.singleArticle
+          .breadCrumb
+            ul.breadCrumb__list
+              li.breadCrumb__item
+                a.breadCrumb__link(href="/") top
+
+              - $cat = get_the_category()[0];
+              //coverじゃないときだけ表示
+              //つまり、PLACE PEOPLE THING のときだけ 
+              - if(strcmp($cat->slug , "cover") != 0): 
+                li.breadCrumb__item--arrow > 
+                li.breadCrumb__item 
+                  a.breadCrumb__link(href="/book/") PICK UP ART BOOK
+              - endif;
+
+
+              li.breadCrumb__item--arrow >
+              li.breadCrumb__item
+                a.breadCrumb__link(href="<?php the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
+                
+
+          .singleArticle__header
+            .singleArticle__titleBox
+              h1.singleArticle__title 
+                em
+                  -the_title()
+
+
+
+            .singleArticle__shareLinks
+              .shareLinks
+                h5.shareLinks_title SHARE
+                - echo do_shortcode('[ssba]');
+
+
+          .singleArticle__thumbnailBox
+            .articleThumbnailBox(style="width:50%; margin:0 auto;")
+
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("large", array('class'=>'articleThumbnailBox__image'));
+              - else:
+                img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
+              - endif;
+
+
+
+
+          .singleArticle__content
+            - the_content();
+
+      -endwhile;
