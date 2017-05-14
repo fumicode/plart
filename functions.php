@@ -106,11 +106,11 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 400, 300, array('center','center'));
 
 //正方形ででかく
-add_image_size( 'square', 800, 800, true ); 
+add_image_size( 'square', 800, 800, true );
 
-add_image_size( 'thumbnail4x3', 400, 300, true ); 
+add_image_size( 'thumbnail4x3', 400, 300, true );
 
-add_image_size( 'slider', 1200, 540, true ); 
+add_image_size( 'slider', 1200, 540, true );
 
 //html のwidth やheightを削除する
 add_filter( 'post_thumbnail_html', 'custom_attribute' );
@@ -146,6 +146,13 @@ function my_tinymce_remove_width_attribute( $options ) {
 add_action( 'wp_enqueue_editor', 'my_tinymce_remove_width_attribute', 10, 1 );
 
 
+///////////////////////////////Home content foot widget area///////////////////////////
 
-
-
+	register_sidebar( array(
+		'name' => __( 'Home content foot', 'lightning' ),
+		'id' => 'home-content-foot-widget-area',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h1 class="mainSection-title">',
+		'after_title' => '</h1>',
+	) );
