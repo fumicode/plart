@@ -8,6 +8,7 @@ var bourbon= require("node-bourbon");
 var neat = require("node-neat");
 var notify = require("gulp-notify");
 var riot = require("gulp-riot");
+var sourcemaps = require("gulp-sourcemaps");
 
 //var browser = require("browser-sync");
 gulp.task("scss", function(){ 
@@ -18,9 +19,12 @@ gulp.task("scss", function(){
       errorHandler: notify.onError("Error: <%= error.message %>") //<-
     }))
 
+    .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: neat.includePaths
+      includePaths: neat.includePaths,
+      sourceComments:true
     }).on('error', sass.logError)) 
+    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./"));
 
 

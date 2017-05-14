@@ -3,7 +3,7 @@
 
   position:absolute;
   right:$box-padding-small;
-  bottom:$box-padding;
+  bottom:$box-padding-small;
 
   text-align:right;
 
@@ -12,7 +12,8 @@
 .globalNav__item{
 
   display:inline;
-  margin-left:1em;
+  margin-left:1.2em;
+  letter-spacing: 0.13em;
 
 
   line-height:1;
@@ -20,5 +21,3 @@
   border-bottom:1px solid $color-plart-gray;
 
 }
-
-

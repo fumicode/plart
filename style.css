@@ -836,60 +836,62 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   box-sizing: border-box;
   padding: 22px 32px;
   position: absolute;
-  bottom: -80px;
-  left: 2em;
+  bottom: -66px;
+  left: 36px;
   z-index: 10;
   width: 512px;
-  height: 160px;
+  height: 132px;
   background: white; }
 
 /* line 26, scss/_categoryBox.scss */
 .categoryBox__table {
-  font-size: 1.8rem;
+  font-size: 1.75rem;
   margin: 0; }
   /* line 30, scss/_categoryBox.scss */
   .categoryBox__table td {
     margin: 0;
     padding: 0;
-    border: none; }
+    border: none;
+    line-height: 1.7; }
 
-/* line 37, scss/_categoryBox.scss */
+/* line 38, scss/_categoryBox.scss */
 .categoryBox__art {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  width: 17%;
+  width: 15%;
   font-size: 2.6rem;
   letter-spacing: 0.3em; }
 
-/* line 47, scss/_categoryBox.scss */
+/* line 48, scss/_categoryBox.scss */
 .categoryBox__cross {
   text-align: center;
   font-size: 2.6rem;
-  width: 9%; }
+  width: 12%; }
 
-/* line 54, scss/_categoryBox.scss */
+/* line 55, scss/_categoryBox.scss */
 .categoryBox__catName {
-  width: 24%; }
-  /* line 55, scss/_categoryBox.scss */
+  width: 24%;
+  letter-spacing: 0.12em; }
+  /* line 56, scss/_categoryBox.scss */
   .categoryBox__catName a {
     color: #000;
     border-bottom: solid 1px #dcdcdc; }
 
-/* line 69, scss/_categoryBox.scss */
+/* line 71, scss/_categoryBox.scss */
 .categoryBox.--place .categoryBox__catName.--place a,
 .categoryBox.--people .categoryBox__catName.--people a,
 .categoryBox.--thing .categoryBox__catName.--thing a {
   color: #dcdcdc; }
 
-/* line 75, scss/_categoryBox.scss */
+/* line 77, scss/_categoryBox.scss */
 .categoryBox__catContent {
   width: 50%;
   font-size: 1rem; }
-  /* line 79, scss/_categoryBox.scss */
+  /* line 81, scss/_categoryBox.scss */
   .categoryBox__catContent a {
     color: #000;
     text-decoration: none; }
-    /* line 83, scss/_categoryBox.scss */
+    /* line 85, scss/_categoryBox.scss */
     .categoryBox__catContent a:hover {
       text-decoration: none; }
 
@@ -897,25 +899,26 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .globalNav {
   position: absolute;
   right: 26px;
-  bottom: 36px;
+  bottom: 26px;
   text-align: right; }
 
 /* line 12, scss/_globalNav.scss */
 .globalNav__item {
   display: inline;
-  margin-left: 1em;
+  margin-left: 1.2em;
+  letter-spacing: 0.13em;
   line-height: 1;
   border-bottom: 1px solid #dcdcdc; }
 
 /* line 8, scss/_globalNavBox.scss */
 .globalNavBox {
   position: relative;
-  height: 261px; }
+  height: 208px; }
 
 /* line 20, scss/_globalNavBox.scss */
 .globalNavBox__plartLogo {
   position: absolute;
-  top: 36px;
+  top: 26px;
   right: 26px;
   width: 109px;
   height: 76px; }
@@ -923,7 +926,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 31, scss/_globalNavBox.scss */
 .globalNavBox__titleBox {
   margin-left: 19px;
-  margin-top: 5px; }
+  margin-top: -15px; }
 
 /* line 37, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
@@ -1482,75 +1485,21 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding-left: 2em;
   padding-right: 2em; }
 
-/* line 62, scss/style.scss */
-.banner--1 {
-  height: 100px;
-  background: brown;
-  width: 100%; }
-
-/* line 68, scss/style.scss */
-.banner--2 {
-  height: 100px;
-  background: purple;
-  height: 180px; }
-
-/* line 74, scss/style.scss */
-.slider--pickup {
-  height: 100px;
-  background: red; }
-
-/* line 79, scss/style.scss */
-.instagramBox {
-  height: 150px;
-  background: pink; }
-
-/* line 84, scss/style.scss */
-.partnersBox {
-  height: 300px;
-  background: red; }
-
-/* line 90, scss/style.scss */
-.partners--1 {
-  float: left;
-  display: block;
-  margin-right: 2.26415%;
-  width: 14.77987%;
-  margin-right: 5px; }
-  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-  .partners--1:last-child {
-    margin-right: 0; }
-
-/* line 95, scss/style.scss */
-.partners--2 {
-  float: left;
-  display: block;
-  margin-right: 2.26415%;
-  width: 14.77987%; }
-  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-  .partners--2:last-child {
-    margin-right: 0; }
-
-/* line 102, scss/style.scss */
-.plartFactory__link {
-  height: 400px;
-  width: 100%;
-  background: red; }
-
 /*
  * Search Box用のcss
  */
-/* line 115, scss/style.scss */
+/* line 68, scss/style.scss */
 .search-form, .search-box {
   position: relative; }
 
-/* line 119, scss/style.scss */
+/* line 72, scss/style.scss */
 input[type="search"].search-field {
   border-radius: 2px 0 0 2px;
   width: -webkit-calc(100% - 42px);
   width: calc(100% - 42px);
   background: #dbdcdc; }
 
-/* line 126, scss/style.scss */
+/* line 79, scss/style.scss */
 .search-submit {
   border-radius: 0 2px 2px 0;
   bottom: 0;
@@ -1564,7 +1513,7 @@ input[type="search"].search-field {
 /*
  * search.phpのnot found
  */
-/* line 140, scss/style.scss */
+/* line 93, scss/style.scss */
 .notFound {
   font-size: 30px; }
 
