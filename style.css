@@ -1122,11 +1122,13 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   background: black;
   color: white;
   margin-top: 10px;
-  margin-bottom: -20px;
+  letter-spacing: 0.13em;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 180px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width: 230px;
   text-align: center; }
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .blackButton::after {
@@ -1267,6 +1269,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 17, scss/_sidebarBox.scss */
 .sidebarBox__title {
   font-size: 1.8rem;
+  letter-spacing: 0.1em;
   margin-bottom: 10px; }
 
 /* line 1, scss/_articleBox--ranking.scss */
@@ -1316,15 +1319,33 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-size: 8px;
   clear: both; }
 
-/* line 8, scss/_footerBox.scss */
+/* line 6, scss/_footerBox.scss */
+.footerBox li {
+  display: inline-block;
+  margin-right: 10px;
+  letter-spacing: 0.1em;
+  font-size: 0.9em; }
+  /* line 11, scss/_footerBox.scss */
+  .footerBox li a {
+    border-bottom: none; }
+  /* line 14, scss/_footerBox.scss */
+  .footerBox li:after {
+    margin-left: 10px;
+    content: "|"; }
+  /* line 18, scss/_footerBox.scss */
+  .footerBox li:last-child:after {
+    content: ""; }
+
+/* line 24, scss/_footerBox.scss */
 .footerBox__icon {
   float: right;
   width: 109px;
   height: 76px; }
 
-/* line 15, scss/_footerBox.scss */
+/* line 31, scss/_footerBox.scss */
 .footerBox__menuBox {
-  clear: both; }
+  clear: both;
+  margin-bottom: 1em; }
 
 /* line 6, scss/_singleArticle.scss */
 .singleArticle__title {
@@ -1451,11 +1472,12 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   align-items: center; }
   /* line 8, scss/_snsLinks.scss */
   .snsLinks--text {
-    margin: 0 10px 0 0; }
-  /* line 11, scss/_snsLinks.scss */
+    margin: 0 10px 0 0;
+    letter-spacing: 0.1em; }
+  /* line 12, scss/_snsLinks.scss */
   .snsLinks a {
     border-bottom: none; }
-  /* line 14, scss/_snsLinks.scss */
+  /* line 15, scss/_snsLinks.scss */
   .snsLinks--icon {
     display: inline-block;
     margin-left: 10px;
@@ -1463,7 +1485,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     margin: 0 0 0 12px;
     padding-top: 8px; }
 
-/* line 23, scss/_snsLinks.scss */
+/* line 24, scss/_snsLinks.scss */
 .mainBox .AlpinePhotoTiles-highlight-div, .mainBox--article .AlpinePhotoTiles-highlight-div {
   padding: 10px;
   margin-right: 5px;
@@ -1487,26 +1509,29 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 
 /* line 72, scss/style.scss */
 input[type="search"].search-field {
-  border-radius: 2px 0 0 2px;
+  border-radius: 0;
+  height: 31px;
   width: -webkit-calc(100% - 42px);
   width: calc(100% - 42px);
   background: #dbdcdc; }
 
-/* line 79, scss/style.scss */
+/* line 80, scss/style.scss */
 .search-submit {
-  border-radius: 0 2px 2px 0;
+  border-radius: 0;
   bottom: 0;
+  height: 31px;
   overflow: hidden;
   padding: 0;
   position: absolute;
   right: 0;
   top: 0;
-  width: 42px; }
+  width: 42px;
+  background-color: #000; }
 
 /*
  * search.phpのnot found
  */
-/* line 93, scss/style.scss */
+/* line 96, scss/style.scss */
 .notFound {
   font-size: 30px; }
 
