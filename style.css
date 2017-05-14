@@ -1076,7 +1076,7 @@ a.n, a.sidebarBanner {
   .contentsLayout--3cols li {
     display: inline-block; }
 
-/* line 25, scss/_contentsLayout.scss */
+/* line 27, scss/_contentsLayout.scss */
 .contentsLayout__item {
   float: left;
   display: block;
@@ -1092,12 +1092,43 @@ a.n, a.sidebarBanner {
   .contentsLayout__item:nth-child(3n+1) {
     clear: left; }
 
-/* line 39, scss/_contentsLayout.scss */
+/* line 32, scss/_contentsLayout.scss */
+.contentsLayout__3items--grid {
+  display: block;
+  width: calc(100% / 3);
+  float: left; }
+
+/* line 38, scss/_contentsLayout.scss */
+.contentsLayout--grid {
+  clear: both;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .contentsLayout--grid::after {
+    clear: both;
+    content: "";
+    display: table; }
+  /* line 41, scss/_contentsLayout.scss */
+  .contentsLayout--grid li {
+    display: inline-block; }
+
+/* line 46, scss/_contentsLayout.scss */
+.contentsLayout__item--grid {
+  display: inline;
+  vertical-align: top;
+  width: 100%;
+  padding: 15px;
+  margin-top: -1px;
+  margin-left: -1px;
+  border: solid 1px gray; }
+
+/* line 65, scss/_contentsLayout.scss */
 .contentsLayout--3lines--menuList {
   margin: 0px;
   padding: 0px; }
 
-/* line 44, scss/_contentsLayout.scss */
+/* line 70, scss/_contentsLayout.scss */
 .contentsLayout--3lines--menu {
   float: left;
   font-size: 10px;
@@ -1105,7 +1136,7 @@ a.n, a.sidebarBanner {
   margin-bottom: 0px;
   margin-right: 5px; }
 
-/* line 52, scss/_contentsLayout.scss */
+/* line 78, scss/_contentsLayout.scss */
 .contentsLayout--3lines--br {
   margin: 0px;
   padding: 0px; }
@@ -1483,21 +1514,28 @@ a.n, a.sidebarBanner {
   padding-left: 2em;
   padding-right: 2em; }
 
+/* line 3, scss/_gridLayout.scss */
+.gridBox {
+  padding: 15px;
+  margin-top: -1px;
+  margin-left: -1px;
+  border: solid 1px gray; }
+
 /*
  * Search Box用のcss
  */
-/* line 68, scss/style.scss */
+/* line 69, scss/style.scss */
 .search-form, .search-box {
   position: relative; }
 
-/* line 72, scss/style.scss */
+/* line 73, scss/style.scss */
 input[type="search"].search-field {
   border-radius: 2px 0 0 2px;
   width: -webkit-calc(100% - 42px);
   width: calc(100% - 42px);
   background: #dbdcdc; }
 
-/* line 79, scss/style.scss */
+/* line 80, scss/style.scss */
 .search-submit {
   border-radius: 0 2px 2px 0;
   bottom: 0;
@@ -1511,7 +1549,7 @@ input[type="search"].search-field {
 /*
  * search.phpのnot found
  */
-/* line 93, scss/style.scss */
+/* line 94, scss/style.scss */
 .notFound {
   font-size: 30px; }
 

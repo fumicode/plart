@@ -20,20 +20,21 @@ block body_end
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   script.
+
     //特集スライダー
     $topSlider = jQuery("#topSlider").slick({
       autoplay:true,
       autoplaySpeed:4000 //4秒
     });
 
+    $featureBox__title = jQuery("#featureBox__title");
     $topSlider.on("afterChange",function(event, slick, currentIndex){
-      $currentSlide = slick.$slides[currentIndex]
+      currentSlide = slick.$slides[currentIndex]
+      console.log(currentSlide);
 
+      var title = currentSlide.dataset.titlestr;
 
-      console.log($currentSlide);
-
-
-
+      $featureBox__title.text(title);
     })
 
     //what's new のスライダー 
