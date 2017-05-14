@@ -59,55 +59,6 @@ body{
 @import "bookSlider";
 
 
-<<<<<<< HEAD
-.banner--1{
-  height: $bannerHeight;
-  background: brown;
-  width:100%;
-}
-
-.banner--2{
-  height: $bannerHeight;
-  background: purple;
-  height:180px;
-}
-
-.slider--pickup{
-  height:$pickupSliderHeight;
-  background: red;
-}
-
-.instagramBox{
-  height:$instagramHeight;
-  background: pink;
-}
-
-.partnersBox{
-  height:$partnersHeight;
-
-}
-
-.partners--1{
-  @include span-columns(1 of 6);
-  margin-right: 5px;
-}
-
-.partners--2{
-  @include span-columns(1 of 6)
-}
-
-
-
-
-.plartFactory__link{
-  height: $plartFactoryLinkHeight;
-  width:100%;
-  background: red;
-}
-
-=======
->>>>>>> 2a79fb171b19cd230e2f19c69c22021eddb359d0
-
 
 /*
  * Search Box用のcss

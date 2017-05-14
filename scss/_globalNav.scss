@@ -3,7 +3,7 @@
 
   position:absolute;
   right:$box-padding-small;
-  bottom:$box-padding;
+  bottom:$box-padding-small;
 
   text-align:right;
 
@@ -13,7 +13,7 @@
 
   display:inline;
   margin-left:1.2em;
-  letter-spacing: 1px;
+  letter-spacing: 0.13em;
 
 
   line-height:1;
