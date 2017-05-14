@@ -22,6 +22,19 @@ $titleBox-margin-top: 28px;
 
 
 
+.globalNavBox__spButton{  
+  display:none;
+
+  @include media($medium-screen-down){
+    display:block;
+  }
+
+  position:absolute;
+    top: 36px;
+    right: $box-padding-sp;
+
+}
+
 .globalNavBox__plartLogo{  // あとでやる
   position:absolute;
     top: 26px;

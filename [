@@ -32,9 +32,10 @@ html
       div.page__footer
         block foot
 
+      -wp_footer();
 
 
-      #spMenuBg.spMenuBg
+      .spMenu__bg
       #spMenu.spMenu
         .spMenu__art ART
         .spMenu__cross ✕
@@ -70,38 +71,5 @@ html
           img.globalNavBox__plartLogo(src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png")
 
 
-    - wp_footer();
     block body_end
-    script.
-      jQuery(function(){
-        var $spMenu = jQuery("#spMenu");
-        var $spMenuButton= jQuery("#spMenuButton");
-        var $spMenuBg = jQuery("#spMenuBg");
-
-        $spMenuButton.click(function(){
-          $spMenu.fadeIn();
-          $spMenuBg.fadeIn();          
-        });
-        $spMenuBg.click(function(){
-          $spMenu.fadeOut();
-          $spMenuBg.fadeOut();          
-        });
-
-      });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
