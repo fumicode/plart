@@ -3,4 +3,4 @@ div.search-box
     label
       input(type="search" class="search-field" name="s" value!="<?php the_search_query(); ?>")
     button(type="submit" class="search-submit")
-      img(src="/wp-content/themes/plart/public/image/search_button.png")
+      img(src="<?= get_stylesheet_directory_uri()?>/public/image/search_button.png")

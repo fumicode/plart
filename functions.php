@@ -159,3 +159,6 @@ add_action( 'wp_enqueue_editor', 'my_tinymce_remove_width_attribute', 10, 1 );
 
 ///////////////////////////////Home content foot widget area///////////////////////////
 	register_nav_menu('mainmenu', 'メインメニュー');
+	register_nav_menu('footer_menu_1', 'footer_menu_1');
+	register_nav_menu('footer_menu_2', 'footer_menu_2');
+	register_nav_menu('footer_menu_3', 'footer_menu_3');

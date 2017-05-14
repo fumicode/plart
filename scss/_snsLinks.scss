@@ -7,6 +7,7 @@
   align-items: center;
     &--text{
       margin: 0 10px 0 0;
+      letter-spacing: $small-letter-spacing;
     }
     a{
       border-bottom: none;

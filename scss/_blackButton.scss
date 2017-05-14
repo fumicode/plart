@@ -1,12 +1,14 @@
 
-$blackButtonWidth:180px;
+$blackButtonWidth:230px;
 .blackButton{
   display: block;
   background: black;
   color:white;
   margin-top:10px;
-  margin-bottom: -20px;
+  letter-spacing: $base-letter-spacing;
   @include outer-container;
+  padding-top: 3px;
+  padding-bottom: 3px;
   width:$blackButtonWidth;
   text-align: center;
 }
