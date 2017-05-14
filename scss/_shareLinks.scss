@@ -2,19 +2,16 @@
 .shareLink{
 }
 
-.shareLinks_title {
+.shareLinks__title {
   display:inline-block;
   margin-right: 5px;
 
 
 }
 
-.shareLinks_item{
-  @extend .n;
+.shareLinks__content{
   display:inline-block;
-  margin-right: 5px;
 
-  line-height:1;
-
+  width:50%;
 
 }

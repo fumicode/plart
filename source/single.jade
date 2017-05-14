@@ -51,8 +51,9 @@ block content
 
             .singleArticle__shareLinks
               .shareLinks
-                h5.shareLinks_title SHARE
-                - echo do_shortcode('[ssba]');
+                h5.shareLinks__title SHARE
+                .shareLinks__content 
+                  - echo do_shortcode('[ssba]');
 
 
           :php

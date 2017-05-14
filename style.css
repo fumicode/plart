@@ -542,14 +542,13 @@ ol {
   margin: 0;
   padding: 0; }
   /* line 7, scss/base/_lists.scss */
-  ul.n, ul.shareLinks_item, ul.sidebarBanner {
+  ul.n, ul.sidebarBanner {
     list-style-type: disc;
     margin-bottom: 1em;
     padding-left: 2em; }
   /* line 13, scss/base/_lists.scss */
   
   ol.n,
-  ol.shareLinks_item,
   ol.sidebarBanner {
     list-style-type: decimal;
     margin-bottom: 1em;
@@ -567,11 +566,11 @@ dl {
     margin: 0; }
 
 /* line 1, scss/base/_tables.scss */
-table.n, table.shareLinks_item, table.sidebarBanner {
+table.n, table.sidebarBanner {
   margin: 0;
   padding: 0; }
   /* line 6, scss/base/_tables.scss */
-  table.n tr, table.shareLinks_item tr, table.sidebarBanner tr, table.n th, table.shareLinks_item th, table.sidebarBanner th, table.n td, table.shareLinks_item td, table.sidebarBanner td {
+  table.n tr, table.sidebarBanner tr, table.n th, table.sidebarBanner th, table.n td, table.sidebarBanner td {
     margin: 0;
     padding: 0; }
 
@@ -661,21 +660,16 @@ h6, .h6 {
   font-size: 1.3rem; }
 
 /* line 68, scss/base/_typography.scss */
-h1.n, h1.shareLinks_item, h1.sidebarBanner,
+h1.n, h1.sidebarBanner,
 h2.n,
-h2.shareLinks_item,
 h2.sidebarBanner,
 h3.n,
-h3.shareLinks_item,
 h3.sidebarBanner,
 h4.n,
-h4.shareLinks_item,
 h4.sidebarBanner,
 h5.n,
-h5.shareLinks_item,
 h5.sidebarBanner,
 h6.n,
-h6.shareLinks_item,
 h6.sidebarBanner {
   font-size: 1.3rem; }
 
@@ -724,17 +718,17 @@ picture {
   font-size: 1.8rem; }
 
 /* line 128, scss/base/_typography.scss */
-table.n, table.shareLinks_item, table.sidebarBanner {
+table.n, table.sidebarBanner {
   border: none;
   padding: 0;
   width: auto; }
   /* line 132, scss/base/_typography.scss */
-  table.n tr, table.shareLinks_item tr, table.sidebarBanner tr {
+  table.n tr, table.sidebarBanner tr {
     border: none;
     margin: 0;
     padding: 0; }
     /* line 136, scss/base/_typography.scss */
-    table.n tr td, table.shareLinks_item tr td, table.sidebarBanner tr td {
+    table.n tr td, table.sidebarBanner tr td {
       border: none;
       margin: 0;
       padding: 0; }
@@ -761,7 +755,7 @@ a {
   border-bottom: solid 1px #dcdcdc; }
 
 /* line 175, scss/base/_typography.scss */
-a.n, a.shareLinks_item, a.sidebarBanner {
+a.n, a.sidebarBanner {
   border-bottom: none; }
 
 /* line 1, scss/_clearfix.scss */
@@ -1348,15 +1342,14 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   border-color: black; }
 
 /* line 5, scss/_shareLinks.scss */
-.shareLinks_title {
+.shareLinks__title {
   display: inline-block;
   margin-right: 5px; }
 
 /* line 12, scss/_shareLinks.scss */
-.shareLinks_item {
+.shareLinks__content {
   display: inline-block;
-  margin-right: 5px;
-  line-height: 1; }
+  width: 50%; }
 
 /* line 1, scss/_shareIcon.scss */
 .shareIcon {
