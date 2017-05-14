@@ -9,11 +9,11 @@ $featureBox-title-font-size:30px;
 .featureBox__number{
   @extend .black-box--thin;
   display:inline-block;
-  padding: 15px;
+  padding: 10px 15px;
   background-color:$color-plart-yellow;
 
 
-  font-size:$featureBox-number-font-size;
+  font-size:$font-size-medium;
 
   line-height:1;
 }

@@ -26,7 +26,7 @@
 .plartStoryNumber__title{
 
   line-height:1;
-  margin-bottom:10px;
+  margin-bottom:4px;
   -moz-text-align-last:justify;
   text-align-last:justify;
   width:100%;
@@ -53,10 +53,8 @@
 
   width:100%;
   margin:auto;
-  margin-top: -6px;
-  padding-top: 6px;
+  margin-top: 8px;
   border-top: solid 1px black;
 
-  font-size: $font-size-normal;
+  font-size: $font-size-medium;
 }
-

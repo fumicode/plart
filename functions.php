@@ -45,7 +45,7 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array('title','editor','thumbnail') 
+      'supports' => array('title','editor','thumbnail')
     )
   );
 }
@@ -156,3 +156,6 @@ add_action( 'wp_enqueue_editor', 'my_tinymce_remove_width_attribute', 10, 1 );
 		'before_title' => '<h1 class="mainSection-title">',
 		'after_title' => '</h1>',
 	) );
+
+///////////////////////////////Home content foot widget area///////////////////////////
+	register_nav_menu('mainmenu', 'メインメニュー');
