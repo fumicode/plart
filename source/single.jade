@@ -9,6 +9,7 @@ block sidebar
 block foot
   include ./includes/foot
 
+
 block content
   .mainBoxContainer
     .mainBox--article
@@ -19,21 +20,27 @@ block content
               li.breadCrumb__item
                 a.breadCrumb__link(href="/") top
 
-              li.breadCrumb__item--arrow > 
-              li.breadCrumb__item 
-                - $cat = get_the_category()[0];
-                a.breadCrumb__link(href="/category/<?= $cat->slug?>") ART ✕ <?= $cat->name ?>
+              - $cat = get_the_category()[0];
+              //coverじゃないときだけ表示
+              //つまり、PLACE PEOPLE THING のときだけ 
+              - if(strcmp($cat->slug , "cover") != 0): 
+                li.breadCrumb__item--arrow > 
+                li.breadCrumb__item 
+                  a.breadCrumb__link(href="/category/<?= $cat->slug?>") ART ✕ <?= $cat->name ?>
+              - endif;
 
 
               li.breadCrumb__item--arrow >
               li.breadCrumb__item
-                a.breadCrumb__link(href="<? the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
+                a.breadCrumb__link(href="<?php the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
                 
 
           .singleArticle__header
             .singleArticle__titleBox
               h1.singleArticle__title 
-                -the_title()
+                em
+                  -the_title()
+
 
             .singleArticle__right
               span.singleArticle__writer PLART編集部 
@@ -43,30 +50,36 @@ block content
             .singleArticle__shareLinks
               .shareLinks
                 h5.shareLinks_title SHARE
-                a.shareLinks_item(href="#")
-                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-                a.shareLinks_item(href="#")
-                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-                a.shareLinks_item(href="#")
-                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-                a.shareLinks_item(href="#")
-                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-                a.shareLinks_item(href="#")
-                  img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
+                - echo do_shortcode('[ssba]');
+
+
+          :php
+            $terms = get_the_terms($post->ID, "article_type");
+            $top_terms = array_values(array_filter($terms, function($elem){
+              return $elem->parent == 0;
+            }));
+
+            $top_term = $top_terms[0];
+
+            $article_type_slug = ($top_term->slug);
+            $article_type_name = strtoupper($article_type_slug);
 
           .singleArticle__thumbnailBox
             .articleThumbnailBox
-              img.articleThumbnailBox__image(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("large", array('class'=>'articleThumbnailBox__image'));
+              - else:
+                  img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
+              - endif;
 
               .articleThumbnailBox__badge
                 .numberBadge
-                  .numberBadge__title TOPICS
-                  .numberBadge__number
-                    .plartStoryNumber(href="")
-                      p.plartStoryNumber__title--plart PLART
-                      p.plartStoryNumber__title--story  STORY
-                      p.plartStoryNumber__number <?= get_the_date('n')?>月15日号
 
+                  .numberBadge__title <?= $article_type_name ?>
+                  .numberBadge__number
+                    include ./includes/plartStoryNumber
+                    +plartStoryNumber("<?= get_the_date('n') ?>")
 
 
           .singleArticle__content
@@ -75,20 +88,10 @@ block content
           hr.noBorder.bigMargin
 
           footer.singleArticle__footer
+
             .shareLinks
               h5.shareLinks_title SHARE
-              br
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-              a.shareLinks_item(href="#")
-                img.shareIcon(src="https://lh3.googleusercontent.com/32GbAQWrubLZX4mVPClpLN0fRbAd3ru5BefccDAj7nKD8vz-_NzJ1ph_4WMYNefp3A=w300")
-
+              - echo do_shortcode('[ssba]');
 
             hr.noBorder.bigMargin
 
