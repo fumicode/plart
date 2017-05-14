@@ -34,7 +34,7 @@ $the_query = new WP_Query( $args );
 ?><?php if($the_query->have_posts()):  ?><div id="topSlider" data-slick="{"slidesToShow":6, "slidesToScroll": 6}" class="topSlider"><?php while($the_query->have_posts()): $the_query->the_post(); ?><div data-titlestr="<?php the_title()?>" class="topSlider__slide"><a href="<?php the_permalink()?>" class="n topSlider__link"><?php if(has_post_thumbnail()): ?><?php the_post_thumbnail("slider", array('class'=>'topSlider__image')); ?><?php else: ?><img src="<?= get_stylesheet_directory_uri();?>/public/image/thumb4x3.png" width="1200" height="540" class="topSlider__image"><?php endif; ?></a></div><?php endwhile; ?><!--これは下に書いてあるので大丈夫-->
 
 
-</div><div class="topSliderBox__number"><a href="" class="plartStoryNumber"><p class="plartStoryNumber__title--plart"> <span>P</span><span style="font-size:1px"> </span><span>L</span><span style="font-size:1px"> </span><span>A</span><span style="font-size:1px"> </span><span>R</span><span style="font-size:1px"> </span><span>T</span></p><p class="plartStoryNumber__title--story"> <span>S</span><span style="font-size:1px"> </span><span>T</span><span style="font-size:1px"> </span><span>O</span><span style="font-size:1px"> </span><span>R</span><span style="font-size:1px"> </span><span>Y</span></p><p class="plartStoryNumber__number"><?= get_the_date('n') ?>月15日号</p></a></div><div class="topSliderBox__featureBox"><div class="featureBox"><div class="featureBox__number"><?= get_the_date('n') ?>月15日号 特集</div><br><div id="featureBox__title" class="featureBox__title"> <?php $term = get_term_by('slug', $term_name, 'article_type');
+</div><div class="topSliderBox__number"><div class="plartStoryNumber"><p class="plartStoryNumber__title--plart"> <span>P</span><span style="font-size:1px"> </span><span>L</span><span style="font-size:1px"> </span><span>A</span><span style="font-size:1px"> </span><span>R</span><span style="font-size:1px"> </span><span>T</span></p><p class="plartStoryNumber__title--story"> <span>S</span><span style="font-size:1px"> </span><span>T</span><span style="font-size:1px"> </span><span>O</span><span style="font-size:1px"> </span><span>R</span><span style="font-size:1px"> </span><span>Y</span></p><p class="plartStoryNumber__number"><?= get_the_date('n') ?>月15日号</p></div></div><div class="topSliderBox__featureBox"><div class="featureBox"><div class="featureBox__number"><?= get_the_date('n') ?>月15日号 特集</div><br><div id="featureBox__title" class="featureBox__title"> <?php $term = get_term_by('slug', $term_name, 'article_type');
 echo $term->name;
 //echo $child_term->name
 
@@ -116,5 +116,15 @@ jQuery("#bookSlider").slick({
   autoplaySpeed:4000, //4秒
   slidesToShow:4,
   slidesToScroll:1,
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+  ]
 });
+
 </script></body></html>

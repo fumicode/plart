@@ -974,34 +974,71 @@ a.n, a.sidebarBanner {
   height: 540px;
   box-sizing: content-box;
   padding: 0; }
+  @media screen and (max-width: 600px) {
+    /* line 2, scss/_topSliderBox.scss */
+    .topSliderBox {
+      height: 320px; } }
 
-/* line 12, scss/_topSliderBox.scss */
+/* line 16, scss/_topSliderBox.scss */
 .topSliderBox__number {
   position: absolute;
   top: 36px;
   right: 36px; }
+  @media screen and (max-width: 600px) {
+    /* line 16, scss/_topSliderBox.scss */
+    .topSliderBox__number {
+      top: 8px;
+      right: 8px; } }
 
-/* line 19, scss/_topSliderBox.scss */
+/* line 27, scss/_topSliderBox.scss */
 .topSliderBox__featureBox {
   position: absolute;
   bottom: 36px;
   left: 36px; }
+  @media screen and (max-width: 600px) {
+    /* line 27, scss/_topSliderBox.scss */
+    .topSliderBox__featureBox {
+      bottom: 8px;
+      left: 8px; } }
 
-/* line 25, scss/_topSliderBox.scss */
+/* line 38, scss/_topSliderBox.scss */
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
   right: 26px; }
+  @media screen and (max-width: 600px) {
+    /* line 38, scss/_topSliderBox.scss */
+    .topSliderBox__seriesBox {
+      display: none; } }
 
-/* line 1, scss/_topSlider.scss */
+/* line 2, scss/_topSlider.scss */
 .topSlider {
   height: 540px;
   overflow: hidden; }
+  @media screen and (max-width: 600px) {
+    /* line 2, scss/_topSlider.scss */
+    .topSlider {
+      height: 320px; } }
 
 /* line 11, scss/_topSlider.scss */
+.topSlider__slide {
+  overflow: hidden; }
+
+/* line 17, scss/_topSlider.scss */
 .topSlider__image {
+  display: inline-block;
   width: 100%;
-  height: 540px; }
+  height: 540px;
+  max-width: 9999px;
+  max-width: initial;
+  max-width: auto; }
+  @media screen and (max-width: 600px) {
+    /* line 17, scss/_topSlider.scss */
+    .topSlider__image {
+      margin: 0 auto;
+      width: 711.11111px;
+      height: 320px;
+      margin-left: -50%; } }
 
 /* line 4, scss/_plartStoryNumber.scss */
 .plartStoryNumber {
@@ -1049,19 +1086,29 @@ a.n, a.sidebarBanner {
 .featureBox__number {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #e6ff00;
-  font-size: 1.5rem;
-  line-height: 1; }
+  background-color: #e6ff00; }
+  @media screen and (max-width: 600px) {
+    /* line 9, scss/_featureBox.scss */
+    .featureBox__number {
+      font-size: 1.3rem;
+      padding: 6.4px; } }
 
-/* line 21, scss/_featureBox.scss */
+/* line 23, scss/_featureBox.scss */
 .featureBox__title {
+  box-sizing: border-box;
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
-  max-width: 500px;
+  max-width: 50%;
   line-height: 1.1;
-  font-size: 30px;
+  font-size: 3rem;
   background-color: rgba(255, 255, 255, 0.9); }
+  @media screen and (max-width: 600px) {
+    /* line 23, scss/_featureBox.scss */
+    .featureBox__title {
+      font-size: 1.8rem;
+      max-width: 280px;
+      padding: 8px; } }
 
 /* line 4, scss/_seriesBox.scss */
 .seriesBox {

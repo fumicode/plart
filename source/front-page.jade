@@ -49,7 +49,17 @@ block body_end
       autoplaySpeed:4000, //4秒
       slidesToShow:4,
       slidesToScroll:1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+      ]
     });
+
 
 block content
   include ./includes/articleBox
