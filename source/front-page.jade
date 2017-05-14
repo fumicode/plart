@@ -21,11 +21,20 @@ block body_end
 
   script.
     //特集スライダー
-    jQuery("#topSlider").slick({
+    $topSlider = jQuery("#topSlider").slick({
       autoplay:true,
       autoplaySpeed:4000 //4秒
-
     });
+
+    $topSlider.on("afterChange",function(event, slick, currentIndex){
+      $currentSlide = slick.$slides[currentIndex]
+
+
+      console.log($currentSlide);
+
+
+
+    })
 
     //what's new のスライダー 
     jQuery("#sliderBox").slick({
@@ -151,7 +160,7 @@ block content
         
         - while($the_query->have_posts()): $the_query->the_post();
 
-          a.n.bookSlider__link
+          a.n.bookSlider__link(href="<?=the_permalink() ?>")
             .bookSlider__item
               - if(has_post_thumbnail()):
               -   the_post_thumbnail("square", array('class'=>'bookSlider__image'));
