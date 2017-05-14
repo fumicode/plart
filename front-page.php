@@ -83,7 +83,7 @@ jQuery("#sliderBox").slick({
 });
 
 //what's new のスライダー 
-$("#bookSlider").slick({
+jQuery("#bookSlider").slick({
   autoplay:true,
   autoplaySpeed:4000, //4秒
   slidesToShow:4,
