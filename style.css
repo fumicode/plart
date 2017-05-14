@@ -1233,6 +1233,11 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     margin: 0 0 0 12px;
     padding-top: 8px; }
 
+.mainBox .AlpinePhotoTiles-highlight-div, .mainBox--article .AlpinePhotoTiles-highlight-div {
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
 .sidebarBanner__image {
   display: block; }
 
