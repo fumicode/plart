@@ -36,6 +36,10 @@ $thumbnailMarginBottom:5px;
   margin-bottom: $articleBoxHeader-marginBottom;
   padding:0px;
   overflow: hidden;
+
+  &.--unvisible{
+    visibility:hidden;
+  }
 }
 
 .articleBox__category{
@@ -112,6 +116,9 @@ $thumbnailMarginBottom:5px;
     visibility:visible;
 
 
+  }
+
+  &.--big{
   }
 }
 

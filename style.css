@@ -10,6 +10,7 @@ Version: 0.0
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
+/* line 9, scss/_normalize.scss */
 html {
   font-family: sans-serif;
   /* 1 */
@@ -21,6 +22,7 @@ html {
 /**
  * Remove default margin.
  */
+/* line 19, scss/_normalize.scss */
 body {
   margin: 0; }
 
@@ -32,6 +34,7 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
+/* line 33, scss/_normalize.scss */
 article,
 aside,
 details,
@@ -51,6 +54,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
+/* line 54, scss/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -64,6 +68,7 @@ video {
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
+/* line 67, scss/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -72,6 +77,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
+/* line 77, scss/_normalize.scss */
 [hidden],
 template {
   display: none; }
@@ -81,6 +87,7 @@ template {
 /**
  * Remove the gray background color from active links in IE 10.
  */
+/* line 89, scss/_normalize.scss */
 a {
   background-color: transparent; }
 
@@ -88,6 +95,7 @@ a {
  * Improve readability of focused elements when they are also in an
  * active/hover state.
  */
+/* line 98, scss/_normalize.scss */
 a:active,
 a:hover {
   outline: 0; }
@@ -97,12 +105,14 @@ a:hover {
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
+/* line 110, scss/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
+/* line 118, scss/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
@@ -110,6 +120,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
+/* line 127, scss/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -117,6 +128,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
+/* line 136, scss/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -124,6 +136,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
+/* line 145, scss/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -131,12 +144,14 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
+/* line 154, scss/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
+/* line 162, scss/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -144,9 +159,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
+/* line 170, scss/_normalize.scss */
 sup {
   top: -0.5em; }
 
+/* line 174, scss/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -155,12 +172,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
+/* line 185, scss/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
+/* line 193, scss/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -169,12 +188,14 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
+/* line 204, scss/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
+/* line 212, scss/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -182,12 +203,14 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
+/* line 221, scss/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
+/* line 229, scss/_normalize.scss */
 code,
 kbd,
 pre,
@@ -207,6 +230,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
+/* line 252, scss/_normalize.scss */
 button,
 input,
 optgroup,
@@ -222,6 +246,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
+/* line 266, scss/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -231,6 +256,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
+/* line 277, scss/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -242,6 +268,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
+/* line 290, scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -254,6 +281,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
+/* line 302, scss/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -261,6 +289,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
+/* line 311, scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -270,6 +299,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
+/* line 322, scss/_normalize.scss */
 input {
   line-height: normal; }
 
@@ -280,6 +310,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
+/* line 334, scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -292,6 +323,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
+/* line 346, scss/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -300,6 +332,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
+/* line 356, scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -311,6 +344,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
+/* line 367, scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -318,6 +352,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
+/* line 376, scss/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -327,6 +362,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
+/* line 387, scss/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -336,6 +372,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
+/* line 396, scss/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -343,6 +380,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
+/* line 405, scss/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -351,20 +389,25 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
+/* line 416, scss/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* line 421, scss/_normalize.scss */
 td,
 th {
   padding: 0; }
 
+/* line 4, node_modules/bourbon-neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
 
+/* line 9, node_modules/bourbon-neat/app/assets/stylesheets/grid/_box-sizing.scss */
 *, *::after, *::before {
   box-sizing: inherit; }
 
+/* line 1, scss/base/_buttons.scss */
 button, input[type="button"], input[type="reset"], input[type="submit"],
 a.button {
   appearance: none;
@@ -385,44 +428,54 @@ a.button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
+  /* line 22, scss/base/_buttons.scss */
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   a.button:hover,
   a.button:focus {
     background-color: #b8cc00;
     color: #fff; }
+  /* line 28, scss/base/_buttons.scss */
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   a.button:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
+    /* line 32, scss/base/_buttons.scss */
     button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover,
     a.button:disabled:hover {
       background-color: #e6ff00; }
 
+/* line 1, scss/base/_forms.scss */
 fieldset {
   background-color: #f7f7f7;
   border: 1px solid #ddd;
   margin: 0 0 1em;
   padding: 2em; }
 
+/* line 8, scss/base/_forms.scss */
 input,
 label,
 select {
   display: block;
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-size: 1.6rem; }
+  /* line 15, scss/base/_forms.scss */
   input.inline,
   label.inline,
   select.inline {
     display: inline; }
 
+/* line 20, scss/base/_forms.scss */
 label {
   font-weight: 600;
   margin-bottom: 0.5em; }
+  /* line 24, scss/base/_forms.scss */
   label.required::after {
     content: "*"; }
+  /* line 28, scss/base/_forms.scss */
   label abbr {
     display: none; }
 
+/* line 33, scss/base/_forms.scss */
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple=multiple] {
   background-color: #fff;
@@ -435,52 +488,65 @@ select[multiple=multiple] {
   margin-bottom: 1em;
   padding: 0.66667em;
   transition: border-color 150ms ease; }
+  /* line 47, scss/base/_forms.scss */
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
   select[multiple=multiple]:hover {
     border-color: #b1b1b1; }
+  /* line 51, scss/base/_forms.scss */
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
   select[multiple=multiple]:focus {
     border-color: #e6ff00;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(207, 230, 0, 0.7);
     outline: none; }
+  /* line 57, scss/base/_forms.scss */
   input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
   select[multiple=multiple]:disabled {
     background-color: #f2f2f2;
     cursor: not-allowed; }
+    /* line 61, scss/base/_forms.scss */
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
     select[multiple=multiple]:disabled:hover {
       border: 1px solid #ddd; }
 
+/* line 67, scss/base/_forms.scss */
 textarea {
   resize: vertical; }
 
+/* line 71, scss/base/_forms.scss */
 input[type="search"] {
   appearance: none; }
 
+/* line 75, scss/base/_forms.scss */
 input[type="checkbox"],
 input[type="radio"] {
   display: inline;
   margin-right: 0.5em; }
+  /* line 80, scss/base/_forms.scss */
   input[type="checkbox"] + label,
   input[type="radio"] + label {
     display: inline-block; }
 
+/* line 85, scss/base/_forms.scss */
 input[type="file"] {
   margin-bottom: 1em; }
 
+/* line 90, scss/base/_forms.scss */
 select {
   margin-bottom: 2em;
   width: auto; }
 
+/* line 1, scss/base/_lists.scss */
 ul,
 ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+  /* line 7, scss/base/_lists.scss */
   ul.n, ul.shareLinks_item, ul.sidebarBanner {
     list-style-type: disc;
     margin-bottom: 1em;
     padding-left: 2em; }
+  /* line 13, scss/base/_lists.scss */
   
   ol.n,
   ol.shareLinks_item,
@@ -489,49 +555,62 @@ ol {
     margin-bottom: 1em;
     padding-left: 2em; }
 
+/* line 28, scss/base/_lists.scss */
 dl {
   margin-bottom: 1em; }
+  /* line 31, scss/base/_lists.scss */
   dl dt {
     font-weight: bold;
     margin-top: 1em; }
+  /* line 36, scss/base/_lists.scss */
   dl dd {
     margin: 0; }
 
+/* line 1, scss/base/_tables.scss */
 table.n, table.shareLinks_item, table.sidebarBanner {
   margin: 0;
   padding: 0; }
+  /* line 6, scss/base/_tables.scss */
   table.n tr, table.shareLinks_item tr, table.sidebarBanner tr, table.n th, table.shareLinks_item th, table.sidebarBanner th, table.n td, table.shareLinks_item td, table.sidebarBanner td {
     margin: 0;
     padding: 0; }
 
+/* line 13, scss/base/_tables.scss */
 table {
   border-collapse: collapse;
   font-feature-settings: "kern", "liga", "tnum";
   margin: 1em 0;
   table-layout: fixed;
   width: 100%; }
+  /* line 20, scss/base/_tables.scss */
   table th {
     border-bottom: 1px solid #a6a6a6;
     font-weight: 600;
     padding: 1em 0;
     text-align: left; }
+  /* line 27, scss/base/_tables.scss */
   table td {
     border-bottom: 1px solid #ddd;
     padding: 1em 0; }
+  /* line 32, scss/base/_tables.scss */
   table tr,
   table td,
   table th {
     vertical-align: middle; }
 
+/* line 1, scss/base/_typography.scss */
 html {
   font-size: 62.5%; }
   @media screen and (min-width: 600px) {
+    /* line 1, scss/base/_typography.scss */
     html {
       font-size: 62.5%; } }
   @media screen and (min-width: 900px) {
+    /* line 1, scss/base/_typography.scss */
     html {
       font-size: 62.5%; } }
 
+/* line 14, scss/base/_typography.scss */
 body {
   color: #333;
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
@@ -539,6 +618,7 @@ body {
   font-size: 1.3rem;
   line-height: 2; }
 
+/* line 24, scss/base/_typography.scss */
 h1,
 h2,
 h3,
@@ -550,29 +630,37 @@ h6 {
   line-height: 1.2;
   margin: 0 0 1em; }
 
+/* line 38, scss/base/_typography.scss */
 h1, .h1 {
   font-size: 2.6rem; }
 
+/* line 42, scss/base/_typography.scss */
 h2, .h2 {
   font-size: 2.6rem; }
 
+/* line 46, scss/base/_typography.scss */
 h3, .h3 {
   font-size: 2.6rem; }
 
+/* line 50, scss/base/_typography.scss */
 h4, .h4 {
   font-size: 1.8rem; }
 
+/* line 54, scss/base/_typography.scss */
 h4,
 .h4 {
   border-bottom: solid 1px #dcdcdc;
   padding-bottom: 1em; }
 
+/* line 60, scss/base/_typography.scss */
 h5, .h5 {
   font-size: 1.3rem; }
 
+/* line 64, scss/base/_typography.scss */
 h6, .h6 {
   font-size: 1.3rem; }
 
+/* line 68, scss/base/_typography.scss */
 h1.n, h1.shareLinks_item, h1.sidebarBanner,
 h2.n,
 h2.shareLinks_item,
@@ -591,9 +679,11 @@ h6.shareLinks_item,
 h6.sidebarBanner {
   font-size: 1.3rem; }
 
+/* line 78, scss/base/_typography.scss */
 p {
   margin: 0 0 1em; }
 
+/* line 82, scss/base/_typography.scss */
 a {
   color: #000;
   text-decoration: none;
@@ -607,6 +697,7 @@ a {
   }
   */ }
 
+/* line 97, scss/base/_typography.scss */
 hr {
   border-bottom: 1px solid #ddd;
   border-left: 0;
@@ -614,37 +705,46 @@ hr {
   border-top: 0;
   margin: 2em 0; }
 
+/* line 105, scss/base/_typography.scss */
 hr.noBorder {
   border: 0; }
 
+/* line 110, scss/base/_typography.scss */
 hr.bigMargin {
   margin-bottom: 100px; }
 
+/* line 115, scss/base/_typography.scss */
 img,
 picture {
   margin: 0;
   max-width: 100%; }
 
+/* line 123, scss/base/_typography.scss */
 .big {
   font-size: 1.8rem; }
 
+/* line 128, scss/base/_typography.scss */
 table.n, table.shareLinks_item, table.sidebarBanner {
   border: none;
   padding: 0;
   width: auto; }
+  /* line 132, scss/base/_typography.scss */
   table.n tr, table.shareLinks_item tr, table.sidebarBanner tr {
     border: none;
     margin: 0;
     padding: 0; }
+    /* line 136, scss/base/_typography.scss */
     table.n tr td, table.shareLinks_item tr td, table.sidebarBanner tr td {
       border: none;
       margin: 0;
       padding: 0; }
 
+/* line 146, scss/base/_typography.scss */
 em {
   font-style: normal;
   background: linear-gradient(transparent 68%, #d5ff00 68%); }
 
+/* line 156, scss/base/_typography.scss */
 blockquote {
   margin-left: 0;
   margin-right: 0;
@@ -656,29 +756,36 @@ blockquote {
   background-position: left top 20px, right bottom 20px;
   background-size: 15px 35px, 15px 35px; }
 
+/* line 171, scss/base/_typography.scss */
 a {
   border-bottom: solid 1px #dcdcdc; }
 
+/* line 175, scss/base/_typography.scss */
 a.n, a.shareLinks_item, a.sidebarBanner {
   border-bottom: none; }
 
+/* line 1, scss/_clearfix.scss */
 .clearfix:after, .page__content:after, .contentsLayout--1big2small:after, .contentsLayout--3lines:after, .articleBox--ranking:after, .humanProfile:after {
   content: " ";
   display: block;
   clear: both; }
 
+/* line 2, scss/_boxes.scss */
 .black-box, .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title, .globalNavBox, .topSliderBox, .mainBox, .mainBox--article, .sidebarBox, .footerBox {
   border: 4px solid black;
   border-bottom-width: 0;
   padding: 36px; }
 
+/* line 9, scss/_boxes.scss */
 .black-box--last, .footerBox {
   border-bottom-width: 4px; }
 
+/* line 13, scss/_boxes.scss */
 .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title {
   border-width: 2px;
   border-bottom-width: 2px; }
 
+/* line 4, scss/_page.scss */
 .page {
   max-width: 1200px;
   margin-left: auto;
@@ -686,37 +793,45 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-top: 50.4px;
   margin-bottom: 50.4px;
   width: 1200px; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .page::after {
     clear: both;
     content: "";
     display: table; }
 
+/* line 25, scss/_page.scss */
 .page__content {
   border-right: solid 4px black;
   border-left: solid 4px black; }
 
+/* line 33, scss/_page.scss */
 .page__main {
   box-sizing: border-box;
   float: left;
   width: 866px; }
 
+/* line 39, scss/_page.scss */
 .page__sidebar {
   box-sizing: border-box;
   float: right;
   width: 326px; }
 
+/* line 2, scss/_siteTitle.scss */
 .siteTitle {
   font-size: 3rem;
   letter-spacing: 0.3em; }
 
+/* line 8, scss/_siteTitle.scss */
 .siteTitle__plart {
   font-family: "Raleway", sans-serif;
   font-weight: bold; }
 
+/* line 16, scss/_siteTitle.scss */
 .siteTitle__story {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
+/* line 6, scss/_categoryBox.scss */
 .categoryBox {
   box-sizing: border-box;
   padding: 22px 32px;
@@ -728,14 +843,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   height: 160px;
   background: white; }
 
+/* line 26, scss/_categoryBox.scss */
 .categoryBox__table {
   font-size: 1.8rem;
   margin: 0; }
+  /* line 30, scss/_categoryBox.scss */
   .categoryBox__table td {
     margin: 0;
     padding: 0;
     border: none; }
 
+/* line 37, scss/_categoryBox.scss */
 .categoryBox__art {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -743,47 +861,58 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-size: 2.6rem;
   letter-spacing: 0.3em; }
 
+/* line 47, scss/_categoryBox.scss */
 .categoryBox__cross {
   text-align: center;
   font-size: 2.6rem;
   width: 9%; }
 
+/* line 54, scss/_categoryBox.scss */
 .categoryBox__catName {
   width: 24%; }
+  /* line 55, scss/_categoryBox.scss */
   .categoryBox__catName a {
     color: #000;
     border-bottom: solid 1px #dcdcdc; }
 
+/* line 69, scss/_categoryBox.scss */
 .categoryBox.--place .categoryBox__catName.--place a,
 .categoryBox.--people .categoryBox__catName.--people a,
 .categoryBox.--thing .categoryBox__catName.--thing a {
   color: #dcdcdc; }
 
+/* line 75, scss/_categoryBox.scss */
 .categoryBox__catContent {
   width: 50%;
   font-size: 1rem; }
+  /* line 79, scss/_categoryBox.scss */
   .categoryBox__catContent a {
     color: #000;
     text-decoration: none; }
+    /* line 83, scss/_categoryBox.scss */
     .categoryBox__catContent a:hover {
       text-decoration: none; }
 
+/* line 2, scss/_globalNav.scss */
 .globalNav {
   position: absolute;
   right: 26px;
   bottom: 36px;
   text-align: right; }
 
+/* line 12, scss/_globalNav.scss */
 .globalNav__item {
   display: inline;
   margin-left: 1em;
   line-height: 1;
   border-bottom: 1px solid #dcdcdc; }
 
+/* line 8, scss/_globalNavBox.scss */
 .globalNavBox {
   position: relative;
   height: 261px; }
 
+/* line 20, scss/_globalNavBox.scss */
 .globalNavBox__plartLogo {
   position: absolute;
   top: 36px;
@@ -791,46 +920,56 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   width: 109px;
   height: 76px; }
 
+/* line 31, scss/_globalNavBox.scss */
 .globalNavBox__titleBox {
   margin-left: 19px;
   margin-top: 5px; }
 
+/* line 37, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
   line-height: 1;
   margin-bottom: 18px; }
 
+/* line 43, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
   line-height: 1;
   margin: 0px; }
 
+/* line 2, scss/_topSliderBox.scss */
 .topSliderBox {
   position: relative;
   height: 540px;
   box-sizing: content-box;
   padding: 0; }
 
+/* line 12, scss/_topSliderBox.scss */
 .topSliderBox__number {
   position: absolute;
   top: 36px;
   right: 36px; }
 
+/* line 19, scss/_topSliderBox.scss */
 .topSliderBox__featureBox {
   position: absolute;
   bottom: 36px;
   left: 36px; }
 
+/* line 25, scss/_topSliderBox.scss */
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
   right: 26px; }
 
+/* line 1, scss/_topSlider.scss */
 .topSlider {
   height: 540px; }
 
+/* line 10, scss/_topSlider.scss */
 .topSlider__image {
   width: 100%;
   height: 540px; }
 
+/* line 4, scss/_plartStoryNumber.scss */
 .plartStoryNumber {
   box-sizing: border-box;
   display: block;
@@ -846,6 +985,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   -moz-text-align-last: justify;
   text-align-last: justify; }
 
+/* line 26, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title, .plartStoryNumber__title--plart, .plartStoryNumber__title--story {
   line-height: 1;
   margin-bottom: 10px;
@@ -853,14 +993,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   text-align-last: justify;
   width: 100%; }
 
+/* line 35, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title--plart {
   font-family: "Raleway", sans-serif;
   font-weight: bold; }
 
+/* line 42, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title--story {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
+/* line 52, scss/_plartStoryNumber.scss */
 .plartStoryNumber__number {
   width: 100%;
   margin: auto;
@@ -869,6 +1012,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   border-top: solid 1px black;
   font-size: 1.3rem; }
 
+/* line 9, scss/_featureBox.scss */
 .featureBox__number {
   display: inline-block;
   padding: 15px;
@@ -876,6 +1020,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-size: 14px;
   line-height: 1; }
 
+/* line 21, scss/_featureBox.scss */
 .featureBox__title {
   margin-top: -2px;
   display: inline-block;
@@ -885,60 +1030,76 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9); }
 
+/* line 4, scss/_seriesBox.scss */
 .seriesBox {
   padding: 17px 26px;
   background: #e6ff00;
   font-size: 26px;
   line-height: 1; }
+  /* line 13, scss/_seriesBox.scss */
   .seriesBox .seriesBox__siteTitles {
     font-size: 1.6rem; }
+    /* line 17, scss/_seriesBox.scss */
     .seriesBox .seriesBox__siteTitles .siteTitle {
       font-size: 1.6rem; }
 
+/* line 6, scss/_contentsLayout.scss */
 .contentsLayout--1big2small--big {
   float: left;
   display: block;
   margin-right: 4.6332%;
   width: 65.12227%; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .contentsLayout--1big2small--big:last-child {
     margin-right: 0; }
 
+/* line 10, scss/_contentsLayout.scss */
 .contentsLayout--1big2small--small {
   float: left;
   display: block;
   margin-right: 4.6332%;
   width: 30.24453%; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .contentsLayout--1big2small--small:last-child {
     margin-right: 0; }
 
+/* line 14, scss/_contentsLayout.scss */
 .contentsLayout--3cols {
   clear: both;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .contentsLayout--3cols::after {
     clear: both;
     content: "";
     display: table; }
+  /* line 17, scss/_contentsLayout.scss */
   .contentsLayout--3cols li {
     display: inline-block; }
 
+/* line 25, scss/_contentsLayout.scss */
 .contentsLayout__item {
   float: left;
   display: block;
   margin-right: 4.6332%;
   width: 30.24453%; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .contentsLayout__item:last-child {
     margin-right: 0; }
+  /* line 78, node_modules/bourbon-neat/app/assets/stylesheets/grid/_omega.scss */
   .contentsLayout__item:nth-child(3n) {
     margin-right: 0; }
+  /* line 83, node_modules/bourbon-neat/app/assets/stylesheets/grid/_omega.scss */
   .contentsLayout__item:nth-child(3n+1) {
     clear: left; }
 
+/* line 39, scss/_contentsLayout.scss */
 .contentsLayout--3lines--menuList {
   margin: 0px;
   padding: 0px; }
 
+/* line 44, scss/_contentsLayout.scss */
 .contentsLayout--3lines--menu {
   float: left;
   font-size: 10px;
@@ -946,10 +1107,12 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-bottom: 0px;
   margin-right: 5px; }
 
+/* line 52, scss/_contentsLayout.scss */
 .contentsLayout--3lines--br {
   margin: 0px;
   padding: 0px; }
 
+/* line 3, scss/_blackButton.scss */
 .blackButton {
   display: block;
   background: black;
@@ -961,14 +1124,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-right: auto;
   width: 180px;
   text-align: center; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .blackButton::after {
     clear: both;
     content: "";
     display: table; }
 
+/* line 1, scss/_mainBox.scss */
 .mainBoxContainer {
   margin-left: -4px; }
 
+/* line 9, scss/_mainBox.scss */
 .mainBox__title {
   padding: 0px;
   margin: 0px;
@@ -976,6 +1142,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-size: 1.8rem;
   margin-right: 10px; }
 
+/* line 17, scss/_mainBox.scss */
 .mainBox__subTitle {
   display: inline;
   margin-left: 1em;
@@ -983,49 +1150,64 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
+/* line 28, scss/_mainBox.scss */
 .mainBox--article {
   padding-top: 80px; }
 
+/* line 10, scss/_articleBox.scss */
 .articleBox-base, .articleBox {
   padding: 15px 0px 15px 0px; }
 
+/* line 16, scss/_articleBox.scss */
 .articleBox {
   border-top: solid 1px #dcdcdc; }
+  /* line 20, scss/_articleBox.scss */
   .articleBox.--big {
     border-top-width: 0;
     margin-bottom: 1px;
     padding-top: 0px; }
+  /* line 26, scss/_articleBox.scss */
   .articleBox.--smalltop {
     border-top-width: 0;
     margin-bottom: 1px;
     padding-top: 0px; }
 
+/* line 35, scss/_articleBox.scss */
 .articleBox__header {
   margin-bottom: 10px;
   padding: 0px;
   overflow: hidden; }
+  /* line 40, scss/_articleBox.scss */
+  .articleBox__header.--unvisible {
+    visibility: hidden; }
 
+/* line 45, scss/_articleBox.scss */
 .articleBox__category {
   float: left;
   font-size: 1.3rem; }
+  /* line 48, scss/_articleBox.scss */
   .articleBox__category.--unvisible {
     visibility: hidden; }
 
+/* line 53, scss/_articleBox.scss */
 .articleBox__category--ART {
   font-weight: bold;
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
+/* line 60, scss/_articleBox.scss */
 .articleBox__category--cross {
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
+/* line 66, scss/_articleBox.scss */
 .articleBox__category--genre {
   line-height: 20px;
   float: left; }
 
+/* line 71, scss/_articleBox.scss */
 .articleBox__number {
   float: right;
   background: #e6ff00;
@@ -1033,6 +1215,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding-left: 7px;
   padding-right: 7px; }
 
+/* line 84, scss/_articleBox.scss */
 .thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   display: block;
@@ -1041,17 +1224,21 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 0px;
   vertical-align: bottom; }
 
+/* line 95, scss/_articleBox.scss */
 .articleBox__thumbnailBox {
   position: relative; }
 
+/* line 106, scss/_articleBox.scss */
 .articleBox__coverBadge {
   position: absolute;
   right: 5%;
   top: 5%;
   visibility: hidden; }
+  /* line 115, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
 
+/* line 125, scss/_articleBox.scss */
 .articleBox__title {
   clear: both;
   word-break: break-all;
@@ -1060,31 +1247,38 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin: 0px;
   padding: 0px; }
 
+/* line 2, scss/_sidebarBox.scss */
 .sidebarBoxContainer {
   margin-left: -4px;
   margin-right: -4px;
   width: auto; }
 
+/* line 8, scss/_sidebarBox.scss */
 .sidebarBox {
   padding: 26px; }
+  /* line 12, scss/_sidebarBox.scss */
   .sidebarBox.--nopadding {
     padding: 0; }
 
+/* line 18, scss/_sidebarBox.scss */
 .sidebarBox__title {
   font-size: 1.8rem;
   margin-bottom: 10px; }
 
+/* line 1, scss/_articleBox--ranking.scss */
 .articleBox--ranking {
   border-bottom: solid 1px gray;
   padding-bottom: 5px;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .articleBox--ranking::after {
     clear: both;
     content: "";
     display: table; }
 
+/* line 8, scss/_articleBox--ranking.scss */
 .articleBox--ranking--thumbnail {
   float: left;
   display: block;
@@ -1093,66 +1287,82 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-top: 20px;
   padding-right: 10px;
   display: block; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .articleBox--ranking--thumbnail:last-child {
     margin-right: 0; }
 
+/* line 15, scss/_articleBox--ranking.scss */
 .articleBox--ranking--right {
   float: left;
   display: block;
   margin-right: 1.3463%;
   width: 59.46148%;
   margin-top: 10px; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .articleBox--ranking--right:last-child {
     margin-right: 0; }
 
+/* line 20, scss/_articleBox--ranking.scss */
 .articleBox--ranking--rank {
   font-size: 30px;
   clear: both; }
 
+/* line 25, scss/_articleBox--ranking.scss */
 .articleBox--ranking--title {
   font-size: 8px;
   clear: both; }
 
+/* line 8, scss/_footerBox.scss */
 .footerBox__icon {
   float: right;
   width: 109px;
   height: 76px; }
 
+/* line 15, scss/_footerBox.scss */
 .footerBox__menuBox {
   clear: both; }
 
+/* line 6, scss/_singleArticle.scss */
 .singleArticle__title {
   margin-top: 2em;
   margin-bottom: 1em; }
 
+/* line 14, scss/_singleArticle.scss */
 .singleArticle__right {
   float: right; }
 
+/* line 8, scss/_breadCrumb.scss */
 .breadCrumb__item, .breadCrumb__item--arrow {
   display: inline-block;
   margin-right: 0.5em; }
 
+/* line 19, scss/_breadCrumb.scss */
 .breadCrumb__link {
   border-color: black; }
 
+/* line 5, scss/_shareLinks.scss */
 .shareLinks_title {
   display: inline-block;
   margin-right: 5px; }
 
+/* line 12, scss/_shareLinks.scss */
 .shareLinks_item {
   display: inline-block;
   margin-right: 5px;
   line-height: 1; }
 
+/* line 1, scss/_shareIcon.scss */
 .shareIcon {
   width: 20px;
   height: 20px; }
 
+/* line 9, scss/_numberBadge.scss */
 .numberBadge {
   position: relative;
   width: 290px;
   height: 145px; }
 
+/* line 15, scss/_numberBadge.scss */
 .numberBadge__title {
   box-sizing: border-box;
   position: absolute;
@@ -1165,48 +1375,67 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   background: rgba(255, 255, 255, 0.9);
   line-height: 1; }
 
+/* line 40, scss/_numberBadge.scss */
 .numberBadge__number {
   position: absolute;
   top: 0px;
   right: 0px; }
 
+/* line 6, scss/_coverBadge.scss */
 .coverBadge {
   position: relative;
   border: 2px solid #000;
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  background: #e6ff00; }
+  border-radius: 30px;
+  width: 60px;
+  height: 60px;
+  background: #e6ff00;
+  font-size: 10px; }
+  /* line 20, scss/_coverBadge.scss */
+  .coverBadge.--big {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 16.66667px; }
+    /* line 27, scss/_coverBadge.scss */
+    .coverBadge.--big .coverBadge__text {
+      line-height: 100px; }
 
+/* line 35, scss/_coverBadge.scss */
 .coverBadge__text {
   width: 100%;
   height: 100%;
-  line-height: 100px;
-  text-align: center;
-  font-size: 16.66667px; }
+  line-height: 60px;
+  text-align: center; }
 
+/* line 3, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox {
   position: relative; }
 
+/* line 9, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox__image {
   width: 100%; }
 
+/* line 14, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox__badge {
   position: absolute;
   top: 26px;
   right: 26px; }
 
+/* line 6, scss/_humanProfile.scss */
 .humanProfile {
   border-bottom: solid #dcdcdc 1px;
   margin-bottom: 5em; }
 
+/* line 17, scss/_humanProfile.scss */
 .humanProfile__image {
   float: left;
   width: 20%; }
 
+/* line 11, scss/_keywordTags.scss */
 .keywordTags__list {
   color: white; }
 
+/* line 16, scss/_keywordTags.scss */
 .keywordTags__item {
   color: white;
   display: inline-block;
@@ -1214,19 +1443,24 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 5px;
   margin: 5px 5px 5px 0px; }
 
+/* line 27, scss/_keywordTags.scss */
 .keywordTags__link {
   color: white; }
 
+/* line 1, scss/_snsLinks.scss */
 .snsLinks {
   font-size: 1.6rem;
   font-weight: bold;
   display: flex;
   -webkit-align-items: center;
   align-items: center; }
+  /* line 8, scss/_snsLinks.scss */
   .snsLinks--text {
     margin: 0 10px 0 0; }
+  /* line 11, scss/_snsLinks.scss */
   .snsLinks a {
     border-bottom: none; }
+  /* line 14, scss/_snsLinks.scss */
   .snsLinks--icon {
     display: inline-block;
     margin-left: 10px;
@@ -1234,54 +1468,66 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     margin: 0 0 0 12px;
     padding-top: 8px; }
 
+/* line 6, scss/_sidebarBanner.scss */
 .sidebarBanner__image {
   display: block; }
 
+/* line 61, scss/style.scss */
 .banner--1 {
   height: 100px;
   background: brown;
   width: 100%; }
 
+/* line 67, scss/style.scss */
 .banner--2 {
   height: 100px;
   background: purple;
   height: 180px; }
 
+/* line 73, scss/style.scss */
 .slider--pickup {
   height: 100px;
   background: red; }
 
+/* line 78, scss/style.scss */
 .instagramBox {
   height: 150px;
   background: pink; }
 
+/* line 83, scss/style.scss */
 .partnersBox {
   height: 300px;
   background: red; }
 
+/* line 89, scss/style.scss */
 .partners--1 {
   float: left;
   display: block;
   margin-right: 2.26415%;
   width: 14.77987%;
   margin-right: 5px; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .partners--1:last-child {
     margin-right: 0; }
 
+/* line 94, scss/style.scss */
 .partners--2 {
   float: left;
   display: block;
   margin-right: 2.26415%;
   width: 14.77987%; }
+  /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
   .partners--2:last-child {
     margin-right: 0; }
 
+/* line 101, scss/style.scss */
 .plartFactory__link {
   height: 400px;
   width: 100%;
   background: red; }
 
 /* Slider */
+/* line 3, scss/_slick-theme.scss */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
 
@@ -1294,6 +1540,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg"); }
 
 /* Arrows */
+/* line 19, scss/_slick-theme.scss */
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -1322,12 +1569,15 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   background-size: contain;
   background-repeat: repeat; }
 
+/* line 56, scss/_slick-theme.scss */
 .slick-prev {
   background-image: url(./public/image/slick-arrow-left.png); }
 
+/* line 59, scss/_slick-theme.scss */
 .slick-next {
   background-image: url(./public/image/slick-arrow-right.png); }
 
+/* line 63, scss/_slick-theme.scss */
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
@@ -1339,16 +1589,19 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     */
   opacity: 0.8; }
 
+/* line 75, scss/_slick-theme.scss */
 .slick-prev:hover:before,
 .slick-prev:focus:before,
 .slick-next:hover:before,
 .slick-next:focus:before {
   opacity: 1; }
 
+/* line 82, scss/_slick-theme.scss */
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
   opacity: .25; }
 
+/* line 88, scss/_slick-theme.scss */
 .slick-prev:before,
 .slick-next:before {
   font-family: 'slick';
@@ -1359,36 +1612,46 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* line 103, scss/_slick-theme.scss */
 .slick-prev {
   left: 0px; }
 
+/* line 107, scss/_slick-theme.scss */
 [dir='rtl'] .slick-prev {
   right: -0;
   left: auto; }
 
+/* line 112, scss/_slick-theme.scss */
 .slick-prev:before {
   content: ''; }
 
+/* line 116, scss/_slick-theme.scss */
 [dir='rtl'] .slick-prev:before {
   content: ''; }
 
+/* line 121, scss/_slick-theme.scss */
 .slick-next {
   right: -0; }
 
+/* line 125, scss/_slick-theme.scss */
 [dir='rtl'] .slick-next {
   right: auto;
   left: -0; }
 
+/* line 130, scss/_slick-theme.scss */
 .slick-next:before {
   content: ''; }
 
+/* line 134, scss/_slick-theme.scss */
 [dir='rtl'] .slick-next:before {
   content: ''; }
 
 /* Dots */
+/* line 140, scss/_slick-theme.scss */
 .slick-dotted.slick-slider {
   margin-bottom: 30px; }
 
+/* line 145, scss/_slick-theme.scss */
 .slick-dots {
   position: absolute;
   bottom: -25px;
@@ -1399,6 +1662,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   list-style: none;
   text-align: center; }
 
+/* line 160, scss/_slick-theme.scss */
 .slick-dots li {
   position: relative;
   display: inline-block;
@@ -1408,6 +1672,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 0;
   cursor: pointer; }
 
+/* line 173, scss/_slick-theme.scss */
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
@@ -1421,14 +1686,17 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   outline: none;
   background: transparent; }
 
+/* line 191, scss/_slick-theme.scss */
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none; }
 
+/* line 196, scss/_slick-theme.scss */
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before {
   opacity: 1; }
 
+/* line 201, scss/_slick-theme.scss */
 .slick-dots li button:before {
   font-family: 'slick';
   font-size: 6px;
@@ -1445,6 +1713,9 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+/* line 223, scss/_slick-theme.scss */
 .slick-dots li.slick-active button:before {
   opacity: .75;
   color: black; }
+
+/*# sourceMappingURL=style.css.map */

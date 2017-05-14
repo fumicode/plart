@@ -3,12 +3,13 @@ mixin articleBox(modifier)
   - $is_cover = strcmp($category->slug,"cover") == 0;
   a.n(href="<?php the_permalink()?>")
     .articleBox(class="#{ modifier ? '--' + modifier :''}")
-      header.articleBox__header(class="<?= $is_cover ?'--unvisible':''?>")
-        .articleBox__category
+      header.articleBox__header
+        .articleBox__category(class="<?= $is_cover ?'--unvisible':''?>")
           .articleBox__category--ART ART
           .articleBox__category--cross ✕
           .articleBox__category--genre
             | <?=$category->cat_name?> 
+
         .articleBox__number <?= get_the_date('n')?>月15日号
 
       .articleBox__thumbnailBox 
@@ -27,8 +28,8 @@ mixin articleBox(modifier)
         - endif;
         
 
-        .articleBox__coverBadge(class="<?= $is_cover ? '--visible':'' ?> ") 
-          .coverBadge
+        .articleBox__coverBadge(class="<?= $is_cover ? '--visible':'' ?> #{modifier == 'big' ? '--big':''} ") 
+          .coverBadge(class="#{modifier == 'big' ? '--big':''}")
             .coverBadge__text <?= get_the_date('n')?>月15日号
 
 
