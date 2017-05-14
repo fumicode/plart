@@ -961,9 +961,10 @@ a.n, a.sidebarBanner {
 
 /* line 1, scss/_topSlider.scss */
 .topSlider {
-  height: 540px; }
+  height: 540px;
+  overflow: hidden; }
 
-/* line 10, scss/_topSlider.scss */
+/* line 11, scss/_topSlider.scss */
 .topSlider__image {
   width: 100%;
   height: 540px; }
