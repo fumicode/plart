@@ -832,13 +832,18 @@ a.n, a.sidebarBanner {
 .siteTitle {
   font-size: 3rem;
   letter-spacing: 0.3em; }
+  @media screen and (max-width: 600px) {
+    /* line 2, scss/_siteTitle.scss */
+    .siteTitle {
+      text-align: center;
+      font-size: 2.6rem; } }
 
-/* line 8, scss/_siteTitle.scss */
+/* line 13, scss/_siteTitle.scss */
 .siteTitle__plart {
   font-family: "Raleway", sans-serif;
   font-weight: bold; }
 
-/* line 16, scss/_siteTitle.scss */
+/* line 21, scss/_siteTitle.scss */
 .siteTitle__story {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
@@ -957,16 +962,29 @@ a.n, a.sidebarBanner {
 .globalNavBox__titleBox {
   margin-left: 3px;
   margin-top: -8px; }
-
-/* line 45, scss/_globalNavBox.scss */
-.globalNavBox__siteDesc {
-  line-height: 1;
-  margin-bottom: 8px; }
+  @media screen and (max-width: 600px) {
+    /* line 39, scss/_globalNavBox.scss */
+    .globalNavBox__titleBox {
+      margin: 20px 15%; } }
 
 /* line 51, scss/_globalNavBox.scss */
+.globalNavBox__siteDesc {
+  line-height: 1;
+  margin-bottom: 8px;
+  font-size: 1rem; }
+  @media screen and (max-width: 600px) {
+    /* line 51, scss/_globalNavBox.scss */
+    .globalNavBox__siteDesc {
+      text-align: center; } }
+
+/* line 61, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
   line-height: 1;
   margin: 0px; }
+  @media screen and (max-width: 600px) {
+    /* line 61, scss/_globalNavBox.scss */
+    .globalNavBox__siteTitle {
+      text-align: center; } }
 
 /* line 2, scss/_topSliderBox.scss */
 .topSliderBox {
