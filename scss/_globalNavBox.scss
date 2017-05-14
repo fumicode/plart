@@ -2,7 +2,7 @@
 $globalNavBox-height:280px; //あとで設定！
 
 $titleBox-margin-left: 55px;
-$titleBox-margin-top: 21px;
+$titleBox-margin-top: 28px;
 
 
 .globalNavBox{
@@ -29,14 +29,14 @@ $titleBox-margin-top: 21px;
 }
 
 .globalNavBox__titleBox{
-  margin-left:$titleBox-margin-left - $box-padding;
+  margin-left:3px;
   margin-top:$titleBox-margin-top - $box-padding;
 
 }
 
 .globalNavBox__siteDesc{
   line-height:1;
-  margin-bottom:18px;
+  margin-bottom:8px;
 
 }
 
