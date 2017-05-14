@@ -32,7 +32,7 @@
       #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
         - while($the_query->have_posts()): $the_query->the_post();
         
-          div.topSlider__slide
+          div.topSlider__slide(data-titlestr="<?php the_title()?>")
             a.n.topSlider__link(href="<?php the_permalink()?>")
               - if(has_post_thumbnail()):
               -   the_post_thumbnail("slider", array('class'=>'topSlider__image'));
@@ -58,7 +58,7 @@
         .featureBox
           .featureBox__number <?= get_the_date('n') ?>月15日号 特集
           br
-          .featureBox__title 
+          #featureBox__title.featureBox__title 
             :php
               $term = get_term_by('slug', $term_name, 'article_type');
               echo $term->name;

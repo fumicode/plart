@@ -3,6 +3,22 @@
   @extend .black-box;
   @extend .black-box--last;
 
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        letter-spacing: $small-letter-spacing;
+        font-size: 0.9em;
+        a{
+          border-bottom: none;
+        }
+        &:after{
+          margin-left: 10px;
+          content:"|";
+        }
+        &:last-child:after{
+          content:"";
+        }
+    }
 }
 
 .footerBox__icon{
@@ -14,4 +30,5 @@
 
 .footerBox__menuBox{
   clear: both;
+  margin-bottom: 1em;
 }

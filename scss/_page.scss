@@ -6,6 +6,13 @@ $page-margin-top:$box-padding * 1.4;
   margin-top:$page-margin-top ;
   margin-bottom:$page-margin-top ;
   width:1200px;
+
+  @include media($medium-screen-down){
+    width:100%;
+    padding:$box-padding-sp;
+    margin:0px;
+  }
+
   //padding:0px 100px 0px 100px;
 }
 
@@ -34,6 +41,11 @@ $page-margin-top:$box-padding * 1.4;
   box-sizing:border-box;
   float:left;
   width:870px -  $box-border-width;
+
+  @include media($medium-screen-down) {
+    width:100%;
+  }
+
 }
 
 .page__sidebar{
@@ -41,6 +53,9 @@ $page-margin-top:$box-padding * 1.4;
   float:right;
   width:330px - $box-border-width;
 
+  @include media($medium-screen-down) {
+    width:100%;
+  }
 }
 
 .page__footer{

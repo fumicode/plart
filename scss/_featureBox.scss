@@ -13,21 +13,31 @@ $featureBox-title-font-size:30px;
   background-color:$color-plart-yellow;
 
 
-  font-size:$font-size-medium;
+  @include media($medium-screen-down){
+    font-size:$font-size-normal;
+    padding: $box-padding-sp*0.8;
+  }
 
-  line-height:1;
 }
 
 .featureBox__title {
   @extend .black-box--thin;
+  box-sizing:border-box;
 
   margin-top: - $box-border-width-thin;
 
   display:inline-block;
   padding: 20px;
-  max-width:500px;
+  max-width:50%;
 
   line-height:1.1;
-  font-size:$featureBox-title-font-size;
+  font-size:$font-size-extrabig;
   background-color:rgba(255,255,255,0.9);
+
+
+  @include media($medium-screen-down){
+    font-size:$font-size-semibig;
+    max-width:280px;
+    padding: $box-padding-sp;
+  }
 }

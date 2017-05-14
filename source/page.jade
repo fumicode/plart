@@ -18,12 +18,10 @@ block content
             ul.breadCrumb__list
               li.breadCrumb__item
                 a.breadCrumb__link(href="/") top
-                
               li.breadCrumb__item--arrow >
               li.breadCrumb__item
                 a.breadCrumb__link(href="<? the_permalink() ?>") <?= mb_strimwidth(get_the_title(), 0, 20,"...") ?>
                 
-
           .singleArticle__header
             .singleArticle__titleBox
               h1.singleArticle__title 
@@ -34,17 +32,12 @@ block content
                 h5.shareLinks_title SHARE
                 - echo do_shortcode('[ssba]');
                
-
           .singleArticle__thumbnailBox
             .articleThumbnailBox
 
               - if(has_post_thumbnail()):
               -   the_post_thumbnail("large", array('class'=>'articleThumbnailBox__image'));
-              - else:
-                  img.articleThumbnailBox__image(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb4x3.png")
               - endif;
-
-
 
           .singleArticle__content
             - the_content();

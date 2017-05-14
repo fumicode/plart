@@ -1,8 +1,11 @@
-
 .black-box{
   border:$box-border-width solid black;
   border-bottom-width:0;
   padding:$box-padding;
+
+  @include media($medium-screen-down) {
+    padding:$box-padding-sp;
+  }
 
 }
 

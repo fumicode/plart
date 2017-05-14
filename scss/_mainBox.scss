@@ -1,6 +1,14 @@
 .mainBoxContainer{
   margin-left:-$box-border-width;
+
+
+  @include media($medium-screen-down) {
+    margin-left:-$box-border-width;
+    margin-right:-$box-border-width;
+  }
+
 }
+
 .mainBox{
   @extend .black-box;
 }
@@ -29,4 +37,10 @@
 .mainBox--article{
   @extend .mainBox;
   padding-top:80px;
+
+
+  @include media($medium-screen-down) {
+    padding-top:inherit;
+  }
+
 }

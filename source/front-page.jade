@@ -20,20 +20,21 @@ block body_end
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   script.
+
     //特集スライダー
     $topSlider = jQuery("#topSlider").slick({
       autoplay:true,
       autoplaySpeed:4000 //4秒
     });
 
+    $featureBox__title = jQuery("#featureBox__title");
     $topSlider.on("afterChange",function(event, slick, currentIndex){
-      $currentSlide = slick.$slides[currentIndex]
+      currentSlide = slick.$slides[currentIndex]
+      console.log(currentSlide);
 
+      var title = currentSlide.dataset.titlestr;
 
-      console.log($currentSlide);
-
-
-
+      $featureBox__title.text(title);
     })
 
     //what's new のスライダー 
@@ -48,7 +49,17 @@ block body_end
       autoplaySpeed:4000, //4秒
       slidesToShow:4,
       slidesToScroll:1,
+      responsive: [
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+      ]
     });
+
 
 block content
   include ./includes/articleBox
@@ -57,7 +68,7 @@ block content
 
       h2.mainBox__title WHAT'S NEW 
       .contentsLayout--1big2small
-        .contentsLayout--1big2small--big
+        .contentsLayout--1big2small__big1
 
           #sliderBox.sliderBox
             :php
@@ -75,13 +86,16 @@ block content
             - endwhile;
             - $the_query->rewind_posts()
 
-        .contentsLayout--1big2small--small
+        .contentsLayout--1big2small__small2
 
           - if($the_query->have_posts()) : $the_query->the_post()
-            +articleBox("smalltop")
+            .contentsLayout--1big2small__small.--first
+              +articleBox("smalltop")
           - endif;
+
           - if($the_query->have_posts()) : $the_query->the_post()
-            +articleBox()
+            .contentsLayout--1big2small__small.--last
+              +articleBox("<?= wp_is_mobile() ? 'smalltop':'' ?>")
           - endif;
 
 
@@ -118,26 +132,28 @@ block content
 
       .contentsLayout--1big2small
         - if($the_query->have_posts()) : $the_query->the_post()
-          .contentsLayout--1big2small--big
+          .contentsLayout--1big2small__big1
             .sliderBox
               .sliderBox__slide
                 +articleBox("big")
 
         - endif;
-        .contentsLayout--1big2small--small
+        .contentsLayout--1big2small__small2
 
           - if($the_query->have_posts()) : $the_query->the_post()
-            +articleBox("smalltop")
+            .contentsLayout--1big2small__small.--first
+              +articleBox("smalltop")
           - endif;
           - if($the_query->have_posts()) : $the_query->the_post()
-            +articleBox()
+            .contentsLayout--1big2small__small.--last
+              +articleBox()
           - endif;
 
 
       a.blackButton(href="/category/cover") VIEW MORE 
 
     .mainBox
-      a.n(href="/article_type/artinlife")
+      a.n(href="/article_type/artinthehome")
         img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
       //a.n(href="/article_type/bussinessandart")
       //  img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")

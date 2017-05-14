@@ -2,7 +2,7 @@
 $globalNavBox-height:280px; //あとで設定！
 
 $titleBox-margin-left: 55px;
-$titleBox-margin-top: 21px;
+$titleBox-margin-top: 28px;
 
 
 .globalNavBox{
@@ -12,6 +12,11 @@ $titleBox-margin-top: 21px;
   position:relative;
 
   height: $globalNavBox-height - 2 * $box-padding;
+
+  @include media($medium-screen-down){
+    //あとでpaddingとか
+    height:auto;
+  }
 
 }
 
@@ -25,19 +30,32 @@ $titleBox-margin-top: 21px;
   width: 109px;
   height: 76px;
 
+  @include media($medium-screen-down){
+    display:none;
+  }
 
 }
 
 .globalNavBox__titleBox{
-  margin-left:$titleBox-margin-left - $box-padding;
+  margin-left:3px;
   margin-top:$titleBox-margin-top - $box-padding;
+
+  @include media($medium-screen-down){
+    margin:20px 15%;
+
+
+  }
 
 }
 
 .globalNavBox__siteDesc{
   line-height:1;
-  margin-bottom:18px;
+  margin-bottom:8px;
 
+  font-size:$font-size-small;
+  @include media($medium-screen-down){
+    text-align:center;
+  }
 }
 
 .globalNavBox__siteTitle{
@@ -45,5 +63,8 @@ $titleBox-margin-top: 21px;
 
   margin:0px;
 
+  @include media($medium-screen-down){
+    text-align:center;
+  }
 
 }

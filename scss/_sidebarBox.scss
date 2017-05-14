@@ -11,11 +11,15 @@
   &.--nopadding{
     padding:0;
   }
+
+  @include media($medium-screen-down) {
+    padding:$box-padding-sp;
+  }
 }
 
 
 .sidebarBox__title{
   font-size: $font-size-semibig;
-
+  letter-spacing: $small-letter-spacing;
   margin-bottom: 10px;
 }

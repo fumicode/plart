@@ -1,15 +1,37 @@
+
 .topSlider{
   height:$topSliderBox-height;
+  overflow:hidden;
 
+  @include media($medium-screen-down){
+    height:$topSliderBox-height-sp;
+  }
 }
 
 .topSlider__slide{
+  overflow:hidden;
+
 
 }
 
 .topSlider__image{
+  display:inline-block;
+
   width:100%;
   height:$topSliderBox-height;
 
+
+  max-width:9999px;
+  max-width:initial;
+  max-width:auto;
+
+  @include media($medium-screen-down){
+    margin:0 auto;
+    width:$topSliderBox-height-sp * 1200 / 540 ;
+    height:$topSliderBox-height-sp;
+
+    margin-left:-50%;
+
+  }
 }
 

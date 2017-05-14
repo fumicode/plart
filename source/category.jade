@@ -30,11 +30,12 @@ block content
           - $post_index = 0
           - $paged = get_query_var('paged') ? get_query_var('paged') : 1;
 
+          - $top_columns = wp_is_mobile() ? 2 :3;
           - while ( have_posts() ) : the_post()
             - $post_index ++
 
-            li.contentsLayout__itep
-              +articleBox("<?= $post_index <= 3 ? 'smalltop' : '' ?>")
+            li.contentsLayout__item
+              +articleBox("<?= $post_index <= $top_columns ? 'smalltop' : '' ?>")
 
 
           - endwhile;
