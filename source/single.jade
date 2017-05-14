@@ -94,48 +94,15 @@ block content
 
             hr.noBorder.bigMargin
 
-
             .keywordTags
               h5.keywordTags__title KEYWORD
               ul.keywordTags__list
                 // タグを表示
+                - $tags = get_the_tags();
+                - foreach($tags as $tag):
                 li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-
+                  a.keywordTags__link(href="<?=  get_tag_link($tag->term_id); ?>") <?= $tag->name; ?>
+                  - endforeach;
       - endwhile;
       //rewind 的なのいるっけ？
 
