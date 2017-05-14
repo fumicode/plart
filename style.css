@@ -1025,8 +1025,8 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
-  max-width: 45%;
-  line-height: 1;
+  max-width: 500px;
+  line-height: 1.1;
   font-size: 30px;
   background-color: rgba(255, 255, 255, 0.9); }
 
@@ -1250,17 +1250,16 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 2, scss/_sidebarBox.scss */
 .sidebarBoxContainer {
   margin-left: -4px;
-  margin-right: -4px;
-  width: auto; }
+  margin-right: -4px; }
 
-/* line 8, scss/_sidebarBox.scss */
+/* line 7, scss/_sidebarBox.scss */
 .sidebarBox {
   padding: 26px; }
-  /* line 12, scss/_sidebarBox.scss */
+  /* line 11, scss/_sidebarBox.scss */
   .sidebarBox.--nopadding {
     padding: 0; }
 
-/* line 18, scss/_sidebarBox.scss */
+/* line 17, scss/_sidebarBox.scss */
 .sidebarBox__title {
   font-size: 1.8rem;
   margin-bottom: 10px; }
@@ -1468,38 +1467,49 @@ a.n, a.shareLinks_item, a.sidebarBanner {
     margin: 0 0 0 12px;
     padding-top: 8px; }
 
+/* line 23, scss/_snsLinks.scss */
+.mainBox .AlpinePhotoTiles-highlight-div, .mainBox--article .AlpinePhotoTiles-highlight-div {
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 5px; }
+
 /* line 6, scss/_sidebarBanner.scss */
 .sidebarBanner__image {
   display: block; }
 
-/* line 61, scss/style.scss */
+/* line 7, scss/_bookSlider.scss */
+.bookSlider__item {
+  padding-left: 2em;
+  padding-right: 2em; }
+
+/* line 62, scss/style.scss */
 .banner--1 {
   height: 100px;
   background: brown;
   width: 100%; }
 
-/* line 67, scss/style.scss */
+/* line 68, scss/style.scss */
 .banner--2 {
   height: 100px;
   background: purple;
   height: 180px; }
 
-/* line 73, scss/style.scss */
+/* line 74, scss/style.scss */
 .slider--pickup {
   height: 100px;
   background: red; }
 
-/* line 78, scss/style.scss */
+/* line 79, scss/style.scss */
 .instagramBox {
   height: 150px;
   background: pink; }
 
-/* line 83, scss/style.scss */
+/* line 84, scss/style.scss */
 .partnersBox {
   height: 300px;
   background: red; }
 
-/* line 89, scss/style.scss */
+/* line 90, scss/style.scss */
 .partners--1 {
   float: left;
   display: block;
@@ -1510,7 +1520,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   .partners--1:last-child {
     margin-right: 0; }
 
-/* line 94, scss/style.scss */
+/* line 95, scss/style.scss */
 .partners--2 {
   float: left;
   display: block;
@@ -1520,11 +1530,43 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   .partners--2:last-child {
     margin-right: 0; }
 
-/* line 101, scss/style.scss */
+/* line 102, scss/style.scss */
 .plartFactory__link {
   height: 400px;
   width: 100%;
   background: red; }
+
+/*
+ * Search Box用のcss
+ */
+/* line 115, scss/style.scss */
+.search-form, .search-box {
+  position: relative; }
+
+/* line 119, scss/style.scss */
+input[type="search"].search-field {
+  border-radius: 2px 0 0 2px;
+  width: -webkit-calc(100% - 42px);
+  width: calc(100% - 42px);
+  background: #dbdcdc; }
+
+/* line 126, scss/style.scss */
+.search-submit {
+  border-radius: 0 2px 2px 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 42px; }
+
+/*
+ * search.phpのnot found
+ */
+/* line 140, scss/style.scss */
+.notFound {
+  font-size: 30px; }
 
 /* Slider */
 /* line 3, scss/_slick-theme.scss */

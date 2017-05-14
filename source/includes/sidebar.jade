@@ -8,18 +8,27 @@
 
   .sidebarBox 
     //searchbar
+    - get_search_form();
     include ./snsLinks
   .sidebarBox
     h2.sidebarBox__title RANKING
 
     :php
+      if (function_exists('sga_ranking_get_date')) {
+        $ranking_data = sga_ranking_get_date();
+        if ( !empty( $ranking_data ) ) {
+            echo '<ol>';
+            foreach ( $ranking_data as $post_id ) {
+                echo '<li><a href="' . esc_attr(get_permalink($post_id)) . '">' . esc_html(get_the_title($post_id)) . '</a></li>';
+            }
+            echo '</ol>';
+        }
+      }
       $args = array( 
         'post_type' => 'post',
         'posts_per_page' => 10, //5件表示
       );
-
       $the_query = new WP_Query( $args );
-
     - $sidebar_index = 1;
     - while($the_query->have_posts()) : $the_query->the_post()
 
@@ -37,7 +46,7 @@
 
     - endwhile;
     - $the_query->rewind_posts()
-      
+
 
   .sidebarBox
     h2.sidebarBox__title PRESS RELEASE

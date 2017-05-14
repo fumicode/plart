@@ -16,23 +16,30 @@ block foot
   include ./includes/foot
 
 block body_end
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+  //<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" //crossorigin="anonymous"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
   script.
     //特集スライダー
-    $("#topSlider").slick({
+    jQuery("#topSlider").slick({
       autoplay:true,
       autoplaySpeed:4000 //4秒
 
     });
 
     //what's new のスライダー 
-    $("#sliderBox").slick({
+    jQuery("#sliderBox").slick({
       autoplay:true,
       autoplaySpeed:4000 //4秒
     });
 
+    //what's new のスライダー 
+    jQuery("#bookSlider").slick({
+      autoplay:true,
+      autoplaySpeed:4000, //4秒
+      slidesToShow:4,
+      slidesToScroll:1,
+    });
 
 block content
   include ./includes/articleBox
@@ -121,31 +128,49 @@ block content
       a.blackButton(href="/category/cover") VIEW MORE 
 
     .mainBox
-      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
-      img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+      a.n(href="/article_type/artinlife")
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
+      a.n(href="/article_type/bussinessandart")
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
 
 
 
     .mainBox
-      h2.mainBox__title PICK UP
-      .sliderBox
-        .slide
-          .slider--pickup
+      h2.mainBox__title PICK UP ART BOOK
+
+      #bookSlider.bookSlider
+
+
+        :php
+          $args = array( 
+            'post_type' => 'book'
+
+          );
+
+          $the_query = new WP_Query( $args );
+        
+        - while($the_query->have_posts()): $the_query->the_post();
+
+          a.n.bookSlider__link
+            .bookSlider__item
+              - if(has_post_thumbnail()):
+              -   the_post_thumbnail("square", array('class'=>'bookSlider__image'));
+              - else:
+                img.bookSlider__image(src="<?= get_stylesheet_directory_uri(); ?>/public/image/thumb4x3.png")
+              - endif;
+        - endwhile;
+        - wp_reset_postdata();
 
     .mainBox
       h2.mainBox__title INSTAGRAM
-      .instagramBox 
-        - echo do_shortcode('[alpine-phototile-for-instagram id=725 user="plartjp" src="user_recent" imgl="instagram" style="wall" size="M" num="10" highlight="1" align="center" max="100" nocredit="1"]');
+      - if ( is_active_sidebar( 'home-content-foot-widget-area' ) ) :
+      - dynamic_sidebar( 'home-content-foot-widget-area' ); 
+      - endif;
+    
 
 
     .mainBox
       h2.mainBox__title PARTNERS
       .partnersBox
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
-        .partners--1
-          img(src="http://kingofwallpapers.com/demo/demo-002.jpg")
+        //.partners--1
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/partner.jpg")

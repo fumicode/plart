@@ -32,6 +32,24 @@ function set_article_type(){
 
 add_action('init', 'set_article_type');
 
+//////////////
+//
+
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'book',
+    array( 'labels' => array(
+        'name' => __( 'Artbooks' ),
+        'singular_name' => __( 'Artbook' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title','editor','thumbnail') 
+    )
+  );
+}
+
 
 
 ////////////////////////////////// スラッグからページをゲットする関数 //////////////////////////////////////
@@ -88,11 +106,11 @@ add_theme_support( 'post-thumbnails' );
 set_post_thumbnail_size( 400, 300, array('center','center'));
 
 //正方形ででかく
-add_image_size( 'square', 800, 800, true ); 
+add_image_size( 'square', 800, 800, true );
 
-add_image_size( 'thumbnail4x3', 400, 300, true ); 
+add_image_size( 'thumbnail4x3', 400, 300, true );
 
-add_image_size( 'slider', 1200, 540, true ); 
+add_image_size( 'slider', 1200, 540, true );
 
 //html のwidth やheightを削除する
 add_filter( 'post_thumbnail_html', 'custom_attribute' );
@@ -128,6 +146,13 @@ function my_tinymce_remove_width_attribute( $options ) {
 add_action( 'wp_enqueue_editor', 'my_tinymce_remove_width_attribute', 10, 1 );
 
 
+///////////////////////////////Home content foot widget area///////////////////////////
 
-
-
+	register_sidebar( array(
+		'name' => __( 'Home content foot', 'lightning' ),
+		'id' => 'home-content-foot-widget-area',
+		'before_widget' => '<section class="widget %2$s" id="%1$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h1 class="mainSection-title">',
+		'after_title' => '</h1>',
+	) );
