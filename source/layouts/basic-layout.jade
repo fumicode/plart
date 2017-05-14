@@ -32,5 +32,42 @@ html
       div.page__footer
         block foot
 
-      -wp_footer();
+
+      include ../includes/spMenu
+
+
+    - wp_footer();
     block body_end
+    script.
+      jQuery(function(){
+        var $spMenu = jQuery("#spMenu");
+        var $spMenuButton= jQuery("#spMenuButton");
+        var $spMenuBg = jQuery("#spMenuBg");
+
+        $spMenuButton.click(function(){
+          $spMenu.fadeIn();
+          $spMenuBg.fadeIn();          
+        });
+        $spMenuBg.click(function(){
+          $spMenu.fadeOut();
+          $spMenuBg.fadeOut();          
+        });
+
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
