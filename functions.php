@@ -32,6 +32,24 @@ function set_article_type(){
 
 add_action('init', 'set_article_type');
 
+//////////////
+//
+
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'book',
+    array( 'labels' => array(
+        'name' => __( 'Artbooks' ),
+        'singular_name' => __( 'Artbook' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'supports' => array('title','editor','thumbnail') 
+    )
+  );
+}
+
 
 
 ////////////////////////////////// スラッグからページをゲットする関数 //////////////////////////////////////
