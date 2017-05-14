@@ -871,7 +871,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 55, scss/_categoryBox.scss */
 .categoryBox__catName {
   width: 24%;
-  letter-spacing: 0.12em; }
+  letter-spacing: 0.1em; }
   /* line 56, scss/_categoryBox.scss */
   .categoryBox__catName a {
     color: #000;
@@ -906,7 +906,9 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .globalNav__item {
   display: inline;
   margin-left: 1.2em;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   line-height: 1;
   border-bottom: 1px solid #dcdcdc; }
 
@@ -991,7 +993,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 26, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title, .plartStoryNumber__title--plart, .plartStoryNumber__title--story {
   line-height: 1;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   -moz-text-align-last: justify;
   text-align-last: justify;
   width: 100%; }
@@ -1010,17 +1012,16 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 .plartStoryNumber__number {
   width: 100%;
   margin: auto;
-  margin-top: -6px;
-  padding-top: 6px;
+  margin-top: 8px;
   border-top: solid 1px black;
-  font-size: 1.3rem; }
+  font-size: 1.5rem; }
 
 /* line 9, scss/_featureBox.scss */
 .featureBox__number {
   display: inline-block;
-  padding: 15px;
+  padding: 10px 15px;
   background-color: #e6ff00;
-  font-size: 14px;
+  font-size: 1.5rem;
   line-height: 1; }
 
 /* line 21, scss/_featureBox.scss */
@@ -1142,10 +1143,11 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 0px;
   margin: 0px;
   margin-bottom: 10px;
-  font-size: 1.8rem;
-  margin-right: 10px; }
+  font-size: 2.6rem;
+  margin-right: 10px;
+  letter-spacing: 0.1em; }
 
-/* line 17, scss/_mainBox.scss */
+/* line 18, scss/_mainBox.scss */
 .mainBox__subTitle {
   display: inline;
   margin-left: 1em;
@@ -1153,7 +1155,7 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
-/* line 28, scss/_mainBox.scss */
+/* line 29, scss/_mainBox.scss */
 .mainBox--article {
   padding-top: 80px; }
 
@@ -1187,38 +1189,41 @@ a.n, a.shareLinks_item, a.sidebarBanner {
 /* line 45, scss/_articleBox.scss */
 .articleBox__category {
   float: left;
-  font-size: 1.3rem; }
-  /* line 48, scss/_articleBox.scss */
+  font-size: 1.5rem;
+  letter-spacing: 0.1em; }
+  /* line 49, scss/_articleBox.scss */
   .articleBox__category.--unvisible {
     visibility: hidden; }
 
-/* line 53, scss/_articleBox.scss */
+/* line 54, scss/_articleBox.scss */
 .articleBox__category--ART {
   font-weight: bold;
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
-/* line 60, scss/_articleBox.scss */
+/* line 61, scss/_articleBox.scss */
 .articleBox__category--cross {
   line-height: 20px;
   float: left;
   margin-right: 4px; }
 
-/* line 66, scss/_articleBox.scss */
+/* line 67, scss/_articleBox.scss */
 .articleBox__category--genre {
   line-height: 20px;
   float: left; }
 
-/* line 71, scss/_articleBox.scss */
+/* line 72, scss/_articleBox.scss */
 .articleBox__number {
   float: right;
   background: #e6ff00;
   line-height: 20px;
   padding-left: 7px;
-  padding-right: 7px; }
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px; }
 
-/* line 84, scss/_articleBox.scss */
+/* line 87, scss/_articleBox.scss */
 .thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   display: block;
@@ -1227,21 +1232,21 @@ a.n, a.shareLinks_item, a.sidebarBanner {
   padding: 0px;
   vertical-align: bottom; }
 
-/* line 95, scss/_articleBox.scss */
+/* line 98, scss/_articleBox.scss */
 .articleBox__thumbnailBox {
   position: relative; }
 
-/* line 106, scss/_articleBox.scss */
+/* line 109, scss/_articleBox.scss */
 .articleBox__coverBadge {
   position: absolute;
   right: 5%;
   top: 5%;
   visibility: hidden; }
-  /* line 115, scss/_articleBox.scss */
+  /* line 118, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
 
-/* line 125, scss/_articleBox.scss */
+/* line 128, scss/_articleBox.scss */
 .articleBox__title {
   clear: both;
   word-break: break-all;

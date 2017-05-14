@@ -40,10 +40,11 @@ div.page__globalNav
           td.categoryBox__catContent モノ、コト
 
     .globalNav
-      ul
-        li.globalNav__item
-          a(href="/about") ABOUT
-        li.globalNav__item
-          a(href="/heyart") HEY!ART
-        li.globalNav__item
-          a(href="/partners") PARTNERS
+      nav
+        :php
+          wp_nav_menu( array(
+            'theme_location'=>'mainmenu', 
+            'container'     =>'', 
+            'menu_class'    =>'',
+            'items_wrap'    =>'<ul id="main-nav">%3$s</ul>'));
+  

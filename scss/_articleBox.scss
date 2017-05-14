@@ -44,7 +44,8 @@ $thumbnailMarginBottom:5px;
 
 .articleBox__category{
   float: left;
-  font-size: $font-size-normal;
+  font-size: $font-size-medium;
+  letter-spacing: $small-letter-spacing;
   &.--unvisible{
     visibility:hidden;
   }
@@ -74,15 +75,17 @@ $thumbnailMarginBottom:5px;
   line-height: $categoryLineHeight;
   padding-left: $categoryLineHeight - $numberFontSize;
   padding-right: $categoryLineHeight - $numberFontSize;
+  padding-top:3px;
+  padding-bottom:3px;
 }
 
 
 .articleBox__thumbnailBox{
-  
+
 }
 
 .thumbnail-base{
-  
+
   clear:both;
   display: block;
 
@@ -130,4 +133,3 @@ $thumbnailMarginBottom:5px;
   margin:0px;
   padding: 0px;
 }
-

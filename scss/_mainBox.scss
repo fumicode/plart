@@ -10,8 +10,9 @@
   padding:0px;
   margin:0px;
   margin-bottom: 10px;
-  font-size: $font-size-semibig;
+  font-size: $font-size-big;
   margin-right: 10px;
+  letter-spacing: $small-letter-spacing;
 }
 
 .mainBox__subTitle{
@@ -29,4 +30,3 @@
   @extend .mainBox;
   padding-top:80px;
 }
-
