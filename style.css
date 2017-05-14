@@ -921,13 +921,13 @@ a.n, a.sidebarBanner {
 
 /* line 31, scss/_globalNavBox.scss */
 .globalNavBox__titleBox {
-  margin-left: 19px;
-  margin-top: -15px; }
+  margin-left: 3px;
+  margin-top: -8px; }
 
 /* line 37, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
   line-height: 1;
-  margin-bottom: 18px; }
+  margin-bottom: 8px; }
 
 /* line 43, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
