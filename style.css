@@ -837,7 +837,7 @@ a.n, a.sidebarBanner {
     /* line 2, scss/_siteTitle.scss */
     .siteTitle {
       text-align: center;
-      font-size: 2.6rem; } }
+      font-size: 1.8rem; } }
 
 /* line 13, scss/_siteTitle.scss */
 .siteTitle__plart {
@@ -977,24 +977,25 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 52, scss/_globalNavBox.scss */
     .globalNavBox__titleBox {
-      margin: 20px 15%; } }
+      margin: 20px 0;
+      text-align: center; } }
 
-/* line 64, scss/_globalNavBox.scss */
+/* line 66, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
   line-height: 1;
   margin-bottom: 8px;
   font-size: 1rem; }
   @media screen and (max-width: 600px) {
-    /* line 64, scss/_globalNavBox.scss */
+    /* line 66, scss/_globalNavBox.scss */
     .globalNavBox__siteDesc {
       text-align: center; } }
 
-/* line 74, scss/_globalNavBox.scss */
+/* line 76, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
   line-height: 1;
   margin: 0px; }
   @media screen and (max-width: 600px) {
-    /* line 74, scss/_globalNavBox.scss */
+    /* line 76, scss/_globalNavBox.scss */
     .globalNavBox__siteTitle {
       text-align: center; } }
 
@@ -1018,26 +1019,28 @@ a.n, a.sidebarBanner {
     /* line 16, scss/_topSliderBox.scss */
     .topSliderBox__number {
       top: 8px;
-      right: 8px; } }
+      right: 8px;
+      transform-origin: right top;
+      transform: scale(0.5); } }
 
-/* line 27, scss/_topSliderBox.scss */
+/* line 32, scss/_topSliderBox.scss */
 .topSliderBox__featureBox {
   position: absolute;
   bottom: 36px;
   left: 36px; }
   @media screen and (max-width: 600px) {
-    /* line 27, scss/_topSliderBox.scss */
+    /* line 32, scss/_topSliderBox.scss */
     .topSliderBox__featureBox {
       bottom: 8px;
       left: 8px; } }
 
-/* line 38, scss/_topSliderBox.scss */
+/* line 43, scss/_topSliderBox.scss */
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
   right: 26px; }
   @media screen and (max-width: 600px) {
-    /* line 38, scss/_topSliderBox.scss */
+    /* line 43, scss/_topSliderBox.scss */
     .topSliderBox__seriesBox {
       display: none; } }
 
@@ -1070,7 +1073,7 @@ a.n, a.sidebarBanner {
       height: 320px;
       margin-left: -50%; } }
 
-/* line 4, scss/_plartStoryNumber.scss */
+/* line 2, scss/_plartStoryNumber.scss */
 .plartStoryNumber {
   box-sizing: border-box;
   display: block;
@@ -1129,7 +1132,7 @@ a.n, a.sidebarBanner {
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
-  max-width: 50%;
+  max-width: 500px;
   line-height: 1.1;
   font-size: 3rem;
   background-color: rgba(255, 255, 255, 0.9); }
@@ -1618,13 +1621,18 @@ a.n, a.sidebarBanner {
   width: 20px;
   height: 20px; }
 
-/* line 9, scss/_numberBadge.scss */
+/* line 10, scss/_numberBadge.scss */
 .numberBadge {
   position: relative;
   width: 290px;
   height: 145px; }
+  @media screen and (max-width: 600px) {
+    /* line 10, scss/_numberBadge.scss */
+    .numberBadge {
+      transform-origin: right top;
+      transform: scale(0.5); } }
 
-/* line 15, scss/_numberBadge.scss */
+/* line 22, scss/_numberBadge.scss */
 .numberBadge__title {
   box-sizing: border-box;
   position: absolute;
@@ -1637,7 +1645,7 @@ a.n, a.sidebarBanner {
   background: rgba(255, 255, 255, 0.9);
   line-height: 1; }
 
-/* line 40, scss/_numberBadge.scss */
+/* line 47, scss/_numberBadge.scss */
 .numberBadge__number {
   position: absolute;
   top: 0px;

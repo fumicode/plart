@@ -54,7 +54,9 @@ $titleBox-margin-top: 28px;
   margin-top:$titleBox-margin-top - $box-padding;
 
   @include media($medium-screen-down){
-    margin:20px 15%;
+    margin:20px 0;
+
+    text-align:center;
 
 
   }
