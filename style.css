@@ -1481,8 +1481,13 @@ a.n, a.sidebarBanner {
   /* line 133, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
+  @media screen and (max-width: 600px) {
+    /* line 124, scss/_articleBox.scss */
+    .articleBox__coverBadge {
+      transform-origin: right top;
+      transform: scale(0.5); } }
 
-/* line 143, scss/_articleBox.scss */
+/* line 146, scss/_articleBox.scss */
 .articleBox__title {
   clear: both;
   word-break: break-all;
@@ -1626,13 +1631,8 @@ a.n, a.sidebarBanner {
   position: relative;
   width: 290px;
   height: 145px; }
-  @media screen and (max-width: 600px) {
-    /* line 10, scss/_numberBadge.scss */
-    .numberBadge {
-      transform-origin: right top;
-      transform: scale(0.5); } }
 
-/* line 22, scss/_numberBadge.scss */
+/* line 18, scss/_numberBadge.scss */
 .numberBadge__title {
   box-sizing: border-box;
   position: absolute;
@@ -1645,7 +1645,7 @@ a.n, a.sidebarBanner {
   background: rgba(255, 255, 255, 0.9);
   line-height: 1; }
 
-/* line 47, scss/_numberBadge.scss */
+/* line 43, scss/_numberBadge.scss */
 .numberBadge__number {
   position: absolute;
   top: 0px;
@@ -1694,7 +1694,9 @@ a.n, a.sidebarBanner {
     /* line 12, scss/_articleThumnbnailBox.scss */
     .articleThumbnailBox__badge {
       top: 8px;
-      right: 8px; } }
+      right: 8px;
+      transform-origin: right top;
+      transform: scale(0.5); } }
 
 /* line 6, scss/_humanProfile.scss */
 .humanProfile {

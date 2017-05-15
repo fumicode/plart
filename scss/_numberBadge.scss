@@ -13,10 +13,6 @@ $numberBadge-title-padding:10px;
   height: $numberBadge-height;
 
 
-  @include media($medium-screen-down){
-    transform-origin:right top;
-    transform:scale(0.5);
-  }
 }
 
 .numberBadge__title{
