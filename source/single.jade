@@ -50,7 +50,7 @@ block content
 
             .singleArticle__shareLinks
               .shareLinks
-                h5.shareLinks__title SHARE
+                h5.shareLinks__title
                 .shareLinks__content 
                   - echo do_shortcode('[ssba]');
 
@@ -97,7 +97,7 @@ block content
           footer.singleArticle__footer
 
             .shareLinks
-              h5.shareLinks_title SHARE
+              h5.shareLinks_title
               - echo do_shortcode('[ssba]');
 
             hr.noBorder.bigMargin
@@ -180,5 +180,6 @@ block content
           -  wp_reset_query();
 
     .mainBox
-      img.plartFactory__link(src="#")
+      a.n(href="/article_type/artinthehome")
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
       a.blackButton(href="#") PAGE TOP

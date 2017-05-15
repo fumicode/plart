@@ -37,7 +37,7 @@ $featureBox-title-font-size:30px;
 
   @include media($medium-screen-down){
     font-size:$font-size-semibig;
-    max-width:280px;
+    max-width:260px;
     padding: $box-padding-sp;
   }
 }

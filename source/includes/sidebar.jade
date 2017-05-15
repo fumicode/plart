@@ -19,6 +19,7 @@
     - if (function_exists('sga_ranking_get_date')):
     -   $ranking_data = sga_ranking_get_date();
     -   if ( !empty( $ranking_data ) ):
+    -     $sidebar_index = 1;
     -     foreach ( $ranking_data as $post_id ):
       .articleBox--ranking
         - if(has_post_thumbnail($post_id)):

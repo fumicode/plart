@@ -1023,7 +1023,7 @@ a.n, a.sidebarBanner {
     /* line 16, scss/_topSliderBox.scss */
     .topSliderBox__number {
       top: 13px;
-      right: 36px;
+      right: 13px;
       transform-origin: right top;
       transform: scale(0.5); } }
 
@@ -1144,7 +1144,7 @@ a.n, a.sidebarBanner {
     /* line 23, scss/_featureBox.scss */
     .featureBox__title {
       font-size: 1.8rem;
-      max-width: 280px;
+      max-width: 260px;
       padding: 13px; } }
 
 /* line 4, scss/_seriesBox.scss */

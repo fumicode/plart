@@ -36,8 +36,7 @@ mixin articleBox(modifier)
 
       .articleBox__title 
         - if(wp_is_mobile()):
-        -   echo mb_strimwidth(get_the_title(), 0, 30, "...");
+        -   echo mb_strimwidth(get_the_title(), 0, 50, "...");
         - else:
         -   the_title();
         - endif;
-
