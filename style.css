@@ -1677,19 +1677,24 @@ a.n, a.sidebarBanner {
   line-height: 60px;
   text-align: center; }
 
-/* line 3, scss/_articleThumnbnailBox.scss */
+/* line 2, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox {
   position: relative; }
 
-/* line 9, scss/_articleThumnbnailBox.scss */
+/* line 8, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox__image {
   width: 100%; }
 
-/* line 14, scss/_articleThumnbnailBox.scss */
+/* line 12, scss/_articleThumnbnailBox.scss */
 .articleThumbnailBox__badge {
   position: absolute;
   top: 26px;
   right: 26px; }
+  @media screen and (max-width: 600px) {
+    /* line 12, scss/_articleThumnbnailBox.scss */
+    .articleThumbnailBox__badge {
+      top: 8px;
+      right: 8px; } }
 
 /* line 6, scss/_humanProfile.scss */
 .humanProfile {
