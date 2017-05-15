@@ -14,3 +14,20 @@
 .singleArticle__right{
   float:right;
 }
+
+.wp-caption {
+    background: #fcfcfc;
+    line-height: 1.2em;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    padding: 0 0 5px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    max-width: 100% !important;
+}
+
+.wp-caption p.wp-caption-text {
+    color: #888;
+    font-size: 0.9em;
+    margin: 0px;
+}

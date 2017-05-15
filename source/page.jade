@@ -29,7 +29,7 @@ block content
 
             .singleArticle__shareLinks
               .shareLinks
-                h5.shareLinks_title SHARE
+                h5.shareLinks_title
                 - echo do_shortcode('[ssba]');
                
           .singleArticle__thumbnailBox
@@ -46,10 +46,9 @@ block content
 
           footer.singleArticle__footer
             .shareLinks
-              h5.shareLinks_title SHARE
+              h5.shareLinks_title
               - echo do_shortcode('[ssba]');
             hr.noBorder.bigMargin
             
       - endwhile;
       - wp_reset_postdata();
-
