@@ -1,5 +1,4 @@
 
-
 .articleThumbnailBox{
   position:relative;
   
@@ -8,13 +7,17 @@
 
 .articleThumbnailBox__image{
   width:100%;
-
 }
 
 .articleThumbnailBox__badge{
   position:absolute;
-    top:$box-padding-small;
+    top: $box-padding-small;
     right:$box-padding-small;
+
+  @include media($medium-screen-down){
+    top: $box-padding-sp;
+    right:$box-padding-sp;
+  }
 
 }
 
