@@ -106,45 +106,15 @@ block content
             .keywordTags
               h5.keywordTags__title KEYWORD
               ul.keywordTags__list
-                // タグを表示
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-                li.keywordTags__item
-                  a.keywordTags__link(href="") アール・ブリュット
-                li.keywordTags__item
-                  a.keywordTags__link(href="") 杉本 志乃
-
+                - $posttags = get_tags();
+                - if($posttags):
+                -   foreach($posttags as $tag):
+                  li.keywordTags__item
+                    a.keywordTags__link(href="<?= get_tag_link($tag->term_id); ?>") <?= $tag->name;?>
+                -   endforeach;
+                - endif;
       - endwhile;
+      - wp_reset_postdata();
       //rewind 的なのいるっけ？
 
     .mainBox
