@@ -1,6 +1,6 @@
 
 (function( $, wp, _ ) {
- 
+
   if ( ! wp.media.events ) {
       return;
   }
@@ -10,8 +10,7 @@
           dom = editor.dom,
           image  = options.image;
 
-      dom.setAttribs( image, {'width': null, 'height': null});
+      dom.setAttribs( image, {'height': null});
   } );
 
 })( jQuery, wp, _ );
-

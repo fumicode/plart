@@ -1,7 +1,7 @@
 .black-box{
   border:$box-border-width solid black;
   border-bottom-width:0;
-  padding:$box-padding;
+  padding:$box-padding-topbottom $box-padding ;
 
   @include media($medium-screen-down) {
     padding:$box-padding-sp;
@@ -18,4 +18,3 @@
   border-width:$box-border-width-thin;
   border-bottom-width:$box-border-width-thin;
 }
-

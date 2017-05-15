@@ -417,7 +417,7 @@ a.button {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
@@ -456,7 +456,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-size: 1.6rem; }
   /* line 15, scss/base/_forms.scss */
   input.inline,
@@ -483,7 +483,7 @@ select[multiple=multiple] {
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-size: 1.6rem;
   margin-bottom: 1em;
   padding: 0.66667em;
@@ -612,9 +612,9 @@ html {
 /* line 14, scss/base/_typography.scss */
 body {
   color: #333;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-feature-settings: "kern", "liga", "pnum";
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 2; }
 
 /* line 24, scss/base/_typography.scss */
@@ -624,7 +624,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   line-height: 1.2;
   margin: 0 0 1em; }
@@ -639,7 +639,7 @@ h2, .h2 {
 
 /* line 46, scss/base/_typography.scss */
 h3, .h3 {
-  font-size: 2.6rem; }
+  font-size: 1.8rem; }
 
 /* line 50, scss/base/_typography.scss */
 h4, .h4 {
@@ -653,11 +653,11 @@ h4,
 
 /* line 60, scss/base/_typography.scss */
 h5, .h5 {
-  font-size: 1.3rem; }
+  font-size: 1.4rem; }
 
 /* line 64, scss/base/_typography.scss */
 h6, .h6 {
-  font-size: 1.3rem; }
+  font-size: 1.4rem; }
 
 /* line 68, scss/base/_typography.scss */
 h1.n, h1.sidebarBanner,
@@ -671,7 +671,7 @@ h5.n,
 h5.sidebarBanner,
 h6.n,
 h6.sidebarBanner {
-  font-size: 1.3rem; }
+  font-size: 1.4rem; }
 
 /* line 78, scss/base/_typography.scss */
 p {
@@ -752,7 +752,7 @@ blockquote {
 
 /* line 171, scss/base/_typography.scss */
 a {
-  border-bottom: solid 1px #dcdcdc; }
+  border-bottom: solid 1px #000000; }
 
 /* line 175, scss/base/_typography.scss */
 a.n, a.sidebarBanner {
@@ -766,9 +766,9 @@ a.n, a.sidebarBanner {
 
 /* line 1, scss/_boxes.scss */
 .black-box, .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title, .globalNavBox, .topSliderBox, .mainBox, .mainBox--article, .sidebarBox, .footerBox, .spMenu {
-  border: 4px solid black;
+  border: 5px solid black;
   border-bottom-width: 0;
-  padding: 36px; }
+  padding: 28px 36px; }
   @media screen and (max-width: 600px) {
     /* line 1, scss/_boxes.scss */
     .black-box, .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title, .globalNavBox, .topSliderBox, .mainBox, .mainBox--article, .sidebarBox, .footerBox, .spMenu {
@@ -776,7 +776,7 @@ a.n, a.sidebarBanner {
 
 /* line 12, scss/_boxes.scss */
 .black-box--last, .footerBox, .spMenu {
-  border-bottom-width: 4px; }
+  border-bottom-width: 5px; }
 
 /* line 16, scss/_boxes.scss */
 .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title {
@@ -804,60 +804,68 @@ a.n, a.sidebarBanner {
       padding: 13px;
       margin: 0px; } }
 
-/* line 33, scss/_page.scss */
+/* line 35, scss/_page.scss */
 .page__content {
-  border-right: solid 4px black;
-  border-left: solid 4px black; }
+  border-right: solid 5px black;
+  border-left: solid 5px black; }
 
-/* line 41, scss/_page.scss */
+/* line 43, scss/_page.scss */
 .page__main {
   box-sizing: border-box;
   float: left;
-  width: 866px; }
+  width: 865px; }
   @media screen and (max-width: 600px) {
-    /* line 41, scss/_page.scss */
+    /* line 43, scss/_page.scss */
     .page__main {
       width: 100%; } }
 
-/* line 52, scss/_page.scss */
+/* line 54, scss/_page.scss */
 .page__sidebar {
   box-sizing: border-box;
   float: right;
-  width: 326px; }
+  width: 325px; }
   @media screen and (max-width: 600px) {
-    /* line 52, scss/_page.scss */
+    /* line 54, scss/_page.scss */
     .page__sidebar {
       width: 100%; } }
 
 /* line 2, scss/_siteTitle.scss */
 .siteTitle {
-  font-size: 3rem;
+  font-size: 2.8rem;
   letter-spacing: 0.3em; }
   @media screen and (max-width: 600px) {
     /* line 2, scss/_siteTitle.scss */
     .siteTitle {
       text-align: center;
-      font-size: 1.8rem; } }
-
-/* line 13, scss/_siteTitle.scss */
-.siteTitle__plart {
-  font-family: "Raleway", sans-serif;
-  font-weight: bold; }
+      font-size: 1.8rem;
+      margin: 0 auto; } }
+  /* line 13, scss/_siteTitle.scss */
+  .siteTitle img {
+    width: 303px; }
+    @media screen and (max-width: 600px) {
+      /* line 13, scss/_siteTitle.scss */
+      .siteTitle img {
+        width: 240px; } }
 
 /* line 21, scss/_siteTitle.scss */
+.siteTitle__plart {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold; }
+
+/* line 29, scss/_siteTitle.scss */
 .siteTitle__story {
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal; }
 
 /* line 6, scss/_categoryBox.scss */
 .categoryBox {
   box-sizing: border-box;
-  padding: 22px 32px;
+  padding: 15px 32px;
   position: absolute;
   bottom: -66px;
   left: 36px;
   z-index: 10;
-  width: 512px;
+  width: 475px;
   height: 132px;
   background: white; }
   @media screen and (max-width: 600px) {
@@ -874,46 +882,48 @@ a.n, a.sidebarBanner {
     margin: 0;
     padding: 0;
     border: none;
-    line-height: 1.7; }
+    line-height: 1.85; }
 
 /* line 42, scss/_categoryBox.scss */
 .categoryBox__art {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   width: 15%;
   font-size: 2.6rem;
-  letter-spacing: 0.3em; }
+  letter-spacing: 0.2em; }
 
 /* line 52, scss/_categoryBox.scss */
 .categoryBox__cross {
   text-align: center;
   font-size: 2.6rem;
-  width: 12%; }
+  font-family: "Montserrat", sans-serif;
+  width: 14%; }
 
-/* line 59, scss/_categoryBox.scss */
+/* line 60, scss/_categoryBox.scss */
 .categoryBox__catName {
+  font-family: "Montserrat", sans-serif;
   width: 24%;
   letter-spacing: 0.1em; }
-  /* line 60, scss/_categoryBox.scss */
+  /* line 62, scss/_categoryBox.scss */
   .categoryBox__catName a {
     color: #000;
-    border-bottom: solid 1px #dcdcdc; }
+    border-bottom: solid 2px #dcdcdc; }
 
-/* line 75, scss/_categoryBox.scss */
+/* line 77, scss/_categoryBox.scss */
 .categoryBox.--place .categoryBox__catName.--place a,
 .categoryBox.--people .categoryBox__catName.--people a,
 .categoryBox.--thing .categoryBox__catName.--thing a {
   color: #dcdcdc; }
 
-/* line 81, scss/_categoryBox.scss */
+/* line 83, scss/_categoryBox.scss */
 .categoryBox__catContent {
   width: 50%;
-  font-size: 1rem; }
-  /* line 85, scss/_categoryBox.scss */
+  font-size: 1.2rem; }
+  /* line 86, scss/_categoryBox.scss */
   .categoryBox__catContent a {
     color: #000;
     text-decoration: none; }
-    /* line 89, scss/_categoryBox.scss */
+    /* line 90, scss/_categoryBox.scss */
     .categoryBox__catContent a:hover {
       text-decoration: none; }
 
@@ -933,10 +943,19 @@ a.n, a.sidebarBanner {
   display: inline;
   margin-left: 1.2em;
   letter-spacing: 0.1em;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   line-height: 1;
   border-bottom: 1px solid #dcdcdc; }
+  @media screen and (max-width: 600px) {
+    /* line 14, scss/_globalNav.scss */
+    .globalNav__item {
+      display: block;
+      margin-left: 0;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      line-height: 2.2;
+      border-bottom: none; } }
 
 /* line 8, scss/_globalNavBox.scss */
 .globalNavBox {
@@ -967,41 +986,43 @@ a.n, a.sidebarBanner {
   position: absolute;
   top: 26px;
   right: 26px;
-  width: 109px;
-  height: 76px; }
+  width: 100px; }
   @media screen and (max-width: 600px) {
     /* line 43, scss/_globalNavBox.scss */
     .globalNavBox__plartLogo {
       display: none; } }
 
-/* line 57, scss/_globalNavBox.scss */
+/* line 56, scss/_globalNavBox.scss */
 .globalNavBox__titleBox {
   margin-left: 3px;
   margin-top: -8px; }
   @media screen and (max-width: 600px) {
-    /* line 57, scss/_globalNavBox.scss */
+    /* line 56, scss/_globalNavBox.scss */
     .globalNavBox__titleBox {
       margin: 20px 0;
       text-align: center; } }
 
-/* line 71, scss/_globalNavBox.scss */
+/* line 70, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
   line-height: 1;
   margin-bottom: 8px;
   font-size: 1rem; }
   @media screen and (max-width: 600px) {
-    /* line 71, scss/_globalNavBox.scss */
+    /* line 70, scss/_globalNavBox.scss */
     .globalNavBox__siteDesc {
       text-align: center; } }
 
-/* line 81, scss/_globalNavBox.scss */
+/* line 80, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
   line-height: 1;
+  width: 303px;
   margin: 0px; }
   @media screen and (max-width: 600px) {
-    /* line 81, scss/_globalNavBox.scss */
+    /* line 80, scss/_globalNavBox.scss */
     .globalNavBox__siteTitle {
-      text-align: center; } }
+      text-align: center;
+      width: 240px;
+      margin: 0 auto; } }
 
 /* line 2, scss/_topSliderBox.scss */
 .topSliderBox {
@@ -1042,7 +1063,7 @@ a.n, a.sidebarBanner {
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
-  right: 26px; }
+  right: 14px; }
   @media screen and (max-width: 600px) {
     /* line 43, scss/_topSliderBox.scss */
     .topSliderBox__seriesBox {
@@ -1103,12 +1124,12 @@ a.n, a.sidebarBanner {
 
 /* line 35, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title--plart {
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold; }
 
 /* line 42, scss/_plartStoryNumber.scss */
 .plartStoryNumber__title--story {
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal; }
 
 /* line 52, scss/_plartStoryNumber.scss */
@@ -1127,7 +1148,7 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 9, scss/_featureBox.scss */
     .featureBox__number {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       padding: 10.4px; } }
 
 /* line 23, scss/_featureBox.scss */
@@ -1136,9 +1157,9 @@ a.n, a.sidebarBanner {
   margin-top: -2px;
   display: inline-block;
   padding: 20px;
-  max-width: 500px;
-  line-height: 1.1;
-  font-size: 3rem;
+  max-width: 460px;
+  line-height: 1.18;
+  font-size: 2.6rem;
   background-color: rgba(255, 255, 255, 0.9); }
   @media screen and (max-width: 600px) {
     /* line 23, scss/_featureBox.scss */
@@ -1151,17 +1172,20 @@ a.n, a.sidebarBanner {
 .seriesBox {
   padding: 17px 26px;
   background: #e6ff00;
-  font-size: 26px;
-  line-height: 1; }
+  font-size: 2rem;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.1em; }
   @media screen and (max-width: 600px) {
     /* line 4, scss/_seriesBox.scss */
     .seriesBox {
       display: none; } }
 
-/* line 22, scss/_seriesBox.scss */
+/* line 24, scss/_seriesBox.scss */
 .seriesBox__siteTitles {
-  font-size: 1.6rem; }
-  /* line 26, scss/_seriesBox.scss */
+  font-size: 1.6rem;
+  margin-left: 10px; }
+  /* line 29, scss/_seriesBox.scss */
   .seriesBox__siteTitles .siteTitle {
     font-size: 1.6rem; }
 
@@ -1357,12 +1381,12 @@ a.n, a.sidebarBanner {
 
 /* line 1, scss/_mainBox.scss */
 .mainBoxContainer {
-  margin-left: -4px; }
+  margin-left: -5px; }
   @media screen and (max-width: 600px) {
     /* line 1, scss/_mainBox.scss */
     .mainBoxContainer {
-      margin-left: -4px;
-      margin-right: -4px; } }
+      margin-left: -5px;
+      margin-right: -5px; } }
 
 /* line 17, scss/_mainBox.scss */
 .mainBox__title {
@@ -1381,8 +1405,8 @@ a.n, a.sidebarBanner {
 .mainBox__subTitle {
   display: inline;
   margin-left: 1em;
-  font-size: 1.3rem;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-size: 1.4rem;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal; }
 
 /* line 40, scss/_mainBox.scss */
@@ -1430,6 +1454,7 @@ a.n, a.sidebarBanner {
   font-size: 1.5rem;
   letter-spacing: 0.1em;
   line-height: 20px;
+  font-family: "Montserrat", sans-serif;
   vertical-align: bottom; }
   /* line 52, scss/_articleBox.scss */
   .articleBox__category.--unvisible {
@@ -1442,20 +1467,21 @@ a.n, a.sidebarBanner {
 /* line 61, scss/_articleBox.scss */
 .articleBox__category--ART {
   display: inline;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   margin-right: 4px; }
 
 /* line 69, scss/_articleBox.scss */
 .articleBox__category--cross {
   display: inline;
-  margin-right: 4px; }
+  margin-right: 4px;
+  font-family: "Montserrat", sans-serif; }
 
-/* line 74, scss/_articleBox.scss */
+/* line 75, scss/_articleBox.scss */
 .articleBox__category--genre {
   display: inline; }
 
-/* line 79, scss/_articleBox.scss */
+/* line 80, scss/_articleBox.scss */
 .articleBox__number {
   float: right;
   background: #e6ff00;
@@ -1465,53 +1491,53 @@ a.n, a.sidebarBanner {
   padding-top: 3px;
   padding-bottom: 3px; }
   @media screen and (max-width: 600px) {
-    /* line 79, scss/_articleBox.scss */
+    /* line 80, scss/_articleBox.scss */
     .articleBox__number {
       float: left;
       margin-top: 10px;
       clear: both; } }
 
-/* line 102, scss/_articleBox.scss */
+/* line 103, scss/_articleBox.scss */
 .thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   display: block;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   padding: 0px;
   vertical-align: bottom; }
 
-/* line 113, scss/_articleBox.scss */
+/* line 114, scss/_articleBox.scss */
 .articleBox__thumbnailBox {
   position: relative; }
 
-/* line 124, scss/_articleBox.scss */
+/* line 125, scss/_articleBox.scss */
 .articleBox__coverBadge {
   position: absolute;
   right: 5%;
   top: 5%;
   visibility: hidden; }
-  /* line 133, scss/_articleBox.scss */
+  /* line 134, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
   @media screen and (max-width: 600px) {
-    /* line 124, scss/_articleBox.scss */
+    /* line 125, scss/_articleBox.scss */
     .articleBox__coverBadge {
       transform-origin: right top;
       transform: scale(0.5); } }
 
-/* line 146, scss/_articleBox.scss */
+/* line 147, scss/_articleBox.scss */
 .articleBox__title {
   clear: both;
   word-break: break-all;
-  line-height: 2;
+  line-height: 1.6;
   height: 9rem;
   margin: 0px;
   padding: 0px; }
 
 /* line 2, scss/_sidebarBox.scss */
 .sidebarBoxContainer {
-  margin-left: -4px;
-  margin-right: -4px; }
+  margin-left: -5px;
+  margin-right: -5px; }
 
 /* line 7, scss/_sidebarBox.scss */
 .sidebarBox {
@@ -1570,11 +1596,13 @@ a.n, a.sidebarBanner {
 /* line 20, scss/_articleBox--ranking.scss */
 .articleBox--ranking--rank {
   font-size: 30px;
-  clear: both; }
+  clear: both;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4; }
 
-/* line 25, scss/_articleBox--ranking.scss */
+/* line 28, scss/_articleBox--ranking.scss */
 .articleBox--ranking--title {
-  font-size: 8px;
+  font-size: 12px;
   clear: both; }
 
 /* line 6, scss/_footerBox.scss */
@@ -1597,10 +1625,16 @@ a.n, a.sidebarBanner {
 /* line 24, scss/_footerBox.scss */
 .footerBox__icon {
   float: right;
-  width: 109px;
-  height: 76px; }
+  width: 109px; }
+  @media screen and (max-width: 600px) {
+    /* line 24, scss/_footerBox.scss */
+    .footerBox__icon {
+      width: 69px;
+      position: absolute;
+      bottom: 30px;
+      right: 30px; } }
 
-/* line 31, scss/_footerBox.scss */
+/* line 36, scss/_footerBox.scss */
 .footerBox__menuBox {
   clear: both;
   margin-bottom: 1em; }
@@ -1671,10 +1705,12 @@ a.n, a.sidebarBanner {
   font-size: 30px;
   padding: 10px;
   width: 80%;
-  background: rgba(255, 255, 255, 0.9);
-  line-height: 1; }
+  background: rgba(255, 255, 255, 0.5);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: "Montserrat", sans-serif; }
 
-/* line 43, scss/_numberBadge.scss */
+/* line 45, scss/_numberBadge.scss */
 .numberBadge__number {
   position: absolute;
   top: 0px;
@@ -1683,23 +1719,22 @@ a.n, a.sidebarBanner {
 /* line 6, scss/_coverBadge.scss */
 .coverBadge {
   position: relative;
-  border: 2px solid #000;
   border-radius: 30px;
   width: 60px;
   height: 60px;
   background: #e6ff00;
   font-size: 10px; }
-  /* line 20, scss/_coverBadge.scss */
+  /* line 19, scss/_coverBadge.scss */
   .coverBadge.--big {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     font-size: 16.66667px; }
-    /* line 27, scss/_coverBadge.scss */
+    /* line 26, scss/_coverBadge.scss */
     .coverBadge.--big .coverBadge__text {
       line-height: 100px; }
 
-/* line 35, scss/_coverBadge.scss */
+/* line 34, scss/_coverBadge.scss */
 .coverBadge__text {
   width: 100%;
   height: 100%;
@@ -1760,26 +1795,39 @@ a.n, a.sidebarBanner {
   display: flex;
   -webkit-align-items: center;
   align-items: center; }
-  /* line 8, scss/_snsLinks.scss */
+  @media screen and (max-width: 600px) {
+    /* line 1, scss/_snsLinks.scss */
+    .snsLinks {
+      font-size: 1.4rem; } }
+  /* line 11, scss/_snsLinks.scss */
   .snsLinks--text {
     margin: 0 10px 0 0;
     letter-spacing: 0.1em; }
-  /* line 12, scss/_snsLinks.scss */
+  /* line 15, scss/_snsLinks.scss */
   .snsLinks a {
     border-bottom: none; }
-  /* line 15, scss/_snsLinks.scss */
+  /* line 18, scss/_snsLinks.scss */
   .snsLinks--icon {
     display: inline-block;
     margin-left: 10px;
     width: 20px;
     margin: 0 0 0 12px;
     padding-top: 8px; }
+    @media screen and (max-width: 600px) {
+      /* line 18, scss/_snsLinks.scss */
+      .snsLinks--icon {
+        width: 15px;
+        margin: 0 0 0 8px;
+        padding-top: 2px; } }
 
-/* line 24, scss/_snsLinks.scss */
+/* line 33, scss/_snsLinks.scss */
 .mainBox .AlpinePhotoTiles-highlight-div, .mainBox--article .AlpinePhotoTiles-highlight-div {
-  padding: 10px;
-  margin-right: 5px;
-  margin-bottom: 5px; }
+  padding: 8px;
+  margin-right: 4px;
+  margin-bottom: 4px; }
+  /* line 37, scss/_snsLinks.scss */
+  .mainBox .AlpinePhotoTiles-highlight-div a, .mainBox--article .AlpinePhotoTiles-highlight-div a {
+    border-bottom: none; }
 
 /* line 6, scss/_sidebarBanner.scss */
 .sidebarBanner__image {
@@ -1810,7 +1858,11 @@ a.n, a.sidebarBanner {
   line-height: 1;
   letter-spacing: 0.1em; }
 
-/* line 22, scss/_spMenu.scss */
+/* line 25, scss/_spMenu.scss */
+.spMenu__nav {
+  margin-bottom: 26px; }
+
+/* line 30, scss/_spMenu.scss */
 .spMenuBg {
   display: none;
   position: fixed;
@@ -1821,41 +1873,42 @@ a.n, a.sidebarBanner {
   z-index: 190;
   background: rgba(0, 0, 0, 0.6); }
 
-/* line 35, scss/_spMenu.scss */
+/* line 43, scss/_spMenu.scss */
 .spMenu__art {
-  font-size: 3rem;
-  font-family: "Raleway", sans-serif;
+  font-size: 2.6rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
+  letter-spacing: 0.1em;
   margin-bottom: 0.5rem; }
 
-/* line 42, scss/_spMenu.scss */
+/* line 51, scss/_spMenu.scss */
 .spMenu__cross {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 0.5rem; }
 
-/* line 48, scss/_spMenu.scss */
+/* line 57, scss/_spMenu.scss */
 .spMenu__categoryItem {
-  font-size: 3rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem; }
 
-/* line 52, scss/_spMenu.scss */
+/* line 61, scss/_spMenu.scss */
 .n.spMenu__categoryTitle, .spMenu__categoryTitle.sidebarBanner {
   display: block;
-  font-size: 2.6rem;
-  font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
+  font-size: 1.8rem;
+  font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal;
   margin-bottom: 0.5rem; }
 
-/* line 61, scss/_spMenu.scss */
+/* line 70, scss/_spMenu.scss */
 .spMenu__categoryLink {
   border-bottom: 1px solid black; }
 
-/* line 65, scss/_spMenu.scss */
+/* line 74, scss/_spMenu.scss */
 .spMenu__categoryDesc {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem; }
 
-/* line 74, scss/_spMenu.scss */
+/* line 83, scss/_spMenu.scss */
 .spMenuButton {
   margin: 0;
   padding: 0;
@@ -1881,8 +1934,12 @@ a.n, a.sidebarBanner {
 /* line 72, scss/style.scss */
 .search-form, .search-box {
   position: relative; }
+  @media screen and (max-width: 600px) {
+    /* line 72, scss/style.scss */
+    .search-form, .search-box {
+      top: 5px; } }
 
-/* line 76, scss/style.scss */
+/* line 80, scss/style.scss */
 input[type="search"].search-field {
   border-radius: 0;
   height: 31px;
@@ -1890,7 +1947,7 @@ input[type="search"].search-field {
   width: calc(100% - 42px);
   background: #dbdcdc; }
 
-/* line 84, scss/style.scss */
+/* line 88, scss/style.scss */
 .search-submit {
   border-radius: 0;
   bottom: 0;
@@ -1906,7 +1963,7 @@ input[type="search"].search-field {
 /*
  * search.phpのnot found
  */
-/* line 100, scss/style.scss */
+/* line 104, scss/style.scss */
 .notFound {
   font-size: 30px; }
 

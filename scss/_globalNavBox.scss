@@ -45,8 +45,7 @@ $titleBox-margin-top: 28px;
     top: 26px;
     right: 26px;
 
-  width: 109px;
-  height: 76px;
+  width: 100px;
 
   @include media($medium-screen-down){
     display:none;
@@ -80,11 +79,13 @@ $titleBox-margin-top: 28px;
 
 .globalNavBox__siteTitle{
   line-height:1;
-
+  width: 303px;
   margin:0px;
 
   @include media($medium-screen-down){
     text-align:center;
+    width: 240px;
+    margin: 0 auto;
   }
 
 }

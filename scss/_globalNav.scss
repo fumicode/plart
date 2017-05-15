@@ -18,11 +18,15 @@
   letter-spacing:$small-letter-spacing;
   font-family:$heading-font-family;
   font-weight:$heading-font-weight;
-
-
-
   line-height:1;
-
   border-bottom:1px solid $color-plart-gray;
+    @include media($medium-screen-down){
+      display: block;
+      margin-left: 0;
+      letter-spacing: 0.1em;
+      font-weight: bold;
+      line-height: 2.2;
+      border-bottom: none;
+    }
 
 }

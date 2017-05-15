@@ -11,11 +11,9 @@ div.page__globalNav
     
     a.n(href="/")
       .globalNavBox__titleBox
-        p.globalNavBox__siteDesc アートがライフスタイルになるウェブマガジン
+        p.globalNavBox__siteDesc
         h1.globalNavBox__siteTitle
-          span.siteTitle 
-            span.siteTitle__plart PLART
-            span.siteTitle__story STORY
+          img(src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo2.png" alt="アートがライフスタイルになるウェブマガジン PLART")
 
 
     -  if(is_category()){
@@ -37,7 +35,7 @@ div.page__globalNav
         tr
           td.categoryBox__catName.--place
             a(href="/category/place") PLACE
-          td.categoryBox__catContent  場、空間、
+          td.categoryBox__catContent  場、空間
         tr
           td.categoryBox__catName.--thing
             a(href="/category/thing") THING

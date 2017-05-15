@@ -9,14 +9,14 @@ $categoryBox-height:132px;
   box-sizing:border-box;
 
 
-  padding:22px 32px;
+  padding:15px 32px;
 
   position:absolute;
     bottom:-$categoryBox-height/2;
     left:36px;
     z-index:10;
 
-  width:512px;
+  width:475px;
   height: $categoryBox-height;
 
   background:white;
@@ -35,7 +35,7 @@ $categoryBox-height:132px;
     margin:0;
     padding:0;
     border:none;
-    line-height: 1.7;
+    line-height: 1.85;
   }
 }
 
@@ -46,21 +46,23 @@ $categoryBox-height:132px;
   width:15%;
 
   font-size:$font-size-big;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
 
 }
 .categoryBox__cross{
   text-align:center;
   font-size:$font-size-big;
+  font-family: $heading-font-family;
 
-  width:12%;
+  width:14%;
 }
 
 .categoryBox__catName{
+  font-family: $heading-font-family;
   a{
 
     color:#000;
-    border-bottom:solid 1px $color-plart-gray;
+    border-bottom:solid 2px $color-plart-gray;
   }
 
   width:24%;
@@ -80,8 +82,7 @@ $categoryBox-height:132px;
 
 .categoryBox__catContent {
   width:50%;
-
-  font-size:$font-size-small;
+  font-size:1.2rem;
   a{
     color:#000;
 

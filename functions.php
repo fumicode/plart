@@ -116,7 +116,7 @@ add_image_size( 'slider', 1200, 540, true );
 add_filter( 'post_thumbnail_html', 'custom_attribute' );
 function custom_attribute( $html ){
   // width height を削除する
-  $html = preg_replace('/(width|height)="\d*"\s/', '', $html);
+  $html = preg_replace('/(height)="\d*"\s/', '', $html);
   return $html;
 }
 
@@ -126,9 +126,8 @@ function custom_attribute( $html ){
 /**
  * 画像挿入時にwidthとheightを削除する
   */
-
 function remove_width_attribute( $html ) {
-  $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+  $html = preg_replace( '/(height)="\d*"\s/', "", $html );
   return $html;
 }
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );

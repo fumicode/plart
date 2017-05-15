@@ -25,7 +25,12 @@
   float:right;
 
   width:109px;
-  height: 76px;
+  @include media($medium-screen-down){
+    width: 69px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
 }
 
 .footerBox__menuBox{

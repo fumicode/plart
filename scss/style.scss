@@ -71,6 +71,10 @@ body{
 
 .search-form, .search-box {
     position: relative;
+    @include media($medium-screen-down){
+      top:5px;
+    }
+
 }
 
 input[type="search"].search-field {

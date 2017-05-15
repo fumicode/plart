@@ -33,9 +33,11 @@ $numberBadge-title-padding:10px;
   width:80%;
 
 
-  background:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.5);
 
   line-height:1;
+  letter-spacing: $small-letter-spacing;
+  font-family: $heading-font-family;
 
 
 }

@@ -44,7 +44,7 @@ h2,.h2{
 }
 
 h3,.h3{
-  font-size: $font-size-big;
+  font-size: $font-size-semibig;
 }
 
 h4,.h4{
@@ -169,10 +169,9 @@ blockquote{
 }
 
 a{
-  border-bottom:solid 1px $color-plart-gray;
+  border-bottom:solid 1px $color-plart-black;
 }
 
 a.n{
   border-bottom:none;
 }
-

@@ -7,6 +7,14 @@
   @include media($medium-screen-down){
     text-align:center;
     font-size:$font-size-semibig;
+    margin: 0 auto;
+  }
+
+  img{
+      width:303px;
+    @include media($medium-screen-down){
+      width: 240px;
+    }
   }
 }
 

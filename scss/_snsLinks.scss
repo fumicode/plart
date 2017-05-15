@@ -5,6 +5,9 @@
   display: flex;
   -webkit-align-items: center;
   align-items: center;
+  @include media($medium-screen-down){
+    font-size: 1.4rem;
+  }
     &--text{
       margin: 0 10px 0 0;
       letter-spacing: $small-letter-spacing;
@@ -18,11 +21,20 @@
     width: 20px;
     margin: 0 0 0 12px;
     padding-top: 8px;
+    @include media($medium-screen-down){
+      width: 15px;
+      margin: 0 0 0 8px;
+      padding-top: 2px;
+    }
   }
+
 }
 
 .mainBox .AlpinePhotoTiles-highlight-div {
-    padding: 10px;
-    margin-right: 5px;
-    margin-bottom: 5px;
+    padding: 8px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    a{
+      border-bottom: none;
+    }
 }

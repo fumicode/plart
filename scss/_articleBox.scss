@@ -4,7 +4,7 @@ $articleBoxTitleHeight:$font-size-medium*2*3;
 $articleBoxHeader-marginBottom:10px;
 $categoryLineHeight:20px;
 $numberFontSize:13px;
-$thumbnailMarginBottom:5px;
+$thumbnailMarginBottom:10px;
 
 .articleBox-base{
   padding:$articleBox-padding 0px $articleBox-padding 0px;
@@ -45,8 +45,8 @@ $thumbnailMarginBottom:5px;
   float: left;
   font-size: $font-size-medium;
   letter-spacing: $small-letter-spacing;
-
   line-height: $categoryLineHeight;
+  font-family: $heading-font-family;
 
   vertical-align:bottom;
   &.--unvisible{
@@ -62,13 +62,14 @@ $thumbnailMarginBottom:5px;
   display:inline;
   font-family:$heading-font-family;
   font-weight:$heading-font-weight;
-  
+
   margin-right: 4px;
 }
 
 .articleBox__category--cross{
   display:inline;
   margin-right: 4px;
+  font-family:$heading-font-family;
 }
 
 .articleBox__category--genre{
@@ -146,7 +147,7 @@ $thumbnailMarginBottom:5px;
 .articleBox__title{
   clear:both;
   word-break: break-all;
-  line-height: 2;
+  line-height: 1.6;
   height:$articleBoxTitleHeight;
   margin:0px;
   padding: 0px;

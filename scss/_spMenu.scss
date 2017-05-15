@@ -17,6 +17,14 @@
 
   line-height:1;
   letter-spacing:0.1em
+
+
+}
+
+.spMenu{
+  &__nav{
+    margin-bottom: $box-padding-sp * 2
+  }
 }
 
 .spMenuBg{
@@ -33,9 +41,10 @@
 }
 
 .spMenu__art {
-  font-size: $font-size-extrabig;
+  font-size: $font-size-big;
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
+  letter-spacing: $small-letter-spacing;
 
   margin-bottom:0.5rem;
 }
@@ -44,15 +53,15 @@
   margin-bottom:0.5rem;
 }
 .spMenu__categoryList{
-} 
-.spMenu__categoryItem{ 
+}
+.spMenu__categoryItem{
   font-size: $font-size-extrabig;
   margin-bottom:1rem;
 }
 .n.spMenu__categoryTitle{
   display:block;
 
-  font-size: $font-size-big;
+  font-size: $font-size-semibig;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   margin-bottom:0.5rem;

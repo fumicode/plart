@@ -6,12 +6,11 @@ $coverBadge-font-size-big:$coverBadge-size-big /6;
 .coverBadge{
   position:relative;
 
-  border:$box-border-width-thin solid #000;
   border-radius: $coverBadge-size/2;
 
   width:$coverBadge-size;
   height:$coverBadge-size;
-  
+
   background:$color-plart-yellow;
 
 
