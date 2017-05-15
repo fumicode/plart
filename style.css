@@ -772,7 +772,7 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 1, scss/_boxes.scss */
     .black-box, .black-box--thin, .categoryBox, .featureBox__number, .featureBox__title, .seriesBox, .numberBadge__title, .globalNavBox, .topSliderBox, .mainBox, .mainBox--article, .sidebarBox, .footerBox, .spMenu {
-      padding: 8px; } }
+      padding: 13px; } }
 
 /* line 12, scss/_boxes.scss */
 .black-box--last, .footerBox, .spMenu {
@@ -801,7 +801,7 @@ a.n, a.sidebarBanner {
     /* line 4, scss/_page.scss */
     .page {
       width: 100%;
-      padding: 8px;
+      padding: 13px;
       margin: 0px; } }
 
 /* line 33, scss/_page.scss */
@@ -952,13 +952,17 @@ a.n, a.sidebarBanner {
   display: none;
   position: absolute;
   top: 36px;
-  right: 8px; }
+  right: 15px; }
   @media screen and (max-width: 600px) {
     /* line 25, scss/_globalNavBox.scss */
     .globalNavBox__spButton {
       display: block; } }
+  /* line 36, scss/_globalNavBox.scss */
+  .globalNavBox__spButton .spMenuButton {
+    width: 20px;
+    height: 18px; }
 
-/* line 38, scss/_globalNavBox.scss */
+/* line 43, scss/_globalNavBox.scss */
 .globalNavBox__plartLogo {
   position: absolute;
   top: 26px;
@@ -966,36 +970,36 @@ a.n, a.sidebarBanner {
   width: 109px;
   height: 76px; }
   @media screen and (max-width: 600px) {
-    /* line 38, scss/_globalNavBox.scss */
+    /* line 43, scss/_globalNavBox.scss */
     .globalNavBox__plartLogo {
       display: none; } }
 
-/* line 52, scss/_globalNavBox.scss */
+/* line 57, scss/_globalNavBox.scss */
 .globalNavBox__titleBox {
   margin-left: 3px;
   margin-top: -8px; }
   @media screen and (max-width: 600px) {
-    /* line 52, scss/_globalNavBox.scss */
+    /* line 57, scss/_globalNavBox.scss */
     .globalNavBox__titleBox {
       margin: 20px 0;
       text-align: center; } }
 
-/* line 66, scss/_globalNavBox.scss */
+/* line 71, scss/_globalNavBox.scss */
 .globalNavBox__siteDesc {
   line-height: 1;
   margin-bottom: 8px;
   font-size: 1rem; }
   @media screen and (max-width: 600px) {
-    /* line 66, scss/_globalNavBox.scss */
+    /* line 71, scss/_globalNavBox.scss */
     .globalNavBox__siteDesc {
       text-align: center; } }
 
-/* line 76, scss/_globalNavBox.scss */
+/* line 81, scss/_globalNavBox.scss */
 .globalNavBox__siteTitle {
   line-height: 1;
   margin: 0px; }
   @media screen and (max-width: 600px) {
-    /* line 76, scss/_globalNavBox.scss */
+    /* line 81, scss/_globalNavBox.scss */
     .globalNavBox__siteTitle {
       text-align: center; } }
 
@@ -1018,8 +1022,8 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 16, scss/_topSliderBox.scss */
     .topSliderBox__number {
-      top: 8px;
-      right: 15px;
+      top: 13px;
+      right: 36px;
       transform-origin: right top;
       transform: scale(0.5); } }
 
@@ -1031,8 +1035,8 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 32, scss/_topSliderBox.scss */
     .topSliderBox__featureBox {
-      bottom: 8px;
-      left: 8px; } }
+      bottom: 13px;
+      left: 13px; } }
 
 /* line 43, scss/_topSliderBox.scss */
 .topSliderBox__seriesBox {
@@ -1124,7 +1128,7 @@ a.n, a.sidebarBanner {
     /* line 9, scss/_featureBox.scss */
     .featureBox__number {
       font-size: 1.3rem;
-      padding: 6.4px; } }
+      padding: 10.4px; } }
 
 /* line 23, scss/_featureBox.scss */
 .featureBox__title {
@@ -1141,7 +1145,7 @@ a.n, a.sidebarBanner {
     .featureBox__title {
       font-size: 1.8rem;
       max-width: 280px;
-      padding: 8px; } }
+      padding: 13px; } }
 
 /* line 4, scss/_seriesBox.scss */
 .seriesBox {
@@ -1346,6 +1350,10 @@ a.n, a.sidebarBanner {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 600px) {
+    /* line 3, scss/_blackButton.scss */
+    .blackButton {
+      margin-bottom: 15px; } }
 
 /* line 1, scss/_mainBox.scss */
 .mainBoxContainer {
@@ -1364,8 +1372,12 @@ a.n, a.sidebarBanner {
   font-size: 2.6rem;
   margin-right: 10px;
   letter-spacing: 0.1em; }
+  @media screen and (max-width: 600px) {
+    /* line 17, scss/_mainBox.scss */
+    .mainBox__title {
+      font-size: 1.8rem; } }
 
-/* line 26, scss/_mainBox.scss */
+/* line 29, scss/_mainBox.scss */
 .mainBox__subTitle {
   display: inline;
   margin-left: 1em;
@@ -1373,11 +1385,11 @@ a.n, a.sidebarBanner {
   font-family: "Helvetica Neue", Arial, sans-serif, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic;
   font-weight: normal; }
 
-/* line 37, scss/_mainBox.scss */
+/* line 40, scss/_mainBox.scss */
 .mainBox--article {
   padding-top: 80px; }
   @media screen and (max-width: 600px) {
-    /* line 37, scss/_mainBox.scss */
+    /* line 40, scss/_mainBox.scss */
     .mainBox--article {
       padding-top: inherit; } }
 
@@ -1510,7 +1522,7 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 7, scss/_sidebarBox.scss */
     .sidebarBox {
-      padding: 8px; } }
+      padding: 13px; } }
 
 /* line 21, scss/_sidebarBox.scss */
 .sidebarBox__title {
@@ -1693,8 +1705,8 @@ a.n, a.sidebarBanner {
   @media screen and (max-width: 600px) {
     /* line 12, scss/_articleThumnbnailBox.scss */
     .articleThumbnailBox__badge {
-      top: 8px;
-      right: 8px;
+      top: 13px;
+      right: 13px;
       transform-origin: right top;
       transform: scale(0.5); } }
 
@@ -1773,8 +1785,8 @@ a.n, a.sidebarBanner {
   display: none;
   padding: 2rem;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 13px;
+  right: 13px;
   z-index: 200;
   width: 70%;
   background: white;

@@ -11,4 +11,7 @@ $blackButtonWidth:230px;
   padding-bottom: 3px;
   width:$blackButtonWidth;
   text-align: center;
+  @include media($medium-screen-down){
+    margin-bottom:15px;
+  }
 }

@@ -22,7 +22,7 @@ $titleBox-margin-top: 28px;
 
 
 
-.globalNavBox__spButton{  
+.globalNavBox__spButton{
   display:none;
 
   @include media($medium-screen-down){
@@ -31,7 +31,12 @@ $titleBox-margin-top: 28px;
 
   position:absolute;
     top: 36px;
-    right: $box-padding-sp;
+    right: 15px;
+
+    .spMenuButton {
+    width: 20px;
+    height: 18px;
+  }
 
 }
 
