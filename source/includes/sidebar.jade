@@ -19,6 +19,7 @@
     - if (function_exists('sga_ranking_get_date')):
     -   $ranking_data = sga_ranking_get_date();
     -   if ( !empty( $ranking_data ) ):
+    -     $sidebar_index = 1;
     -     foreach ( $ranking_data as $post_id ):
       .articleBox--ranking
         - if(has_post_thumbnail($post_id)):
@@ -36,13 +37,34 @@
     - endif;
 
 
-
   .sidebarBox
     h2.sidebarBox__title PRESS RELEASE
-    .pressRelease__slider
-      .slider
-        p slider
-        p slider
+
+    .pressReleaseBox
+      :php
+        $args = array(
+          'post_type' => 'post',
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'article_type',
+              'field' => 'slug',
+              'terms' => 'press-release',
+            ),
+          ),
+        );
+
+      - $the_query = new WP_Query( $args );
+      - while($the_query->have_posts()): $the_query->the_post();
+        a.pressReleaseBox__item(href="<?=the_permalink()?>")
+          .pressReleaseBox__title
+            - echo get_the_date("Y.n.d")
+          .pressReleaseBox__content
+            - the_title();
+
+      - endwhile;
+      - wp_reset_postdata();
+
+   
   .sidebarBox
     h2.sidebarBox__title FACEBOOK
     <div class="fb-page" data-href="https://www.facebook.com/plartjp" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/plartjp" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/plartjp">PLART（プラート）</a></blockquote></div>

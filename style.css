@@ -1835,14 +1835,25 @@ a.n, a.sidebarBanner {
   border-radius: 0;
   background: black; }
 
+/* line 2, scss/_pressReleaseBox.scss */
+.pressReleaseBox {
+  height: 300px;
+  overflow-y: scroll; }
+
+/* line 7, scss/_pressReleaseBox.scss */
+.pressReleaseBox__item {
+  display: block;
+  margin-bottom: 1em;
+  border-bottom: 0; }
+
 /*
  * Search Box用のcss
  */
-/* line 71, scss/style.scss */
+/* line 72, scss/style.scss */
 .search-form, .search-box {
   position: relative; }
 
-/* line 75, scss/style.scss */
+/* line 76, scss/style.scss */
 input[type="search"].search-field {
   border-radius: 0;
   height: 31px;
@@ -1850,7 +1861,7 @@ input[type="search"].search-field {
   width: calc(100% - 42px);
   background: #dbdcdc; }
 
-/* line 83, scss/style.scss */
+/* line 84, scss/style.scss */
 .search-submit {
   border-radius: 0;
   bottom: 0;
@@ -1866,7 +1877,7 @@ input[type="search"].search-field {
 /*
  * search.phpのnot found
  */
-/* line 99, scss/style.scss */
+/* line 100, scss/style.scss */
 .notFound {
   font-size: 30px; }
 
