@@ -1,6 +1,7 @@
 mixin articleBox(modifier)
   - $category = get_the_category()[0];
   - $is_cover = strcmp($category->slug,"cover") == 0;
+
   a.n(href="<?php the_permalink()?>")
     .articleBox(class="#{ modifier ? '--' + modifier :''}")
       header.articleBox__header
@@ -33,5 +34,10 @@ mixin articleBox(modifier)
             .coverBadge__text <?= get_the_date('n')?>月15日号
 
 
-      .articleBox__title <?= the_title() ?>
+      .articleBox__title 
+        - if(wp_is_mobile()):
+        -   echo mb_strimwidth(get_the_title(), 0, 30, "...");
+        - else:
+        -   the_title();
+        - endif;
 
