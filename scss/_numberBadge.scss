@@ -2,6 +2,7 @@
 $numberBadge-height:$plartStoryNumber-size;
 $numberBadge-width: $numberBadge-height * 2;
 
+
 $numberBadge-title-font-size:30px;
 $numberBadge-title-padding:10px;
 
@@ -10,6 +11,12 @@ $numberBadge-title-padding:10px;
   position:relative;
   width: $numberBadge-width;
   height: $numberBadge-height;
+
+
+  @include media($medium-screen-down){
+    transform-origin:right top;
+    transform:scale(0.5);
+  }
 }
 
 .numberBadge__title{
