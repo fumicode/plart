@@ -1019,7 +1019,7 @@ a.n, a.sidebarBanner {
     /* line 16, scss/_topSliderBox.scss */
     .topSliderBox__number {
       top: 8px;
-      right: 8px;
+      right: 15px;
       transform-origin: right top;
       transform: scale(0.5); } }
 
@@ -1890,8 +1890,8 @@ input[type="search"].search-field {
   position: absolute;
   top: 50%;
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 18px;
   padding: 0;
   -webkit-transform: translate(0, -50%);
   -ms-transform: translate(0, -50%);
