@@ -17,6 +17,8 @@
   @include media($medium-screen-down){
     top: $box-padding-sp;
     right:$box-padding-sp;
+    transform-origin:right top;
+    transform:scale(0.5);
   }
 
 }

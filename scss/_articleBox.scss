@@ -132,11 +132,14 @@ $thumbnailMarginBottom:5px;
 
   &.--visible{
     visibility:visible;
-
-
   }
 
   &.--big{
+  }
+
+  @include media($medium-screen-down){
+    transform-origin:right top;
+    transform:scale(0.5);
   }
 }
 
