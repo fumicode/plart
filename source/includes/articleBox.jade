@@ -11,7 +11,7 @@ mixin articleBox(modifier)
           .articleBox__category--genre
             | <?=$category->cat_name?> 
 
-        .articleBox__number <?= get_the_date('n')?>月15日号
+        .articleBox__number(class="<?= $is_cover ?'--unvisible':''?>") <?= get_the_date('n')?>月15日号
 
       .articleBox__thumbnailBox 
         - if(has_post_thumbnail()):

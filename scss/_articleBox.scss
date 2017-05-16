@@ -86,6 +86,10 @@ $thumbnailMarginBottom:5px;
   padding-bottom:3px;
 
 
+  &.--unvisible{
+    visibility:hidden;
+  }
+
   @include media($medium-screen-down) {
     float:left;
     margin-top:$articleBoxHeader-marginBottom;
