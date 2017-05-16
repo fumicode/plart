@@ -1495,6 +1495,9 @@ a.n, a.sidebarBanner {
   padding-right: 7px;
   padding-top: 3px;
   padding-bottom: 3px; }
+  /* line 89, scss/_articleBox.scss */
+  .articleBox__number.--unvisible {
+    visibility: hidden; }
   @media screen and (max-width: 600px) {
     /* line 80, scss/_articleBox.scss */
     .articleBox__number {
@@ -1502,7 +1505,11 @@ a.n, a.sidebarBanner {
       margin-top: 10px;
       clear: both; } }
 
+<<<<<<< HEAD
 /* line 103, scss/_articleBox.scss */
+=======
+/* line 106, scss/_articleBox.scss */
+>>>>>>> e5806a7eda792819a7eb16feb8028d92e1a51ae4
 .thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   display: block;
@@ -1511,26 +1518,46 @@ a.n, a.sidebarBanner {
   padding: 0px;
   vertical-align: bottom; }
 
+<<<<<<< HEAD
 /* line 114, scss/_articleBox.scss */
 .articleBox__thumbnailBox {
   position: relative; }
 
 /* line 125, scss/_articleBox.scss */
+=======
+/* line 117, scss/_articleBox.scss */
+.articleBox__thumbnailBox {
+  position: relative; }
+
+/* line 128, scss/_articleBox.scss */
+>>>>>>> e5806a7eda792819a7eb16feb8028d92e1a51ae4
 .articleBox__coverBadge {
   position: absolute;
   right: 5%;
   top: 5%;
   visibility: hidden; }
+<<<<<<< HEAD
   /* line 134, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
   @media screen and (max-width: 600px) {
     /* line 125, scss/_articleBox.scss */
+=======
+  /* line 137, scss/_articleBox.scss */
+  .articleBox__coverBadge.--visible {
+    visibility: visible; }
+  @media screen and (max-width: 600px) {
+    /* line 128, scss/_articleBox.scss */
+>>>>>>> e5806a7eda792819a7eb16feb8028d92e1a51ae4
     .articleBox__coverBadge {
       transform-origin: right top;
       transform: scale(0.5); } }
 
+<<<<<<< HEAD
 /* line 147, scss/_articleBox.scss */
+=======
+/* line 150, scss/_articleBox.scss */
+>>>>>>> e5806a7eda792819a7eb16feb8028d92e1a51ae4
 .articleBox__title {
   clear: both;
   word-break: break-all;
