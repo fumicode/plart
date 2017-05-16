@@ -21,8 +21,8 @@ a.button{
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
     color: #fff;
+    opacity: 0.7;
   }
 
   &:disabled {

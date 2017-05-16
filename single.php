@@ -5,7 +5,23 @@
 <link rel='dns-prefetch' href='//s.w.org' />
 <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; フィード" href="http://www.plart-story.jp/feed/" />
 <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; コメントフィード" href="http://www.plart-story.jp/comments/feed/" />
-<meta name="description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" /><?php wp_enqueue_style('raleway', "https://fonts.googleapis.com/css?family=Montserrat", array(), time() ); ?><?php wp_enqueue_style('style', get_stylesheet_uri(), array(), time() ); ?><?php wp_enqueue_script('jquery'); ?><?php wp_head(); ?></head><body><div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=1810486322562458";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><div class="page"><div class="page__header"><div class="page__globalNav"><div class="globalNavBox"><div class="globalNavBox__spButton"><button id="spMenuButton" class="spMenuButton"><img src="<?= get_stylesheet_directory_uri()?>/public/image/menuicon.png"></button></div><a href="/"><img src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png" class="globalNavBox__plartLogo"></a><a href="/" class="n"><div class="globalNavBox__titleBox"><p class="globalNavBox__siteDesc"></p><h1 class="globalNavBox__siteTitle"><img src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo2.png" alt="アートがライフスタイルになるウェブマガジン PLART"></h1></div></a><?php if(is_category()){; ?><?php $cat_id=get_query_var('cat'); ?><?php $cat=get_category($cat_id); ?><?php $cat_slug = $cat->category_nicename; ?><?php $cat_name = $cat->name; ?><?php }; ?><div class="categoryBox <?= $cat ? '--'.$cat_slug : '' ?>"><table class="categoryBox__table"><tr><td rowspan="3" class="categoryBox__art">ART</td><td rowspan="3" class="categoryBox__cross">✕</td><td class="categoryBox__catName --people"><a href="/category/people">PEOPLE</a></td><td class="categoryBox__catContent">ヒト、アーティスト</td></tr><tr><td class="categoryBox__catName --place"><a href="/category/place">PLACE</a></td><td class="categoryBox__catContent"> 場、空間</td></tr><tr><td class="categoryBox__catName --thing"><a href="/category/thing">THING</a></td><td class="categoryBox__catContent">モノ、コト</td></tr></table></div><div class="globalNav"><nav><?php wp_nav_menu( array(
+<meta name="description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+<meta property="og:site_name" content="PLART STORY" />
+<meta property="og:url" content="http://www.plart-story.jp/" />
+<meta property="og:title" content="PLART STORY | LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+<meta property="og:description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+<meta property="fb:app_id" content="1810486322562458" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="<?= get_stylesheet_directory_uri()?>/public/image/PLART_ogp.png" />
+<!-- [ / VK All in one Expansion Unit OGP ] -->
+<!-- [ VK All in one Expansion Unit twitter card ] -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン">
+<meta name="twitter:title" content="PLART STORY | LIFE IS ART！ アートがライフスタイルになるウェブマガジン">
+<meta name="twitter:url" content="http://www.plart-story.jp">
+<meta name="twitter:image" content="<?= get_stylesheet_directory_uri()?>/public/image/PLART_ogp.png">
+<meta name="twitter:domain" content="www.plart-story.jp">
+<meta name="twitter:site" content="@plartjp"><?php wp_enqueue_style('raleway', "https://fonts.googleapis.com/css?family=Montserrat", array(), time() ); ?><?php wp_enqueue_style('style', get_stylesheet_uri(), array(), time() ); ?><?php wp_enqueue_script('jquery'); ?><?php wp_head(); ?></head><body><div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=1810486322562458";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87349986-1', 'www.plart-story.jp');ga('send', 'pageview');</script><div class="page"><div class="page__header"><div class="page__globalNav"><div class="globalNavBox"><div class="globalNavBox__spButton"><button id="spMenuButton" class="spMenuButton"><img src="<?= get_stylesheet_directory_uri()?>/public/image/menuicon.png"></button></div><a href="/"><img src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo.png" class="globalNavBox__plartLogo"></a><a href="/" class="n"><div class="globalNavBox__titleBox"><p class="globalNavBox__siteDesc"></p><h1 class="globalNavBox__siteTitle"><img src="<?= get_stylesheet_directory_uri()?>/public/image/plart_logo2.png" alt="アートがライフスタイルになるウェブマガジン PLART"></h1></div></a><?php if(is_category()){; ?><?php $cat_id=get_query_var('cat'); ?><?php $cat=get_category($cat_id); ?><?php $cat_slug = $cat->category_nicename; ?><?php $cat_name = $cat->name; ?><?php }; ?><div class="categoryBox <?= $cat ? '--'.$cat_slug : '' ?>"><table class="categoryBox__table"><tr><td rowspan="3" class="categoryBox__art">ART</td><td rowspan="3" class="categoryBox__cross">✕</td><td class="categoryBox__catName --people"><a href="/category/people">PEOPLE</a></td><td class="categoryBox__catContent">ヒト、アーティスト</td></tr><tr><td class="categoryBox__catName --place"><a href="/category/place">PLACE</a></td><td class="categoryBox__catContent"> 場、空間</td></tr><tr><td class="categoryBox__catName --thing"><a href="/category/thing">THING</a></td><td class="categoryBox__catContent">モノ、コト</td></tr></table></div><div class="globalNav"><nav><?php wp_nav_menu( array(
   'theme_location'=>'mainmenu', 
   'container'     =>'', 
   'menu_class'    =>'',
@@ -66,7 +82,7 @@ wp_nav_menu( array(
   'theme_location'=>'footer_menu_3', 
   'container'     =>'', 
   'menu_class'    =>'footerBox__menu'));
-?></nav><div class="snsLinks"> <p class="snsLinks--text">FOLLOW ME !</p><p class="snsLinks--icon"><a target="_blank" href="http://instagram.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/instagram-logo.svg" class="snsLinks--icon--instagram"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://twitter.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/twitter-logo-silhouette.svg" class="snsLinks--icon--twitter"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://facebook.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/facebook-app-logo.svg" class="snsLinks--icon--facebook"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://jp.pinterest.com/plartart"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/pinterest-logo.svg" class="snsLinks--icon--pinterest"></a></p></div></div></div><div id="spMenuBg" class="spMenuBg"></div><div id="spMenu" class="spMenu"><div class="spMenu__art">ART</div><div class="spMenu__cross">✕</div><div class="spMenu__categoryList"><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/people" class="spMenu__categoryLink">PEOPLE</a></h2><div class="spMenu__categoryDesc">ヒト、アーティスト</div></div><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/place" class="spMenu__categoryLink">PLACE</a></h2><div class="spMenu__categoryDesc">場、空間、</div></div><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/thing" class="spMenu__categoryLink">THING</a></h2><div class="spMenu__categoryDesc">モノ、コト</div></div></div><div class="spMenu__nav"><div class="globalNav--sp"><nav><?php wp_nav_menu( array(
+?></nav><div class="snsLinks"> <p class="snsLinks--text">FOLLOW ME !</p><p class="snsLinks--icon"><a target="_blank" href="http://instagram.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/instagram-logo.svg" class="snsLinks--icon--instagram"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://twitter.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/twitter-logo-silhouette.svg" class="snsLinks--icon--twitter"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://facebook.com/plartjp"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/facebook-app-logo.svg" class="snsLinks--icon--facebook"></a></p><p class="snsLinks--icon"><a target="_blank" href="http://jp.pinterest.com/plartart"><img src="<?php echo get_stylesheet_directory_uri(); ?>/public/image/pinterest-logo.svg" class="snsLinks--icon--pinterest"></a></p></div></div></div><div id="spMenuBg" class="spMenuBg"></div><div id="spMenu" class="spMenu"><div id="spMenu__close">×</div><div class="spMenu__art">ART</div><div class="spMenu__cross">✕</div><div class="spMenu__categoryList"><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/people" class="spMenu__categoryLink">PEOPLE</a></h2><div class="spMenu__categoryDesc">ヒト、アーティスト</div></div><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/place" class="spMenu__categoryLink">PLACE</a></h2><div class="spMenu__categoryDesc">場、空間、</div></div><div class="spMenu__categoryItem"><h2 class="n spMenu__categoryTitle"> <a href="/category/thing" class="spMenu__categoryLink">THING</a></h2><div class="spMenu__categoryDesc">モノ、コト</div></div></div><div class="spMenu__nav"><div class="globalNav--sp"><nav><?php wp_nav_menu( array(
   'theme_location'=>'mainmenu', 
   'container'     =>'', 
   'menu_class'    =>'',
@@ -75,14 +91,22 @@ wp_nav_menu( array(
   var $spMenu = jQuery("#spMenu");
   var $spMenuButton= jQuery("#spMenuButton");
   var $spMenuBg = jQuery("#spMenuBg");
+  var $spMenuClose = jQuery("#spMenu__close");
 
   $spMenuButton.click(function(){
     $spMenu.fadeIn();
-    $spMenuBg.fadeIn();          
+    $spMenuBg.fadeIn(); 
+    $spMenuClose.fadeIn();      
   });
   $spMenuBg.click(function(){
     $spMenu.fadeOut();
-    $spMenuBg.fadeOut();          
+    $spMenuBg.fadeOut(); 
+    $spMenuClose.fadeOut();         
+  });
+  $spMenuClose.click(function(){
+    $spMenu.fadeOut();
+    $spMenuBg.fadeOut(); 
+    $spMenuClose.fadeOut();       
   });
 
 });</script></body></html>

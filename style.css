@@ -98,21 +98,26 @@ a {
 /* line 98, scss/_normalize.scss */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+  opacity: 0.7; }
+
+/* line 104, scss/_normalize.scss */
+a img:hover {
+  opacity: 0.7; }
 
 /* Text-level semantics
    ========================================================================== */
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
-/* line 110, scss/_normalize.scss */
+/* line 115, scss/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-/* line 118, scss/_normalize.scss */
+/* line 123, scss/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
@@ -120,7 +125,7 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-/* line 127, scss/_normalize.scss */
+/* line 132, scss/_normalize.scss */
 dfn {
   font-style: italic; }
 
@@ -128,7 +133,7 @@ dfn {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari, and Chrome.
  */
-/* line 136, scss/_normalize.scss */
+/* line 141, scss/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
@@ -136,7 +141,7 @@ h1 {
 /**
  * Address styling not present in IE 8/9.
  */
-/* line 145, scss/_normalize.scss */
+/* line 150, scss/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
@@ -144,14 +149,14 @@ mark {
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 154, scss/_normalize.scss */
+/* line 159, scss/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 162, scss/_normalize.scss */
+/* line 167, scss/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -159,11 +164,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 170, scss/_normalize.scss */
+/* line 175, scss/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 174, scss/_normalize.scss */
+/* line 179, scss/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
@@ -172,14 +177,14 @@ sub {
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
-/* line 185, scss/_normalize.scss */
+/* line 190, scss/_normalize.scss */
 img {
   border: 0; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
  */
-/* line 193, scss/_normalize.scss */
+/* line 198, scss/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -188,14 +193,14 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
-/* line 204, scss/_normalize.scss */
+/* line 209, scss/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
  */
-/* line 212, scss/_normalize.scss */
+/* line 217, scss/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0; }
@@ -203,14 +208,14 @@ hr {
 /**
  * Contain overflow in all browsers.
  */
-/* line 221, scss/_normalize.scss */
+/* line 226, scss/_normalize.scss */
 pre {
   overflow: auto; }
 
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 229, scss/_normalize.scss */
+/* line 234, scss/_normalize.scss */
 code,
 kbd,
 pre,
@@ -230,7 +235,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-/* line 252, scss/_normalize.scss */
+/* line 257, scss/_normalize.scss */
 button,
 input,
 optgroup,
@@ -246,7 +251,7 @@ textarea {
 /**
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
-/* line 266, scss/_normalize.scss */
+/* line 271, scss/_normalize.scss */
 button {
   overflow: visible; }
 
@@ -256,7 +261,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-/* line 277, scss/_normalize.scss */
+/* line 282, scss/_normalize.scss */
 button,
 select {
   text-transform: none; }
@@ -268,7 +273,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 290, scss/_normalize.scss */
+/* line 295, scss/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -281,7 +286,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 302, scss/_normalize.scss */
+/* line 307, scss/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
@@ -289,7 +294,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 311, scss/_normalize.scss */
+/* line 316, scss/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -299,7 +304,7 @@ input::-moz-focus-inner {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 322, scss/_normalize.scss */
+/* line 327, scss/_normalize.scss */
 input {
   line-height: normal; }
 
@@ -310,7 +315,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 334, scss/_normalize.scss */
+/* line 339, scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -323,7 +328,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 346, scss/_normalize.scss */
+/* line 351, scss/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -332,7 +337,7 @@ input[type="number"]::-webkit-outer-spin-button {
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
-/* line 356, scss/_normalize.scss */
+/* line 361, scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -344,7 +349,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 367, scss/_normalize.scss */
+/* line 372, scss/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -352,7 +357,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 376, scss/_normalize.scss */
+/* line 381, scss/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -362,7 +367,7 @@ fieldset {
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
-/* line 387, scss/_normalize.scss */
+/* line 392, scss/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -372,7 +377,7 @@ legend {
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
  */
-/* line 396, scss/_normalize.scss */
+/* line 401, scss/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -380,7 +385,7 @@ textarea {
  * Don't inherit the `font-weight` (applied by a rule above).
  * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
  */
-/* line 405, scss/_normalize.scss */
+/* line 410, scss/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
@@ -389,12 +394,12 @@ optgroup {
 /**
  * Remove most spacing between table cells.
  */
-/* line 416, scss/_normalize.scss */
+/* line 421, scss/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 421, scss/_normalize.scss */
+/* line 426, scss/_normalize.scss */
 td,
 th {
   padding: 0; }
@@ -432,8 +437,8 @@ a.button {
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   a.button:hover,
   a.button:focus {
-    background-color: #b8cc00;
-    color: #fff; }
+    color: #fff;
+    opacity: 0.7; }
   /* line 28, scss/base/_buttons.scss */
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
   a.button:disabled {
@@ -832,27 +837,28 @@ a.n, a.sidebarBanner {
 /* line 2, scss/_siteTitle.scss */
 .siteTitle {
   font-size: 2.8rem;
-  letter-spacing: 0.3em; }
+  letter-spacing: 0.3em;
+  margin-left: 8px; }
   @media screen and (max-width: 600px) {
     /* line 2, scss/_siteTitle.scss */
     .siteTitle {
       text-align: center;
       font-size: 1.8rem;
       margin: 0 auto; } }
-  /* line 13, scss/_siteTitle.scss */
+  /* line 14, scss/_siteTitle.scss */
   .siteTitle img {
     width: 303px; }
     @media screen and (max-width: 600px) {
-      /* line 13, scss/_siteTitle.scss */
+      /* line 14, scss/_siteTitle.scss */
       .siteTitle img {
         width: 240px; } }
 
-/* line 21, scss/_siteTitle.scss */
+/* line 22, scss/_siteTitle.scss */
 .siteTitle__plart {
   font-family: "Montserrat", sans-serif;
   font-weight: bold; }
 
-/* line 29, scss/_siteTitle.scss */
+/* line 30, scss/_siteTitle.scss */
 .siteTitle__story {
   font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal; }
@@ -1063,7 +1069,7 @@ a.n, a.sidebarBanner {
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
-  right: 14px; }
+  right: 20px; }
   @media screen and (max-width: 600px) {
     /* line 43, scss/_topSliderBox.scss */
     .topSliderBox__seriesBox {
@@ -1183,9 +1189,8 @@ a.n, a.sidebarBanner {
 
 /* line 24, scss/_seriesBox.scss */
 .seriesBox__siteTitles {
-  font-size: 1.6rem;
-  margin-left: 10px; }
-  /* line 29, scss/_seriesBox.scss */
+  font-size: 1.6rem; }
+  /* line 28, scss/_seriesBox.scss */
   .seriesBox__siteTitles .siteTitle {
     font-size: 1.6rem; }
 
@@ -1553,8 +1558,7 @@ a.n, a.sidebarBanner {
 /* line 21, scss/_sidebarBox.scss */
 .sidebarBox__title {
   font-size: 1.8rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px; }
+  letter-spacing: 0.1em; }
 
 /* line 1, scss/_articleBox--ranking.scss */
 .articleBox--ranking {
@@ -1786,7 +1790,8 @@ a.n, a.sidebarBanner {
 
 /* line 27, scss/_keywordTags.scss */
 .keywordTags__link {
-  color: white; }
+  color: white;
+  border: none; }
 
 /* line 1, scss/_snsLinks.scss */
 .snsLinks {
@@ -1874,6 +1879,14 @@ a.n, a.sidebarBanner {
   background: rgba(0, 0, 0, 0.6); }
 
 /* line 43, scss/_spMenu.scss */
+#spMenu__close {
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  top: 5px;
+  right: 10px; }
+
+/* line 51, scss/_spMenu.scss */
 .spMenu__art {
   font-size: 2.6rem;
   font-family: "Montserrat", sans-serif;
@@ -1881,17 +1894,17 @@ a.n, a.sidebarBanner {
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem; }
 
-/* line 51, scss/_spMenu.scss */
+/* line 59, scss/_spMenu.scss */
 .spMenu__cross {
   font-size: 2.8rem;
   margin-bottom: 0.5rem; }
 
-/* line 57, scss/_spMenu.scss */
+/* line 65, scss/_spMenu.scss */
 .spMenu__categoryItem {
   font-size: 2.8rem;
   margin-bottom: 1rem; }
 
-/* line 61, scss/_spMenu.scss */
+/* line 69, scss/_spMenu.scss */
 .n.spMenu__categoryTitle, .spMenu__categoryTitle.sidebarBanner {
   display: block;
   font-size: 1.8rem;
@@ -1899,16 +1912,16 @@ a.n, a.sidebarBanner {
   font-weight: normal;
   margin-bottom: 0.5rem; }
 
-/* line 70, scss/_spMenu.scss */
+/* line 78, scss/_spMenu.scss */
 .spMenu__categoryLink {
   border-bottom: 1px solid black; }
 
-/* line 74, scss/_spMenu.scss */
+/* line 82, scss/_spMenu.scss */
 .spMenu__categoryDesc {
   font-size: 1.4rem;
   margin-bottom: 0.5rem; }
 
-/* line 83, scss/_spMenu.scss */
+/* line 91, scss/_spMenu.scss */
 .spMenuButton {
   margin: 0;
   padding: 0;

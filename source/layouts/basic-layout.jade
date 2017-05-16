@@ -10,6 +10,22 @@ html
     <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; フィード" href="http://www.plart-story.jp/feed/" />
     <link rel="alternate" type="application/rss+xml" title="PLART STORY &raquo; コメントフィード" href="http://www.plart-story.jp/comments/feed/" />
     <meta name="description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+    <meta property="og:site_name" content="PLART STORY" />
+    <meta property="og:url" content="http://www.plart-story.jp/" />
+    <meta property="og:title" content="PLART STORY | LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+    <meta property="og:description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン" />
+    <meta property="fb:app_id" content="1810486322562458" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<?= get_stylesheet_directory_uri()?>/public/image/PLART_ogp.png" />
+    <!-- [ / VK All in one Expansion Unit OGP ] -->
+    <!-- [ VK All in one Expansion Unit twitter card ] -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="LIFE IS ART！ アートがライフスタイルになるウェブマガジン">
+    <meta name="twitter:title" content="PLART STORY | LIFE IS ART！ アートがライフスタイルになるウェブマガジン">
+    <meta name="twitter:url" content="http://www.plart-story.jp">
+    <meta name="twitter:image" content="<?= get_stylesheet_directory_uri()?>/public/image/PLART_ogp.png">
+    <meta name="twitter:domain" content="www.plart-story.jp">
+    <meta name="twitter:site" content="@plartjp">
 
     - wp_enqueue_style('raleway', "https://fonts.googleapis.com/css?family=Montserrat", array(), time() );
     - wp_enqueue_style('style', get_stylesheet_uri(), array(), time() );
@@ -19,7 +35,7 @@ html
 
     block head_end
   body
-    <div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=1810486322562458";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div><script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.3&appId=1810486322562458";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-87349986-1', 'www.plart-story.jp');ga('send', 'pageview');</script>
     div.page
       div.page__header
         block head
@@ -43,14 +59,22 @@ html
         var $spMenu = jQuery("#spMenu");
         var $spMenuButton= jQuery("#spMenuButton");
         var $spMenuBg = jQuery("#spMenuBg");
+        var $spMenuClose = jQuery("#spMenu__close");
 
         $spMenuButton.click(function(){
           $spMenu.fadeIn();
-          $spMenuBg.fadeIn();          
+          $spMenuBg.fadeIn(); 
+          $spMenuClose.fadeIn();      
         });
         $spMenuBg.click(function(){
           $spMenu.fadeOut();
-          $spMenuBg.fadeOut();          
+          $spMenuBg.fadeOut(); 
+          $spMenuClose.fadeOut();         
+        });
+        $spMenuClose.click(function(){
+          $spMenu.fadeOut();
+          $spMenuBg.fadeOut(); 
+          $spMenuClose.fadeOut();       
         });
 
       });
