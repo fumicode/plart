@@ -43,7 +43,8 @@ if ($categories){
     'category__in' => $categories,
     'post__not_in' => array($post->ID),
     'posts_per_page'=>3,
-    'caller_get_posts'=>1
+    'caller_get_posts'=>1,
+    'order_by' => 'rand' 
   );
   $my_query = new WP_Query($args);
     if( $my_query->have_posts() ) {
