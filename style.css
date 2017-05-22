@@ -1495,6 +1495,9 @@ a.n, a.sidebarBanner {
   padding-right: 7px;
   padding-top: 3px;
   padding-bottom: 3px; }
+  /* line 90, scss/_articleBox.scss */
+  .articleBox__number.--unvisible {
+    visibility: hidden; }
   @media screen and (max-width: 600px) {
     /* line 80, scss/_articleBox.scss */
     .articleBox__number {
@@ -1502,7 +1505,7 @@ a.n, a.sidebarBanner {
       margin-top: 10px;
       clear: both; } }
 
-/* line 103, scss/_articleBox.scss */
+/* line 107, scss/_articleBox.scss */
 .thumbnail-base, .articleBox__thumbnail, .articleBox--big .articleBox__thumbnail {
   clear: both;
   display: block;
@@ -1511,26 +1514,26 @@ a.n, a.sidebarBanner {
   padding: 0px;
   vertical-align: bottom; }
 
-/* line 114, scss/_articleBox.scss */
+/* line 118, scss/_articleBox.scss */
 .articleBox__thumbnailBox {
   position: relative; }
 
-/* line 125, scss/_articleBox.scss */
+/* line 129, scss/_articleBox.scss */
 .articleBox__coverBadge {
   position: absolute;
   right: 5%;
   top: 5%;
   visibility: hidden; }
-  /* line 134, scss/_articleBox.scss */
+  /* line 138, scss/_articleBox.scss */
   .articleBox__coverBadge.--visible {
     visibility: visible; }
   @media screen and (max-width: 600px) {
-    /* line 125, scss/_articleBox.scss */
+    /* line 129, scss/_articleBox.scss */
     .articleBox__coverBadge {
       transform-origin: right top;
       transform: scale(0.5); } }
 
-/* line 147, scss/_articleBox.scss */
+/* line 151, scss/_articleBox.scss */
 .articleBox__title {
   clear: both;
   word-break: break-all;
