@@ -1,0 +1,81 @@
+$rankingBox-padding:20px;
+$rankingBox-padding-small:15px;
+
+.rankingBox{
+  @extend .clearfix;
+
+  padding-top: $rankingBox-padding;
+  padding-bottom: $rankingBox-padding;
+
+  border-bottom: solid 1px gray;
+  @include outer-container;
+
+}
+
+.rankingBox__thumbnail{
+  @include span-columns(4 of 10);
+  padding-right: 10px;
+  display: block;
+}
+
+.rankingBox__content{
+  @include span-columns(6 of 10);
+
+}
+
+.rankingBox__rank{
+  font-size: 30px;
+  font-family: $heading-font-family;
+  line-height: 1;
+
+  margin-bottom:10px;
+}
+
+.rankingBox__title{
+
+
+  font-size: 12px;
+
+  line-height:21px;
+
+
+}
+
+
+@include media($medium-screen-down) {
+  .rankingBox.--noimage{
+
+    padding-top:$rankingBox-padding-small;
+    padding-bottom:$rankingBox-padding-small;
+  }
+
+  .rankingBox.--noimage .rankingBox__thumbnail{
+    display:none;
+
+  }
+
+  .rankingBox.--noimage .rankingBox__content{
+    @include span-columns(10 of 10);
+
+    @include outer-container;
+  }
+
+
+
+  .rankingBox.--noimage .rankingBox__rank{
+    float:left;
+    width:40px; //↓とそろえる
+  }
+
+  .rankingBox.--noimage .rankingBox__title{
+
+    float:right;
+
+    width:calc(100% - 40px)
+
+  }
+
+
+
+
+}
