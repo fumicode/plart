@@ -1,4 +1,3 @@
-$articleThumbnailHeight:170px;
 $articleBox-padding:15px;
 $articleBoxTitleHeight:$font-size-medium*2*3;
 $articleBoxHeader-marginBottom:10px;
@@ -6,10 +5,11 @@ $categoryLineHeight:20px;
 $numberFontSize:13px;
 $thumbnailMarginBottom:10px;
 
+
 .articleBox-base{
-  padding:$articleBox-padding 0px $articleBox-padding 0px;
-  //margin-right: $articleBox-padding;
-  //background: pink;
+  padding-top:$articleBox-padding ;
+  padding-bottom:$articleBox-padding ;
+
 }
 
 .articleBox{
@@ -104,9 +104,6 @@ $thumbnailMarginBottom:10px;
 }
 
 
-.articleBox__thumbnailBox{
-
-}
 
 .thumbnail-base{
 
@@ -150,6 +147,47 @@ $thumbnailMarginBottom:10px;
     transform-origin:right top;
     transform:scale(0.5);
   }
+}
+
+
+.articleBox__hoverCover{
+
+  opacity:0;
+  position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+  background:rgba(0,0,0, 0.5);
+
+
+  transition-property:opacity;
+  transition-duration:0.5s;
+  transition-timing-function:ease-in-out;
+
+  text-align:center;
+}
+
+  a:hover .articleBox__hoverCover{
+    opacity:1;
+  }
+
+.articleBox__hoverCoverLogo{
+  display:block;
+
+  width: 33.33%;
+  position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+
+
+  margin:auto;
+
+
+
 }
 
 .articleBox__title{

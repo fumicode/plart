@@ -14,6 +14,7 @@ mixin articleBox(modifier)
         .articleBox__number(class="<?= $is_cover ?'--unvisible':''?>") <?= get_the_date('n')?>月15日号
 
       .articleBox__thumbnailBox 
+
         - if(has_post_thumbnail()):
         -   if(#{modifier == "big"}): 
         -     the_post_thumbnail("square", array('class'=>'articleBox__thumbnail'));
@@ -28,6 +29,9 @@ mixin articleBox(modifier)
         -   endif;
         - endif;
         
+        .articleBox__hoverCover
+          img.articleBox__hoverCoverLogo( src="<?= get_stylesheet_directory_uri(); ?>/public/image/articlebox_hover_logo.png")
+
 
         .articleBox__coverBadge(class="<?= $is_cover ? '--visible':'' ?> #{modifier == 'big' ? '--big':''} ") 
           .coverBadge(class="#{modifier == 'big' ? '--big':''}")

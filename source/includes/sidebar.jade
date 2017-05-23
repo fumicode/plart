@@ -22,21 +22,26 @@
     -   if ( !empty( $ranking_data ) ):
     -     $sidebar_index = 1;
     -     foreach ( $ranking_data as $post_id ):
+
       a(href="<?= the_permalink($post_id) ?>")
-        .articleBox--ranking
+        .rankingBox(class="<?= $sidebar_index >= 6 ? '--noimage': ''?>")
           - if(has_post_thumbnail($post_id)):
-          -   echo get_the_post_thumbnail($post_id, "square", array('class'=>'articleBox--ranking--thumbnail'));
+          -   echo get_the_post_thumbnail($post_id, "square", array('class'=>'rankingBox__thumbnail'));
           - else:
-            img.articleBox--ranking--thumbnail(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
+            img.rankingBox__thumbnail(src="<?= get_stylesheet_directory_uri()?>/public/image/thumb3x3.png")
           - endif;
-          .articleBox--ranking--right
-            .articleBox--ranking--rank 
-              - echo $sidebar_index ++;
-            .articleBox--ranking--title
-              - echo get_the_title($post_id);
+          .rankingBox__content
+            .rankingBox__rank 
+              - echo $sidebar_index ;
+            .rankingBox__title
+              - echo mb_strimwidth(get_the_title($post_id) , 0, 35 *2);
+
+    -       $sidebar_index ++ ;
     -     endforeach;
     -   endif;
     - endif;
+
+
 
 
   .sidebarBox
