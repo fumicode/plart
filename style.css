@@ -7540,10 +7540,14 @@ input[type="search"].search-field {
   width: 42px;
   background-color: #000; }
 
+/* line 107, scss/style.scss */
+.pager:before, .pager:after {
+  content: none; }
+
 /*
  * search.phpのnot found
  */
-/* line 110, scss/style.scss */
+/* line 114, scss/style.scss */
 .notFound {
   font-size: 30px; }
 
