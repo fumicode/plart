@@ -41,12 +41,12 @@ gulp.task("riot", function(){
 });
 
 gulp.task('watch',function () {
-  gulp.watch("./scss/**/*.scss", ["scss"]);
-  gulp.watch("./riottags/*.jade", ["riot"]);
+  gulp.watch("scss/**/*.scss", ["scss"]);
+  gulp.watch("riottags/*.jade", ["riot"]);
   gulp.watch(['./public/stylesheets/*.css'], function(event){
     console.log("css changed");
   });
-  gulp.watch('./source/**/*.jade', ['templates']);
+  gulp.watch('source/**/*.jade', ['templates']);
 });
 
 gulp.task('templates', function() {
