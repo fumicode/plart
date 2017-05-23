@@ -128,7 +128,8 @@ block content
               'category__in' => $categories,
               'post__not_in' => array($post->ID),
               'posts_per_page'=>3,
-              'caller_get_posts'=>1
+              'caller_get_posts'=>1,
+              'orderby' => 'rand' 
             );
             $my_query = new WP_Query($args);
               if( $my_query->have_posts() ) {
@@ -181,5 +182,5 @@ block content
 
     .mainBox
       a.n(href="/article_type/artinthehome")
-        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_1200_540_170513.jpg")
-      a.blackButton(href="#") PAGE TOP
+        img(src="<?= get_stylesheet_directory_uri(); ?>/public/image/PLART_banner_living.jpg")
+      

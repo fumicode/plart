@@ -28,9 +28,13 @@
       //そのカテゴリに属してるやつを全部表示する
 
     - if($the_query->have_posts()): 
+      - $first_post_title = null;
 
       #topSlider.topSlider( data-slick='{"slidesToShow":6, "slidesToScroll": 6}')
         - while($the_query->have_posts()): $the_query->the_post();
+          - if(!$first_post_title){ //最初の投稿名を取っておく。featureBoxに表示させるため。
+          -   $first_post_title = get_the_title();
+          - }
         
           div.topSlider__slide(data-titlestr="<?php the_title()?>")
             a.n.topSlider__link(href="<?php the_permalink()?>")
@@ -60,8 +64,7 @@
           br
           #featureBox__title.featureBox__title 
             :php
-              $term = get_term_by('slug', $term_name, 'article_type');
-              echo $term->name;
+              echo  $first_post_title
               //echo $child_term->name
 
 

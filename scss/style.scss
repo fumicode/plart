@@ -77,12 +77,18 @@ body{
 
 }
 
+form {
+    margin: 0;
+}
+
 input[type="search"].search-field {
 	border-radius: 0;
   height: 31px;
 	width: -webkit-calc(100% - 42px);
 	width: calc(100% - 42px);
   background:#dbdcdc;
+  margin-bottom: 0;
+  -webkit-appearance: none;
 }
 
 .search-submit {

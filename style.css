@@ -6415,7 +6415,7 @@ a.n, a.sidebarBanner {
       margin-left: 0;
       letter-spacing: 0.1em;
       font-weight: bold;
-      line-height: 2.2;
+      line-height: 2.6;
       border-bottom: none; } }
 
 /* line 8, scss/_globalNavBox.scss */
@@ -7071,39 +7071,58 @@ a.n, a.sidebarBanner {
   font-size: 12px;
   clear: both; }
 
-/* line 6, scss/_footerBox.scss */
-.footerBox li {
-  display: inline-block;
-  margin-right: 10px;
-  letter-spacing: 0.1em;
-  font-size: 0.9em; }
-  /* line 11, scss/_footerBox.scss */
-  .footerBox li a {
-    border-bottom: none; }
-  /* line 14, scss/_footerBox.scss */
-  .footerBox li:after {
-    margin-left: 10px;
-    content: "|"; }
+/* line 2, scss/_footerBox.scss */
+.footerBox {
+  position: relative; }
+  /* line 5, scss/_footerBox.scss */
+  .footerBox .blackButton {
+    display: block;
+    letter-spacing: 0.13em;
+    position: absolute;
+    margin: 0;
+    top: -20px;
+    right: 50%;
+    margin-right: -115px;
+    width: 230px; }
   /* line 18, scss/_footerBox.scss */
-  .footerBox li:last-child:after {
-    content: ""; }
+  .footerBox li {
+    display: inline-block;
+    margin-right: 10px;
+    letter-spacing: 0.1em;
+    font-size: 0.9em;
+    line-height: 2.8; }
+    /* line 24, scss/_footerBox.scss */
+    .footerBox li a {
+      border-bottom: none; }
+    /* line 27, scss/_footerBox.scss */
+    .footerBox li:after {
+      margin-left: 10px;
+      content: "|"; }
+    /* line 31, scss/_footerBox.scss */
+    .footerBox li:last-child:after {
+      content: ""; }
 
-/* line 24, scss/_footerBox.scss */
+/* line 37, scss/_footerBox.scss */
 .footerBox__icon {
   float: right;
   width: 109px; }
   @media screen and (max-width: 600px) {
-    /* line 24, scss/_footerBox.scss */
+    /* line 37, scss/_footerBox.scss */
     .footerBox__icon {
       width: 69px;
       position: absolute;
       bottom: 30px;
       right: 30px; } }
 
-/* line 36, scss/_footerBox.scss */
+/* line 49, scss/_footerBox.scss */
 .footerBox__menuBox {
   clear: both;
   margin-bottom: 1em; }
+
+@media screen and (max-width: 600px) {
+  /* line 54, scss/_footerBox.scss */
+  .footerBox__siteTitle {
+    margin-top: 1em; } }
 
 /* line 6, scss/_singleArticle.scss */
 .singleArticle__title {
@@ -7113,8 +7132,12 @@ a.n, a.sidebarBanner {
 /* line 14, scss/_singleArticle.scss */
 .singleArticle__right {
   float: right; }
+  @media screen and (max-width: 600px) {
+    /* line 14, scss/_singleArticle.scss */
+    .singleArticle__right {
+      float: none; } }
 
-/* line 18, scss/_singleArticle.scss */
+/* line 21, scss/_singleArticle.scss */
 .wp-caption {
   background: #fcfcfc;
   line-height: 1.2em;
@@ -7125,7 +7148,7 @@ a.n, a.sidebarBanner {
   border: 1px solid #e5e5e5;
   max-width: 100% !important; }
 
-/* line 29, scss/_singleArticle.scss */
+/* line 32, scss/_singleArticle.scss */
 .wp-caption p.wp-caption-text {
   color: #888;
   font-size: 0.9em;
@@ -7367,29 +7390,33 @@ a.n, a.sidebarBanner {
   font-size: 2.8rem;
   margin-bottom: 0.5rem; }
 
-/* line 65, scss/_spMenu.scss */
+/* line 63, scss/_spMenu.scss */
+.spMenu__categoryList {
+  margin-bottom: 20px; }
+
+/* line 66, scss/_spMenu.scss */
 .spMenu__categoryItem {
   font-size: 2.8rem;
   margin-bottom: 1rem; }
 
-/* line 69, scss/_spMenu.scss */
+/* line 70, scss/_spMenu.scss */
 .n.spMenu__categoryTitle, .spMenu__categoryTitle.sidebarBanner {
   display: block;
-  font-size: 1.8rem;
+  font-size: 2.6rem;
   font-family: "Helvetica Neue", YuGothic, "Yu Gothic", "游ゴシック", "游ゴシック体", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", sans-serif;
   font-weight: normal;
   margin-bottom: 0.5rem; }
 
-/* line 78, scss/_spMenu.scss */
+/* line 79, scss/_spMenu.scss */
 .spMenu__categoryLink {
   border-bottom: 1px solid black; }
 
-/* line 82, scss/_spMenu.scss */
+/* line 83, scss/_spMenu.scss */
 .spMenu__categoryDesc {
   font-size: 1.4rem;
   margin-bottom: 0.5rem; }
 
-/* line 91, scss/_spMenu.scss */
+/* line 92, scss/_spMenu.scss */
 .spMenuButton {
   margin: 0;
   padding: 0;
@@ -7487,14 +7514,20 @@ a.n, a.sidebarBanner {
       top: 5px; } }
 
 /* line 80, scss/style.scss */
+form {
+  margin: 0; }
+
+/* line 84, scss/style.scss */
 input[type="search"].search-field {
   border-radius: 0;
   height: 31px;
   width: -webkit-calc(100% - 42px);
   width: calc(100% - 42px);
-  background: #dbdcdc; }
+  background: #dbdcdc;
+  margin-bottom: 0;
+  -webkit-appearance: none; }
 
-/* line 88, scss/style.scss */
+/* line 94, scss/style.scss */
 .search-submit {
   border-radius: 0;
   bottom: 0;
@@ -7510,7 +7543,7 @@ input[type="search"].search-field {
 /*
  * search.phpのnot found
  */
-/* line 104, scss/style.scss */
+/* line 110, scss/style.scss */
 .notFound {
   font-size: 30px; }
 

@@ -17,7 +17,8 @@
     h2.sidebarBox__title RANKING
 
     - if (function_exists('sga_ranking_get_date')):
-    -   $ranking_data = sga_ranking_get_date();
+    -   $rank_args = array( 'post_type' => 'post' , 'display_count' => 10 );
+    -   $ranking_data = sga_ranking_get_date($rank_args);
     -   if ( !empty( $ranking_data ) ):
     -     $sidebar_index = 1;
     -     foreach ( $ranking_data as $post_id ):

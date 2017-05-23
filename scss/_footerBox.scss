@@ -1,5 +1,17 @@
 
 .footerBox{
+  position: relative;
+
+  .blackButton {
+    display: block;
+    letter-spacing: 0.13em;
+    position: absolute;
+    margin: 0;
+    top: -20px;
+    right: 50%;
+    margin-right: -115px;
+    width: 230px;
+  }
   @extend .black-box;
   @extend .black-box--last;
 
@@ -8,6 +20,7 @@
         margin-right: 10px;
         letter-spacing: $small-letter-spacing;
         font-size: 0.9em;
+        line-height: 2.8;
         a{
           border-bottom: none;
         }
@@ -36,4 +49,10 @@
 .footerBox__menuBox{
   clear: both;
   margin-bottom: 1em;
+}
+
+.footerBox__siteTitle{
+  @include media($medium-screen-down){
+    margin-top: 1em;
+  }
 }

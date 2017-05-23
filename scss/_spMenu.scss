@@ -61,6 +61,7 @@
   margin-bottom:0.5rem;
 }
 .spMenu__categoryList{
+  margin-bottom: 20px;
 }
 .spMenu__categoryItem{
   font-size: $font-size-extrabig;
@@ -69,7 +70,7 @@
 .n.spMenu__categoryTitle{
   display:block;
 
-  font-size: $font-size-semibig;
+  font-size: $font-size-big;
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   margin-bottom:0.5rem;

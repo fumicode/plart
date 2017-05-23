@@ -13,6 +13,9 @@
 
 .singleArticle__right{
   float:right;
+  @include media($medium-screen-down){
+    float:none;
+  }
 }
 
 .wp-caption {

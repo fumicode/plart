@@ -1,0 +1,103 @@
+extends layouts/basic-layout
+
+block head
+  include ./includes/head
+
+block sidebar
+  include ./includes/sidebar
+
+block foot
+  include ./includes/foot
+
+block content
+  include ./includes/articleBox
+
+  .mainBoxContainer
+    .mainBox--article
+      .breadCrumb
+        ul.breadCrumb__list
+          li.breadCrumb__item
+            a.breadCrumb__link(href="/") TOP
+
+          li.breadCrumb__item--arrow >
+          li.breadCrumb__item
+            a.breadCrumb__link(href="./") ART ✕ <?= get_the_category()[0]->name ?>
+
+      hr.noBorder
+
+      .contentsLayout--grid
+          //- $post_index = 0
+          //- $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+          //- while ( have_posts() ) : the_post()
+          //  - if ($post_index % 2 == 0):
+          //    ul.contentsLayout__3items--grid
+          //      li.contentsLayout__item--grid
+          //        +articleBox("<?= 'smalltop' ?>")
+          //  - else:
+          //    li.contentsLayout__item--grid
+          //      +articleBox("<?= 'smalltop' ?>")
+          //  - endif;
+          //  - $post_index ++
+          //- endwhile;
+
+          //　静的に。
+          ul.contentsLayout__3items--grid
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://www.webops.com/wp-content/uploads/requst-a-demo.jpg")
+              .articleBox__title aa
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="")
+              .articleBox__title aa
+          ul.contentsLayout__3items--grid
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://blogs.vmware.com/apps/files/2017/02/bluedemobutton.jpg")
+              .articleBox__title aa
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://blogs.vmware.com/apps/files/2017/02/bluedemobutton.jpg")
+              .articleBox__title aa
+          ul.contentsLayout__3items--grid
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="")
+              .articleBox__title aa
+            li.contentsLayout__item--grid
+              .articleBox--smalltop
+                .articleBox__header
+                  .articleBox__header--ART ART
+                  .articleBox__header--cross ✕
+                  .articleBox__header--genre PEOPLE
+                .articleBox__number 3月15日号
+              img.articleBox__thumbnail(src="http://www.webops.com/wp-content/uploads/requst-a-demo.jpg")
+              .articleBox__title aa
+
+
+      - if(function_exists('wp_pagenavi')) { wp_pagenavi(); };
