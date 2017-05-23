@@ -6512,6 +6512,7 @@ a {
 
 /* line 32, scss/_topSliderBox.scss */
 .topSliderBox__featureBox {
+  pointer-events: none;
   position: absolute;
   bottom: 36px;
   left: 36px; }
@@ -6521,13 +6522,13 @@ a {
       bottom: 13px;
       left: 13px; } }
 
-/* line 43, scss/_topSliderBox.scss */
+/* line 44, scss/_topSliderBox.scss */
 .topSliderBox__seriesBox {
   position: absolute;
   bottom: -30px;
   right: 20px; }
   @media screen and (max-width: 600px) {
-    /* line 43, scss/_topSliderBox.scss */
+    /* line 44, scss/_topSliderBox.scss */
     .topSliderBox__seriesBox {
       display: none; } }
 

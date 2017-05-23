@@ -30,6 +30,7 @@
 }
 
 .topSliderBox__featureBox{
+  pointer-events:none;
   position:absolute;
     bottom:$box-padding;
     left:$box-padding;
