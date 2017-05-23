@@ -26,6 +26,10 @@ $thumbnailMarginBottom:10px;
     border-top-width:0;
     margin-bottom: 1px;
     padding-top: 0px;
+      @include media($medium-screen-down){
+      border-top:solid 1px $color-plart-gray;
+      padding: 15px 0px 15px 0px;
+    }
   }
 
 }

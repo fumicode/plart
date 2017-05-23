@@ -1,7 +1,7 @@
 .articleBox--ranking{
   @extend .clearfix;
   border-bottom: solid 1px gray;
-  padding-bottom:5px;
+  padding-bottom:20px;
   @include outer-container;
 }
 

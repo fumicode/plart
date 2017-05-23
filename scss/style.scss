@@ -6,13 +6,12 @@ Version: 0.0
 */
 
 //////////// basic framework////////////
-
+@import "bootstrap.min";
 @import "normalize";
 //@import "bourbon";
 @import "node_modules/bourbon/app/assets/stylesheets/bourbon";
 @import "base/grid-settings";
 @import "neat";
-
 @import "base/base"; //bitters これは変えちゃっていいもの。
 
 body{
@@ -61,6 +60,7 @@ body{
 @import "gridLayout";
 @import "spMenu";
 @import "pressReleaseBox";
+@import "singleCarousel";
 
 
 

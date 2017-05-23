@@ -7,7 +7,9 @@ $page-margin-top:$box-padding * 1.4;
   @include outer-container;
   margin-top:$page-margin-top ;
   margin-bottom:$page-margin-top ;
-  width:1200px;
+  width: 100%;
+  max-width:1200px;
+
 
   @include media($medium-screen-down){
     width:100%;
